@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+H:\JOEDAYZ\JAVA\JAVA ASSOCIATE 7 Y 8\cap2workspace\ocajp8\cap2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1913245429.index
+2130379427.index
+1626299536.index
+1398506290.index
+2122154584.index
+3264844910.index

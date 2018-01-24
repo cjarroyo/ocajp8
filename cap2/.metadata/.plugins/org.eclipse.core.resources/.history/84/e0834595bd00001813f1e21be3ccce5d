@@ -1,0 +1,12 @@
+package ocajp.cap2.aUnderstandingJavaOperators;
+
+import org.junit.Test;
+
+public class UnderstandingJavaOperators {
+	
+	@Test
+	public void testUnit(){
+		
+	}
+
+}

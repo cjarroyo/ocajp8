@@ -1,0 +1,36 @@
+package ocajp.cap2;
+
+import org.junit.Test;
+
+public class CWorkingWithUnaryOperators {
+	/*unary operator is one that requires exactly one operand, or variable, to function*/
+	/*
+	 
+	 TABLE 2. 2 Java unary operators
+	______________________________________
+	Unary operator 			Description
+	______________________________________
+		+ 					Indicates a number is positive, although numbers are assumed to be positive in Java unless accompanied by a negative unary operator
+		- 					Indicates a literal number is negative or negates an expression
+		++ 					Increments a value by 1
+		-- 					Decrements a value by 1
+		! 					Inverts a Boolean’s logical value
+	____________________________________
+	 */
+	
+	@Test
+	public void logicalComplementAndNegationOperators(){
+		
+		
+		
+	}
+	
+	@Test
+	public void incrementAndDecrementOperators(){
+		
+		
+		
+	}
+		
+	
+}

@@ -1,0 +1,9 @@
+package ocajp.cap2;
+
+public class DUsingAdditionalBinaryOperators {
+	
+	public void assignmentOperators(){
+		
+	}
+
+}

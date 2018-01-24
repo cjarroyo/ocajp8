@@ -1,0 +1,22 @@
+package ocajp.cap2.aUnderstandingJavaOperators;
+
+import org.junit.Test;
+
+public class UnderstandingJavaOperators {
+	
+	@Test
+	public void operator(){
+		//normalmente evalua de izquierda a derecha
+		//pero, en algunos casos de derecha a izquierda.
+		int y = 4;
+		double x = 3 + 2 * --y;
+		/*
+		 * x = 3 + 2 * 3
+		 * x = 3 + 6
+		 * x = 9
+		 * como es double lo convierte a x = 9.0
+		 * */
+		
+	}
+
+}

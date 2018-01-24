@@ -1,0 +1,12 @@
+package ocajp.cap2;
+
+import org.junit.Test;
+
+public class BWorkingWithBinaryArithmetic {
+	
+	@Test
+	public void arithmeticOperators(){
+		
+	}
+
+}
