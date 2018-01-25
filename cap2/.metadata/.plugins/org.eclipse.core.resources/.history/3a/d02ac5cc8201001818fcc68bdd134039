@@ -1,0 +1,43 @@
+package ocajp.cap2;
+
+import org.junit.Test;
+
+public class EUnderstandingJavaStatements {
+	//executed under certain conditions
+
+	@Test
+	public void theIf_thenStatement(){
+	//we only want to execute a block of code under certain circumstances
+	//Accomplishes this by allowing our application to execute a particular block of code if and only if a boolean expression evaluates to true at runtime.
+	int hourOfDay = 8;
+	if(hourOfDay < 11)
+			System.out.println("Good Morning");
+	}
+	
+	@Test	
+	public void theIf_then_elseStatement(){
+		
+	}
+	
+	@Test
+	public void theSwitchStatement(){
+		
+	}
+	
+	@Test
+	public void thewhileStatement(){
+		
+	}
+	
+	@Test
+	public void theDo_whileStatement(){
+		
+	}
+	
+	@Test
+	public void theForStatement(){
+		
+	}
+
+	
+}

@@ -1,0 +1,38 @@
+package ocajp.cap2;
+
+import org.junit.Test;
+
+public class EUnderstandingJavaStatements {
+
+	@Test
+	public void theIf_thenStatement(){
+		
+	}
+	
+	@Test	
+	public void theIf_then_elseStatement(){
+		
+	}
+	
+	@Test
+	public void theSwitchStatement(){
+		
+	}
+	
+	@Test
+	public void thewhileStatement(){
+		
+	}
+	
+	@Test
+	public void theDo_whileStatement(){
+		
+	}
+	
+	@Test
+	public void theForStatement(){
+		
+	}
+
+	
+}

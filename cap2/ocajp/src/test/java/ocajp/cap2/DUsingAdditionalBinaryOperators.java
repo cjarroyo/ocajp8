@@ -1,5 +1,7 @@
 package ocajp.cap2;
 
+import java.io.File;
+
 import org.junit.Test;
 
 public class DUsingAdditionalBinaryOperators {
@@ -44,8 +46,8 @@ public class DUsingAdditionalBinaryOperators {
         short y = (short)1921222; // Stored as 20678
         /*The second value, 1,921,222 , is too large to be stored as a short, so numeric OVERFLOW occurs and it becomes 20,678*/
         /*OVERFLOW is when a number is so large that it will no longer fit within the data type, so
-          the system “wraps around” to the next lowest value and counts up from there.*/
-        /*There’s also an analogous UNDERFLOW, when the number is too low to fi t in the data type.*/
+          the system "wraps around"  to the next lowest value and counts up from there.*/
+        /*There's also an analogous UNDERFLOW, when the number is too low to fi t in the data type.*/
         /*OJO*/
         System.out.print(2147483647 + 1); // -2147483648
         //Since 2147483647 is the maximum int value, adding any strictly positive value to it will
@@ -128,7 +130,33 @@ public class DUsingAdditionalBinaryOperators {
 
     @Test
     public void equalityOperators() {
-        //pag 65
+    	//the equals operator == and not equals operator !=, they compare two operands and return a boolean value
+    	/*
+    	The equality operators are used in one of three scenarios:
+    		1. Comparing two numeric primitive types. If the numeric values are of different data
+    			types, the values are automatically promoted as previously described. For example,
+    			5 == 5.00 returns true since the left side is promoted to a double.
+    		2. Comparing two boolean values.
+    		3. Comparing two objects, including null and String values.
+    		
+    		boolean x = true == 3; // DOES NOT COMPILE
+			boolean y = false != "Giraffe"; // DOES NOT COMPILE
+			boolean z = 3 == "Kangaroo"; // DOES NOT COMPILE
+    	 */
+    	
+    	boolean a = false;
+    	boolean b = (a = true);
+    	System.out.println(b); // Outputs true
+    	
+    	/*For object comparison, the equality operator is applied to the references to the objects*/
+    	/*Two references are equal if and only if they point to the same object, or both point to null*/
+    	File x = new File("myFile.txt");
+    	File y = new File("myFile.txt");
+    	File z = x;
+    	System.out.println(x == y); // Outputs false
+    	System.out.println(x == z); // Outputs true
+    	
+    	
     }
 
 

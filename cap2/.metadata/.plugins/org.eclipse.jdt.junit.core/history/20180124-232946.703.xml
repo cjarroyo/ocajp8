@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EUnderstandingJavaStatements" project="ocajp" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="ocajp.cap2.EUnderstandingJavaStatements" time="0.0">
+    <testcase name="theIf_thenStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+    <testcase name="thewhileStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+    <testcase name="theDo_whileStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+    <testcase name="theForStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+    <testcase name="theSwitchStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+    <testcase name="theIf_then_elseStatement" classname="ocajp.cap2.EUnderstandingJavaStatements" time="0.0"/>
+  </testsuite>
+</testrun>
