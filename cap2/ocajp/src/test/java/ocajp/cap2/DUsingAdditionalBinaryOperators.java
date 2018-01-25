@@ -111,13 +111,24 @@ public class DUsingAdditionalBinaryOperators {
 
             the final result can be determined by the left-hand side of the expression.
          */
-            int y = 9;
-            boolean x = true || (y < 4); //always TRUE
+        int y = 9;
+        boolean x = true || (y < 4); //always TRUE
+
+        /*if(x != null && x.getValue() < 5) {// if x was null , then the short-circuit prevents a NullPointerException
+            // Do something
+        }*/
+        //si x es null since the evaluation of x.getValue() < 5 is never reached, correct
+
+
+        int a = 6;
+        boolean b = (a >= 6) || (++a <= 7); //(a >= 6) es TRUE el otro ya no se usa entonces --a sigue siendo 6
+        System.out.println(a);
+
     }
 
     @Test
     public void equalityOperators() {
-
+        //pag 65
     }
 
 
