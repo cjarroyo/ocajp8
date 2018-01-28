@@ -34,12 +34,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FUnderstandingAdvancedFlowControl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FUnderstandingAdvancedFlowControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ocajp/cap2/FUnderstandingAdvancedFlowControl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
               <caret line="112" column="89" lean-forward="false" selection-start-line="112" selection-start-column="89" selection-end-line="112" selection-end-column="89" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GExcercises.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ocajp/cap2/GExcercises.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#301#310#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,6 +108,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ocajp/cap2/DUsingAdditionalBinaryOperators.java" />
         <option value="$PROJECT_DIR$/src/test/java/ocajp/cap2/EUnderstandingJavaStatements.java" />
         <option value="$PROJECT_DIR$/src/test/java/ocajp/cap2/FUnderstandingAdvancedFlowControl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ocajp/cap2/GExcercises.java" />
       </list>
     </option>
   </component>
@@ -171,6 +185,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EUnderstandingJavaStatements.theForStatement">
+  <component name="RunManager" selected="JUnit.GExcercises.veinte">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -206,7 +223,7 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="DUsingAdditionalBinaryOperators.logicalOperators" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GExcercises.diez" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ocajp.cap2.*" />
@@ -217,8 +234,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ocajp.cap2" />
-      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.DUsingAdditionalBinaryOperators" />
-      <option name="METHOD_NAME" value="logicalOperators" />
+      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.GExcercises" />
+      <option name="METHOD_NAME" value="diez" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -231,7 +248,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EUnderstandingJavaStatements.theForStatement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GExcercises.dieznueve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ocajp.cap2.*" />
@@ -242,8 +259,83 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ocajp.cap2" />
-      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.EUnderstandingJavaStatements" />
-      <option name="METHOD_NAME" value="theForStatement" />
+      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.GExcercises" />
+      <option name="METHOD_NAME" value="dieznueve" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GExcercises.nueve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ocajp.cap2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ocajp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ocajp.cap2" />
+      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.GExcercises" />
+      <option name="METHOD_NAME" value="nueve" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GExcercises.trece" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ocajp.cap2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ocajp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ocajp.cap2" />
+      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.GExcercises" />
+      <option name="METHOD_NAME" value="trece" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="GExcercises.veinte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ocajp.cap2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ocajp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ocajp.cap2" />
+      <option name="MAIN_CLASS_NAME" value="ocajp.cap2.GExcercises" />
+      <option name="METHOD_NAME" value="veinte" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -316,14 +408,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DUsingAdditionalBinaryOperators.logicalOperators" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EUnderstandingJavaStatements.theForStatement" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.GExcercises.nueve" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GExcercises.diez" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GExcercises.trece" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GExcercises.dieznueve" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GExcercises.veinte" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EUnderstandingJavaStatements.theForStatement" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DUsingAdditionalBinaryOperators.logicalOperators" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GExcercises.veinte" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GExcercises.dieznueve" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GExcercises.trece" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GExcercises.diez" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GExcercises.nueve" />
       </list>
     </recent_temporary>
   </component>
@@ -342,20 +440,44 @@
       <updated>1516828526399</updated>
       <workItem from="1516828610772" duration="103000" />
       <workItem from="1516835240320" duration="5040000" />
-      <workItem from="1517114802329" duration="5106000" />
+      <workItem from="1517114802329" duration="9530000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DUsingAdditionalBinaryOperators_logicalOperators - 2018.01.24 at 19h 37m 30s.xml">
-      <configuration name="DUsingAdditionalBinaryOperators.logicalOperators" configurationId="JUnit" />
+    <history-entry file="GExcercises_diez - 2018.01.28 at 01h 50m 52s.xml">
+      <configuration name="GExcercises.diez" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EUnderstandingJavaStatements_theForStatement - 2018.01.27 at 23h 48m 07s.xml">
-      <configuration name="EUnderstandingJavaStatements.theForStatement" configurationId="JUnit" />
+    <history-entry file="GExcercises_diez - 2018.01.28 at 01h 51m 12s.xml">
+      <configuration name="GExcercises.diez" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_dieznueve - 2018.01.28 at 02h 32m 52s.xml">
+      <configuration name="GExcercises.dieznueve" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_nueve - 2018.01.28 at 01h 47m 15s.xml">
+      <configuration name="GExcercises.nueve" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_seis - 2018.01.28 at 01h 38m 54s.xml">
+      <configuration name="GExcercises.seis" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_trece - 2018.01.28 at 02h 00m 50s.xml">
+      <configuration name="GExcercises.trece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_trece - 2018.01.28 at 02h 10m 48s.xml">
+      <configuration name="GExcercises.trece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_trece - 2018.01.28 at 02h 11m 42s.xml">
+      <configuration name="GExcercises.trece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_trece - 2018.01.28 at 02h 11m 54s.xml">
+      <configuration name="GExcercises.trece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GExcercises_veinte - 2018.01.28 at 02h 42m 33s.xml">
+      <configuration name="GExcercises.veinte" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10249000" />
+    <option name="totallyTimeSpent" value="14673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
@@ -371,7 +493,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19743863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40875134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -383,7 +505,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -399,7 +521,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ocajp/cap2/GExcercises.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -485,12 +617,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ocajp/cap2/GExcercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>ocajp:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ocajp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
