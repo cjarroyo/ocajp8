@@ -33,8 +33,6 @@ public class DUsingAdditionalBinaryOperators {
         int z = (int)9l;
         long t = 192301398193810323L;
 
-        /*******Overfl ow and Underflow: ver siguiente metodo********/
-
         short a = 10;
         short b = 3;
         //short c =  a * b; // DOES NOT COMPILE, a y b son promovidos a int x lo que (a * b) es int, int es mas grande que short, so, error, tendrias que castearlo a short para que compile
@@ -47,7 +45,7 @@ public class DUsingAdditionalBinaryOperators {
         /*The second value, 1,921,222 , is too large to be stored as a short, so numeric OVERFLOW occurs and it becomes 20,678*/
         /*OVERFLOW is when a number is so large that it will no longer fit within the data type, so
           the system "wraps around"  to the next lowest value and counts up from there.*/
-        /*There's also an analogous UNDERFLOW, when the number is too low to fi t in the data type.*/
+        /*There's also an analogous UNDERFLOW, when the number is too low to fit in the data type.*/
         /*OJO*/
         System.out.print(2147483647 + 1); // -2147483648
         //Since 2147483647 is the maximum int value, adding any strictly positive value to it will
@@ -67,11 +65,11 @@ public class DUsingAdditionalBinaryOperators {
         int b = 5;
         //b = b * a; // DOES NOT COMPILE
         b *= a;//FIXING, The compound operator will first cast "a" to a long , apply the multiplication of two long values, then cast the result to an int
-
-        long p = 5;
+        //System.out.println(a);
+        /*long p = 5;
         long q = (p=3);
         System.out.println(p); // Outputs 3
-        System.out.println(q); // Also, outputs 3
+        System.out.println(q); // Also, outputs 3*/
     }
 
     @Test
@@ -98,7 +96,7 @@ public class DUsingAdditionalBinaryOperators {
     @Test
     public void logicalOperators() {
         /*The logical operators, ( & ), ( | ), and ( ^ ), may be applied to both numeric and boolean data types*/
-        /*when they’re applied to numeric data types, they’re referred to as bitwise operators*/
+        /*when they’re applied to numeric data types, they’re referred to as bitwise(bit a bit) operators*/
         /*
             x & y       x | y           x ^ y
             (AND)   (INCLUSIVE OR)  (EXCLUSIVE OR)
@@ -133,8 +131,8 @@ public class DUsingAdditionalBinaryOperators {
     	//the equals operator == and not equals operator !=, they compare two operands and return a boolean value
     	/*
     	The equality operators are used in one of three scenarios:
-    		1. Comparing two numeric primitive types. If the numeric values are of different data
-    			types, the values are automatically promoted as previously described. For example,
+    		1.  Comparing two numeric primitive types. If the numeric values are of different data types,
+    		    the values are automatically promoted as previously described. For example,
     			5 == 5.00 returns true since the left side is promoted to a double.
     		2. Comparing two boolean values.
     		3. Comparing two objects, including null and String values.

@@ -5,7 +5,6 @@ import org.junit.Test;
 public class CWorkingWithUnaryOperators {
 	/*unary operator is one that requires exactly one operand, or variable, to function*/
 	/*
-	 
 	 TABLE 2. 2 Java unary operators
 	______________________________________
 	Unary operator 			Description
@@ -14,7 +13,7 @@ public class CWorkingWithUnaryOperators {
 		- 					Indicates a literal number is negative or negates an expression
 		++ 					Increments a value by 1
 		-- 					Decrements a value by 1
-		! 					Inverts a Boolean’s logical value
+		! 					Inverts a Booleans logical value
 	____________________________________
 	 */
 	

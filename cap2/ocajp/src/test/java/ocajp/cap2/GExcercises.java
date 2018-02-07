@@ -76,8 +76,7 @@ public class GExcercises {
 
     @Test
     public void quince(){
-        int x = 1, y = 15;
-
+        int x = 1, y = (int)15L;
 
     }
 

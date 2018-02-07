@@ -124,29 +124,41 @@ public class EUnderstandingJavaStatements {
 			break;
 		}*/
 		//output: Weekday
-		/*int dayOfWeek2 = 5;
-		switch (dayOfWeek2) {
-		case 0:
-			System.out.println("Sunday");
-		default:
-			System.out.println("Weekday");
-		case 6:
-			System.out.println("Saturday");
-			break;
-		}*/
+
+//		int dayOfWeek2 = 5;
+//		switch (dayOfWeek2) {
+//		case 0:
+//			System.out.println("Sunday");
+//		default:
+//			System.out.println("Weekday");
+//		case 6:
+//			System.out.println("Saturday");
+//			break;
+//		}
 		//Weekday
 		//Saturday
+
 		//The order of the case and default statements is now important
-		/*int dayOfWeek3 = 6;
-		switch (dayOfWeek3) {
-		case 0:
-			System.out.println("Sunday");
-		default:
-			System.out.println("Weekday");
-		case 6:
-			System.out.println("Saturday");
-			break;
-		}*/
+//		int dayOfWeek3 = 6;
+//		switch (dayOfWeek3) {
+//		case 0:
+//			System.out.println("Sunday");
+//		default:
+//			System.out.println("Weekday");
+//		case 6:
+//			System.out.println("Saturday");
+//			break;
+//		}
+
+
+
+
+
+
+
+
+
+
 		//Saturday
 		
 		int dayOfWeek4 = 0;
@@ -159,6 +171,8 @@ public class EUnderstandingJavaStatements {
 			System.out.println("Saturday");
 			break;
 		}
+
+
 		//Sunday
 		//Weekday
 		//Saturday
@@ -181,7 +195,7 @@ public class EUnderstandingJavaStatements {
 		case suffix:
 			id = 0;
 			break;
-		case lastName: // DOES NOT COMPILE, tiene que ser final variable
+		case lastName: // DOES NOT COMPILE, no es constante, ya que se pasa a la función;
 			id = 8;
 			break;
 		case 5: // DOES NOT COMPILE, match con string
@@ -222,7 +236,7 @@ public class EUnderstandingJavaStatements {
 			x++;
 		} while (false);
 		System.out.println(x); // Outputs 1
-		//Java will execute the statement block fi rst, and then check the loop condition.
+		//Java will execute the statement block first, and then check the loop condition.
 		//puedes combinar los 2
 	}
 	
@@ -256,27 +270,27 @@ public class EUnderstandingJavaStatements {
         /* for( ) will not compile.  */
 
         /*2. Adding Multiple Terms to the for Statement */
-        /*int x = 0;
-        for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
-            System.out.print(y + " ");
-        }
-        System.out.print(x);*/
+//        int x = 0;
+//        for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
+//            System.out.print(y + " ");
+//        }
+//        System.out.print(x);
         /*you can declare a variable, such as x in this example, before the loop begins and use it after it completes*/
         /*your initialization block, boolean expression, and update statements can include extra variables that may not reference each other. For example, z is defined in the initialization block and is never used*/
         /*the update statement can modify multiple variables.*/
         /*Output: 0 1 2 3 4*/
 
         /*3. Redeclaring a Variable in the Initialization Block*/
-        /*int x = 0;
-        for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) {// DOES NOT COMPILE, porque x es int, luego lo redeclaran a long
-            System.out.print(x + " ");
-        }*/
+//        int x = 0;
+//        for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) {// DOES NOT COMPILE, porque x es int, luego lo redeclaran a long
+//            System.out.print(x + " ");
+//        }
 
-        /*int x = 0;
+        int x = 0;
         long y = 10;
         for(y = 0, x = 4; x < 5 && y < 10; x++, y++) {//ok
             System.out.print(x + " ");
-        }*/
+        }
 
         /* 4. Using Incompatible Data Types in the Initialization Block */
         //The variables in the initialization block must all be of the same type.
@@ -303,7 +317,7 @@ public class EUnderstandingJavaStatements {
         // composed of an initialization section and an object to be iterated over.
         // The right-hand side must be a built-in Java array or an object whose class implements java.lang.Iterable, which includes most of the Java Collections framework.
 
-        final String[] names = new String[3];
+        /*final String[] names = new String[3];
         names[0] = "Lisa";
         names[1] = "Kevin";
         names[2] = "Roger";
@@ -318,7 +332,7 @@ public class EUnderstandingJavaStatements {
         values.add("Roger");
         for(String value : values) {
             System.out.print(value + ", ");
-        }
+        }*/
         //output: Lisa, Kevin, Roger,
 
         /*String names2 = "Lisa";
