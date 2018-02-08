@@ -9,7 +9,6 @@ import org.junit.Test;
 
 public class E_Method_Chaining {
 
-
     @Test
     public void method_Chaining_1() {
         /* It is common to call multiple methods on the same String */
