@@ -5,6 +5,15 @@ package ch3.ch3.core_apis.E_Working_with_Dates_and_Times;
  * on 07 February 2018 - 4:50 PM
  */
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+import org.junit.Test;
+
 public class D_Formatting_Dates_and_Times {
 
     @Test
@@ -34,14 +43,14 @@ public class D_Formatting_Dates_and_Times {
          /* This is a reasonable way for computers to communicate, but probably not how you want to output the date and time in your program. Luckily there are some predefi ned formats
         that are more useful: */
         DateTimeFormatter shortDateTime = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        System.out.println(shortDateTime.format(dateTime)); // 1/20/20
-        System.out.println(shortDateTime.format(date)); // 1/20/20
-        System.out.println(shortDateTime.format(time)); // UnsupportedTemporalTypeException
+        // System.out.println(shortDateTime.format(dateTime)); // 1/20/20
+        // System.out.println(shortDateTime.format(date)); // 1/20/20
+        // System.out.println(shortDateTime.format(time)); // UnsupportedTemporalTypeException
         //similar
-        DateTimeFormatter shortDateTime = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        System.out.println(dateTime.format(shortDateTime));
-        System.out.println(date.format(shortDateTime));
-        System.out.println(time.format(shortDateTime));
+        //DateTimeFormatter shortDateTime2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        //System.out.println(dateTime.format(shortDateTime2));
+        //System.out.println(date.format(shortDateTime2));
+        //System.out.println(time.format(shortDateTime2));
     }
 
     /*
@@ -82,7 +91,7 @@ ofLocalizedTime                         Throws runtime exception                
     public void formatting_Dates_and_Times_5() {
         /*If you don’t want to use one of the predefi ned formats, you can create your own. For example, this code spells out the month*/
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
-        System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
+        //System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
 
         /*
         MMMM: M represents the month(M outputs 1, MM outputs 01, MMM outputs Jan, and MMMM outputs January)
@@ -97,9 +106,9 @@ ofLocalizedTime                         Throws runtime exception                
     @Test
     public void formatting_Dates_and_Times_6() {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("hh:mm");
-        f.format(dateTime);
-        f.format(date); // throws exception
-        f.format(time);
+        // f.format(dateTime);
+        // f.format(date); // throws exception
+        // f.format(time);
         /*Remember M (uppercase) is month and m (lowercase) is minute.
         We can only use this formatter with objects containing times. Therefore, line 6 will throw
         an exception.*/

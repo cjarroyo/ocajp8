@@ -5,6 +5,14 @@ package ch3.ch3.core_apis.E_Working_with_Dates_and_Times;
  * on 07 February 2018 - 4:50 PM
  */
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.Period;
+
+import org.junit.Test;
+
 public class C_Working_with_Periods {
     /* The head zookeeper has decided to switch the toys every month. This system will continue for three months to see how it works out. */
 
@@ -63,14 +71,14 @@ public class C_Working_with_Periods {
 
         Period wrong = Period.ofYears(1).ofWeeks(1); // every week
 
-        Period wrong = Period.ofYears(1);
-        wrong = Period.ofWeeks(7);
+        /*Period wrong = Period.ofYears(1);
+        wrong = Period.ofWeeks(7);*/
 
         /* This is clearly not what you intended! */
     }
 
     @Test
-    public void working_with_Periods_3() {
+    public void working_with_Periods_4() {
         /* The last thing to know about Period is what objects it can be used with. Let’s look at some code: */
         LocalDate date = LocalDate.of(2015, 1, 20);
         LocalTime time = LocalTime.of(6, 15);

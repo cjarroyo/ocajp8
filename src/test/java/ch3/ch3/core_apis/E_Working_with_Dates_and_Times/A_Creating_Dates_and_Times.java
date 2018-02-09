@@ -7,6 +7,13 @@ package ch3.ch3.core_apis.E_Working_with_Dates_and_Times;
 
 /* you need an import statement to work with the date and time classes */
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+
+import org.junit.Test;
+
 /* import java.time.*; */
 public class A_Creating_Dates_and_Times {
     /* The exam gives you three choices */
@@ -17,7 +24,7 @@ public class A_Creating_Dates_and_Times {
     LocalDateTime: Contains both a date and time but no time zone. A good example of LocalDateTime is “the stroke of midnight on New Year’s.”
     */
     @Test
-    public void creating_Dates_and_Times_1(){
+    public void creating_Dates_and_Times_1() {
         /* create your fi rst date and time objects */
         System.out.println(LocalDate.now());
         System.out.println(LocalTime.now());
@@ -26,7 +33,7 @@ public class A_Creating_Dates_and_Times {
     }
 
     @Test
-    public void creating_Dates_and_Times_2(){
+    public void creating_Dates_and_Times_2() {
         /* let’s look at other specific dates and times */
         /* To begin, let’s create just a date with no time */
         /*
@@ -39,7 +46,7 @@ public class A_Creating_Dates_and_Times {
     }
 
     @Test
-    public void creating_Dates_and_Times_3(){
+    public void creating_Dates_and_Times_3() {
         /* When creating a time, you can choose how detailed you want to be. You can specify just the hour and minute, seconds, nanosecond */
         /*
         public static LocalTime of(int hour, int minute)
@@ -52,13 +59,13 @@ public class A_Creating_Dates_and_Times {
     }
 
     @Test
-    public void creating_Dates_and_Times_4(){
+    public void creating_Dates_and_Times_4() {
         /*Finally*/
 
         /*The first line of code shows how you can specify all the information about the LocalDateTime right in the same line*/
         LocalDateTime dateTime1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6, 15, 30);
         /*The second line of code shows how you can create LocalDate and LocalTime objects separately fi rst and then combine them to create a LocalDateTime object*/
-        LocalDateTime dateTime2 = LocalDateTime.of(date1, time1);
+        /* LocalDateTime dateTime2 = LocalDateTime.of(date1, time1); */
 
         /* This time there are a lot of method signatures since there are more combinations */
         /*

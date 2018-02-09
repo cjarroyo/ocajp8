@@ -5,10 +5,17 @@ package ch3.ch3.core_apis.E_Working_with_Dates_and_Times;
  * on 07 February 2018 - 4:49 PM
  */
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+
+import org.junit.Test;
+
 public class B_Manipulating_Dates_and_Times {
 
     @Test
-    public void manipulating_Dates_and_Times_1(){
+    public void manipulating_Dates_and_Times_1() {
         /*Adding to a date is easy. The date and time classes are immutable, just like String was.*/
 
         LocalDate date = LocalDate.of(2014, Month.JANUARY, 20);
@@ -24,7 +31,7 @@ public class B_Manipulating_Dates_and_Times {
     }
 
     @Test
-    public void manipulating_Dates_and_Times_2(){
+    public void manipulating_Dates_and_Times_2() {
         /* There are also nice easy methods to go backward in time. This time, let’s work with LocalDateTime. */
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(5, 15);
@@ -40,16 +47,16 @@ public class B_Manipulating_Dates_and_Times {
     }
 
     @Test
-    public void manipulating_Dates_and_Times_3(){
+    public void manipulating_Dates_and_Times_3() {
         /* It is common for date and time methods to be chained*/
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(5, 15);
-        LocalDateTime dateTime = LocalDateTime.of(date2, time).minusDays(1).minusHours(10).minusSeconds(30);
+        //LocalDateTime dateTime = LocalDateTime.of(date2, time).minusDays(1).minusHours(10).minusSeconds(30);
 
     }
 
     @Test
-    public void manipulating_Dates_and_Times_4(){
+    public void manipulating_Dates_and_Times_4() {
         /*exercise 1*/
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         date.plusDays(10);
@@ -60,10 +67,10 @@ public class B_Manipulating_Dates_and_Times {
     }
 
     @Test
-    public void manipulating_Dates_and_Times_5(){
+    public void manipulating_Dates_and_Times_5() {
         /*exercise 2*/
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
-        date = date.plusMinutes(1); // DOES NOT COMPILE
+        //date = date.plusMinutes(1); // DOES NOT COMPILE
         /*LocalDate does not contain time*/
     }
 
