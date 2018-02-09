@@ -64,11 +64,11 @@ public class D_Important_String_Methods {
         System.out.println(string.substring(string.indexOf('m'))); // mals
         System.out.println(string.substring(3, 4)); // m
         System.out.println(string.substring(3, 7)); // mals
-        /*Notice we said “stop at” rather than “include.” This means the endIndex parameter is allowed to be 1 past the end of the sequence */
+        /*Notice we said "stop at" rather than "include." This means the endIndex parameter is allowed to be 1 past the end of the sequence */
 
         System.out.println(string.substring(3, 3)); // empty string
-        System.out.println(string.substring(3, 2)); // throws exception becouse the final index is back
-        System.out.println(string.substring(3, 8)); // throws exception because 8 is out
+        //System.out.println(string.substring(3, 2)); // throws exception becouse the final index is back
+        //System.out.println(string.substring(3, 8)); // throws exception because 8 is out
 
     }
 
