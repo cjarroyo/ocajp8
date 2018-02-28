@@ -22,6 +22,5 @@ public class F_Sorting {
         numbers.add(81);
         Collections.sort(numbers);
         System.out.println(numbers); //[5, 81, 99]
-
     }
 }
