@@ -5,5 +5,7 @@ package methodFactoryPattern;
  * on 06 April 2018 - 11:16 AM
  */
 
-public class ChicagoPizzaFactory {
+public class ChicagoPizzaFactory{
+
+
 }
