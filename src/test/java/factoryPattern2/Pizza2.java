@@ -1,4 +1,4 @@
-package methodFactoryPattern;
+package factoryPattern2;
 
 /*
  * Created by: Cristian Arroyo

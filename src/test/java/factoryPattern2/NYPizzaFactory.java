@@ -1,14 +1,14 @@
-package methodFactoryPattern;
+package factoryPattern2;
 
 /*
  * Created by: Cristian Arroyo
  * on 06 April 2018 - 11:15 AM
  */
 
-import methodFactoryPattern.impl.NYCheesePizza2;
-import methodFactoryPattern.impl.NYClamPizza2;
-import methodFactoryPattern.impl.NYPepperoniPizza2;
-import methodFactoryPattern.impl.NYVeggiePizza2;
+import factoryPattern2.impl.NYCheesePizza2;
+import factoryPattern2.impl.NYClamPizza2;
+import factoryPattern2.impl.NYPepperoniPizza2;
+import factoryPattern2.impl.NYVeggiePizza2;
 
 public class NYPizzaFactory {
 
