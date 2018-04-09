@@ -7,5 +7,9 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Dough;
 
-public class ThinCrustDough extends Dough {
+public class ThinCrustDough implements Dough {
+
+    public ThinCrustDough() {
+        System.out.println("NY Thin Crust Dough");
+    }
 }

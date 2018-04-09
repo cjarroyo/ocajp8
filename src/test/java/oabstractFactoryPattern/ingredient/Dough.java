@@ -5,5 +5,5 @@ package oabstractFactoryPattern.ingredient;
  * on 08 April 2018 - 1:19 AM
  */
 
-public class Dough {
+public interface Dough {
 }

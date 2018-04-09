@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Sauce;
 
-public class MarinaraSauce extends Sauce {
+public class MarinaraSauce implements Sauce {
 }

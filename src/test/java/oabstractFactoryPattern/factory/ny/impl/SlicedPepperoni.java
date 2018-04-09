@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Pepperoni;
 
-public class SlicedPepperoni extends Pepperoni {
+public class SlicedPepperoni implements Pepperoni {
 }

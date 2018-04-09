@@ -5,5 +5,5 @@ package oabstractFactoryPattern.ingredient;
  * on 08 April 2018 - 1:20 AM
  */
 
-public class Pepperoni {
+public interface Pepperoni {
 }

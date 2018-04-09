@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.chicago.impl;
 
 import oabstractFactoryPattern.ingredient.Dough;
 
-public class ThickCrustDough extends Dough {
+public class ThickCrustDough implements Dough {
 }

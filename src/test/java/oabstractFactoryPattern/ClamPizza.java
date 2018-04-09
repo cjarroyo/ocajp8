@@ -5,9 +5,10 @@ package oabstractFactoryPattern;
  * on 08 April 2018 - 2:20 AM
  */
 
+import oabstractFactoryPattern.Pizza7;
 import oabstractFactoryPattern.factory.PizzaIngredientFactory;
 
-public class ClamPizza extends Pizza7{
+public class ClamPizza extends Pizza7 {
 
     private PizzaIngredientFactory ingredientFactory;
 

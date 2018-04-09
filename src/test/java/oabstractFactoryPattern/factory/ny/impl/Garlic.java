@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Veggies;
 
-public class Garlic extends Veggies {
+public class Garlic implements Veggies {
 }

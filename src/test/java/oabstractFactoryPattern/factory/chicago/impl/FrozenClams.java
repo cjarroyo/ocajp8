@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.chicago.impl;
 
 import oabstractFactoryPattern.ingredient.Clams;
 
-public class FrozenClams extends Clams {
+public class FrozenClams implements Clams {
 }

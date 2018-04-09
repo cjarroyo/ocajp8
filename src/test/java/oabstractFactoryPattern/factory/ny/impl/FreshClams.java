@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Clams;
 
-public class FreshClams extends Clams {
+public class FreshClams implements Clams {
 }

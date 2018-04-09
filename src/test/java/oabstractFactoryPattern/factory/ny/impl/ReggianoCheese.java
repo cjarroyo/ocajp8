@@ -7,5 +7,5 @@ package oabstractFactoryPattern.factory.ny.impl;
 
 import oabstractFactoryPattern.ingredient.Cheese;
 
-public class ReggianoCheese extends Cheese {
+public class ReggianoCheese implements Cheese {
 }

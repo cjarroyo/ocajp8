@@ -5,5 +5,5 @@ package oabstractFactoryPattern.ingredient;
  * on 08 April 2018 - 1:21 AM
  */
 
-public class Clams {
+public interface Clams {
 }
