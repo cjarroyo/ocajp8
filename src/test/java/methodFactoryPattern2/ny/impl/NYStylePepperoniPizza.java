@@ -8,4 +8,7 @@ package methodFactoryPattern2.ny.impl;
 import methodFactoryPattern2.Pizza3;
 
 public class NYStylePepperoniPizza extends Pizza3 {
+    public NYStylePepperoniPizza() {
+        System.out.println("instanciamos Pizzas Pepperoni estyle NY");
+    }
 }

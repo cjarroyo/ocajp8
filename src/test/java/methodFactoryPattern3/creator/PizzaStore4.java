@@ -10,9 +10,7 @@ import methodFactoryPattern3.product.Pizza4;
 public abstract class PizzaStore4 {
 
     public Pizza4 orderPizza(String type) {
-        Pizza4 pizza;
-
-        pizza = createPizza(type);
+        Pizza4 pizza = createPizza(type);
 
         pizza.prepare();
         pizza.bake();

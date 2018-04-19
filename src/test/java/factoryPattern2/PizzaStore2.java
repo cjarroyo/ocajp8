@@ -5,9 +5,12 @@ package factoryPattern2;
  * on 06 April 2018 - 7:06 PM
  */
 
+import factoryPattern2.nyFactory.NYPizzaFactory;
+import factoryPattern2.product.Pizza2;
+
 public class PizzaStore2 {
 
-    NYPizzaFactory nyPizzaFactory;
+    private NYPizzaFactory nyPizzaFactory;
 
     public PizzaStore2(NYPizzaFactory nyPizzaFactory) {
         this.nyPizzaFactory = nyPizzaFactory;
@@ -15,14 +18,7 @@ public class PizzaStore2 {
 
     public Pizza2 order(String type) {
 
-        /*ChicagoPizzaFactory chicagoFactory = new ChicagoPizzaFactory();
-        PizzaStore chicagoStore = new PizzaStore(chicagoFactory);
-        chicagoStore.order(“Veggie”);*/
-
-
-        NYPizzaFactory nyFactory = new NYPizzaFactory();
-        PizzaStore2 nyStore = new PizzaStore2(nyFactory);
-        Pizza2 pizza2 = nyStore.order("Veggie");
+        Pizza2 pizza2 = nyPizzaFactory.createPizza(type);
 
         pizza2.prepare();
         pizza2.bake();

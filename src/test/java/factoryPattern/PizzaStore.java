@@ -5,26 +5,24 @@ package factoryPattern;
  * on 05 April 2018 - 11:16 PM
  */
 
+import factoryPattern.factory.SimplePizzaFactory;
+import factoryPattern.product.Pizza;
+
 public class PizzaStore {
 
-    SimplePizzaFactory factory;
+    private SimplePizzaFactory factory;
 
     public PizzaStore(SimplePizzaFactory factory) {
         this.factory = factory;
     }
 
-    Pizza orderPizza(String type) {
-        Pizza pizza = new Pizza();
-
-        factory.createPizza(type);
-
+    public Pizza orderPizza(String type) {
+        Pizza pizza = factory.createPizza(type);
         pizza.prepare();
         pizza.bake();
         pizza.cut();
         pizza.box();
-
         return pizza;
-
     }
 
 }

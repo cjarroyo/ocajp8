@@ -8,4 +8,7 @@ package methodFactoryPattern2.chicago.impl;
 import methodFactoryPattern2.Pizza3;
 
 public class ChicagoStyleVeggiePizza extends Pizza3 {
+    public ChicagoStyleVeggiePizza() {
+        System.out.println("instanciamos Pizzas veggie estyle Chicago");
+    }
 }
