@@ -11,6 +11,7 @@ public class C_The_switch_Statement {
 
     @Test
     public void theSwitchStatement(){
+
         /**************Supported Data Types******************/
         /*supports any of the primitive numeric wrapper classes, Strin, Enums*/
 		/*supports
@@ -63,15 +64,6 @@ public class C_The_switch_Statement {
 //			System.out.println("Saturday");
 //			break;
 //		}
-
-
-
-
-
-
-
-
-
 
         //Saturday
 

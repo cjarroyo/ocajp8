@@ -31,14 +31,18 @@ public class D_The_continue_Statement {
         }
 
 
-        /*TABLE 2.5  Advanced flow control usage
+        /*
+        TABLE 2.5  Advanced flow control usage
+        ____________________________________________________________________________________________________________
+                        Allows optional labels          Allows break statement          Allows continue statement
+        ____________________________________________________________________________________________________________
+        if                  Yes *                               No                               No
+        while               Yes                                 Yes                              Yes
+        do while            Yes                                 Yes                              Yes
+        for                 Yes                                 Yes                              Yes
+        switch              Yes                                 Yes                              No
+        ____________________________________________________________________________________________________________
 
-                Allows optional labels          Allows break statement          Allows continue statement
-if                  Yes *                               No                               No
-while               Yes                                 Yes                              Yes
-do while            Yes                                 Yes                              Yes
-for                 Yes                                 Yes                              Yes
-switch              Yes                                 Yes                              No
-*/
+        */
     }
 }
