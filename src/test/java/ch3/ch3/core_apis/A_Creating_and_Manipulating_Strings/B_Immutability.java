@@ -8,18 +8,32 @@ package ch3.ch3.core_apis.A_Creating_and_Manipulating_Strings;
 import org.junit.Test;
 
 public class B_Immutability {
-    /* Once a String object is created, it is not allowed to change.*/
-    /* The trade-off for the optimal packing is zero flexibility.*/
-    /* You need to know that String is immutable.*/
+     /*
+     Once a String object is created, it is not allowed to change.
+     The trade-off for the optimal packing is zero flexibility.
+     You need to know that String is immutable.
+     */
 
     class Mutable {
         private String s;
-        public void setS(String newS){ s = newS; }// Setter makes it mutable
-        public String getS() { return s; } //Immutable only has a getter.
+
+        // Setter makes it mutable
+        public void setS(String newS) {
+            s = newS;
+        }
+
+        //Immutable only has a getter.
+        public String getS() {
+            return s;
+        }
     }
+
     final class Immutable {
         private String s = "name";
-        public String getS() { return s; }
+
+        public String getS() {
+            return s;
+        }
     }
 
     @Test
@@ -30,5 +44,4 @@ public class B_Immutability {
         s2.concat("3");
         System.out.println(s2);
     }
-
 }

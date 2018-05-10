@@ -17,7 +17,7 @@ For now, just remember that the String class is special and doesn’t need to be
 import org.junit.Test;
 
 public class A_Concatenation {
-    /* Placing one String before the other String and combining them together is called string concatenation*/
+    //Placing one String before the other String and combining them together is called string concatenation
 /*
 RULES:
   1. If both operands are numeric, + means numeric addition.
@@ -29,7 +29,7 @@ RULES:
     public void concatenation1() {
         System.out.println(1 + 2); //rule 1
         System.out.println("a" + "b"); //rule 2
-        System.out.println("a" + "b" + 3); //rule 3, rule 2
+        System.out.println("a" + "b" + 3 + 1); //rule 3, rule 2
         System.out.println(1 + 2 + "c"); //rule 3, rule 1, rule 2
     }
 

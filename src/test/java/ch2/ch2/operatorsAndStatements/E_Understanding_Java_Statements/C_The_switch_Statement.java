@@ -33,16 +33,16 @@ public class C_The_switch_Statement {
         int dayOfWeek = 5;
         switch (dayOfWeek) {
             default:
-                System.out.println("Weekday");
+                System.out.println("Weekday2");
                 break;
             case 0:
-                System.out.println("Sunday");
+                System.out.println("Sunday2");
                 break;
             case 6:
-                System.out.println("Saturday");
+                System.out.println("Saturday2");
                 break;
         }
-        //output: Weekday
+        //output: Weekday2
     }
 
     @Test
@@ -50,15 +50,15 @@ public class C_The_switch_Statement {
         int dayOfWeek2 = 5;
         switch (dayOfWeek2) {
             case 0:
-                System.out.println("Sunday");
+                System.out.println("Sunday3");
             default:
-                System.out.println("Weekday");
+                System.out.println("Weekday3");
             case 6:
-                System.out.println("Saturday");
+                System.out.println("Saturday3");
                 break;
         }
-        //Weekday
-        //Saturday
+        //Weekday3
+        //Saturday3
     }
 
     @Test
@@ -67,14 +67,14 @@ public class C_The_switch_Statement {
         int dayOfWeek3 = 6;
         switch (dayOfWeek3) {
             case 0:
-                System.out.println("Sunday");
+                System.out.println("Sunday4");
             default:
-                System.out.println("Weekday");
+                System.out.println("Weekday4");
             case 6:
-                System.out.println("Saturday");
+                System.out.println("Saturday4");
                 break;
         }
-        //Saturday
+        //Saturday4
     }
 
     @Test
@@ -82,16 +82,16 @@ public class C_The_switch_Statement {
         int dayOfWeek4 = 0;
         switch (dayOfWeek4) {
             case 0:
-                System.out.println("Sunday");
+                System.out.println("Sunday5");
             default:
-                System.out.println("Weekday");
+                System.out.println("Weekday5");
             case 6:
-                System.out.println("Saturday");
+                System.out.println("Saturday5");
                 break;
         }
-        //Sunday
-        //Weekday
-        //Saturday
+        //Sunday5
+        //Weekday5
+        //Saturday5
     }
 
     @Test
@@ -114,7 +114,7 @@ public class C_The_switch_Statement {
             case suffix:
                 id = 0;
                 break;
-            /*case lastName: // DOES NOT COMPILE, no es constante, ya que se pasa a la función;
+            /*case lastName: // DOES NOT COMPILE, no es constante, ya que se pasa a la funció, puede variar;
                 id = 8;
                 break;*/
             /*case 5: // DOES NOT COMPILE, match con string
