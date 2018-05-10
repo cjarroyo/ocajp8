@@ -6,7 +6,6 @@ package ch1.ch1.java_buildings_blocks.F_distinguishing_Between_Object_References
  */
 
 /*
-
 Java applications contain two types of data.
     -  primitive types
     -  reference types
@@ -33,7 +32,7 @@ public class A_PrimitiveTypes {
     ___________________________________________________________
 
  - float and double are used for floating-point (decimal) values.
- - A float requires the letter f following the number so Java knows it is a float.
+ - A float requires the letter "f" following the number so Java knows it is a float.
  - byte, short, int, and long are used for numbers without decimal points.
  - Each numeric type uses twice as many bits as the smaller similar type. For example, short uses twice as many bits as byte does.
 
@@ -56,7 +55,7 @@ public class A_PrimitiveTypes {
 
 
     There are a few more things you should know about numeric primitives.
-    When a number is present in the code, it is called a literal. By default, Java assumes you are defi ning an int value with a literal.
+    When a number is present in the code, it is called a literal. By default, Java assumes you are defining an int value with a literal.
     In this example, the number listed is bigger than what fits in an int.
     Remember, you aren’t expected to memorize the maximum value for an int. The exam will include it in the question if it comes up.
 
