@@ -12,7 +12,6 @@ public class A_WrittingAMainMethod {
     The JVM calls on the underlying system to allocate memory and CPU time, access files, and so on.
     The main() method lets us hook our code into this process, keeping it alive long enough to do the work we’ve coded.
      */
-
 }
 
 class Zoo {

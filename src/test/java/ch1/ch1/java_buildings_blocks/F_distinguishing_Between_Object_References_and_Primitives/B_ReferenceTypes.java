@@ -33,16 +33,19 @@ public class B_ReferenceTypes {
     The String and Date objects do not have names and can be accessed only via their corresponding reference.
     Figure 1.1 shows how the reference types appear in memory.
 
-    A Date reference            A Date object
+    A Date reference                 A Date object
 
-    today                       day   month   year
-    ----                        ---   ----    ----
-                                29      7     2011
+     __________                     ___________________
+    |today |   |                    |day   month   year|
+    |______|___|----------------->  |---   ----    ----|
+                                    |29      7     2011|
+                                    |__________________|
 
     A String reference      A String object
+     ____________            ______________
+    |gretting|   |          | How are you? |
+    |________|___| -------->|______________|
 
-    gretting                How are you?
-    ------
 
      */
 

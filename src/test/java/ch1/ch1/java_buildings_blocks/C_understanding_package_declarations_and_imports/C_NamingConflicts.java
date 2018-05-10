@@ -47,7 +47,5 @@ public class C_NamingConflicts {
             java.util.Date date;
             java.sql.Date sqlDate;
         }
-
-
      */
 }
