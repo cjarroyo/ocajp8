@@ -11,9 +11,10 @@ public class D_LogicalOperators {
 
     @Test
     public void logicalOperators() {
-        /*The logical operators, ( & ), ( | ), and ( ^ ), may be applied to both numeric and boolean data types*/
-        /*when they’re applied to numeric data types, they’re referred to as bitwise(bit a bit) operators*/
         /*
+        The logical operators, ( & ), ( | ), and ( ^ ), may be applied to both numeric and boolean data types
+        when they’re applied to numeric data types, they’re referred to as bitwise(bit a bit) operators
+
             x & y       x | y           x ^ y
             (AND)   (INCLUSIVE OR)  (EXCLUSIVE OR)
 

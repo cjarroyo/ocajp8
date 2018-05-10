@@ -10,8 +10,7 @@ import org.junit.Test;
 public class B_The_if_then_else_Statement {
 
     @Test
-    public void theIf_then_elseStatement(){
-
+    public void theIf_then_elseStatement_1() {
         int hourOfDay = 8;
         if (hourOfDay < 11) {
             System.out.println("Good Morning");
@@ -19,15 +18,23 @@ public class B_The_if_then_else_Statement {
         if (hourOfDay >= 11) {
             System.out.println("Good Afternoon");
         }
+    }
 
+    @Test
+    public void theIf_then_elseStatement_2() {
         //mejor usa esto:Now our code is truly branching between one of the two possible options,
+        int hourOfDay = 8;
         if (hourOfDay < 11) {
             System.out.println("Good Morning");
         } else {
             System.out.println("Good Afternoon");
         }
+    }
 
+    @Test
+    public void theIf_then_elseStatement_3() {
         // tambien
+        int hourOfDay = 8;
         if (hourOfDay < 11) {
             System.out.println("Good Morning");
         } else if (hourOfDay < 15) {
@@ -35,6 +42,11 @@ public class B_The_if_then_else_Statement {
         } else {
             System.out.println("Good Evening");
         }
+    }
+
+    @Test
+    public void theIf_then_elseStatement_4() {
+        int hourOfDay = 8;
         //if-then-else statements is that order is important
         if (hourOfDay < 15) {
             System.out.println("Good Afternoon");

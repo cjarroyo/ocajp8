@@ -16,24 +16,24 @@ public class B_NumericPromotion {
 		/*
 		 1. If two values have different data types, Java will automatically promote one of the values to the larger of the two data types.
 		 2. If one of the values is integral and the other is floating-point, Java will automatically promote the integral value to the floating-point values data type.
-		 3. Smaller data types, namely byte, short, and char, are first promoted to int any time they are used with a Java binary arithmetic operator, even if neither of the operands is int.
+		 3. Smaler data types, namely byte, short, and char, are first promoted to int any time they are used with a Java binary arithmetic operator, even if neither of the operands is int.
 		 (unary operators are excluded from this rule.) For example, applying ++ to a short value results in a short value.
 		 4. After all promotion has occurred and the operands have the same data type, the resulting value will have the same data type as its promoted operands.*/
 
         int a = 1;
         long b = 33;
-        System.out.println("First Rule, promoted to a long : --> " + a * b);
+        System.out.println("First Rule, promoted to 'a' long : --> " + a * b);
         //long is larger than int, then the int value is promoted to a long
 
         double c = 39.21;
         float d = 2.1f;
-        System.out.println("First Rule too, promoted to a double : --> " + c + d);
+        System.out.println("First Rule too, promoted to 'd' double : --> " + c + d);
         //with both operands being promoted to a double, and the result would be a double value
 
         short e = 10;
         short f = 3;
         System.out.println("Third Rule: " + e / f);
-        //that "x" and "y" will both be promoted to int
+        //that "e" and "f" will both be promoted to int
 
         short g = 14;
         float h = 13;

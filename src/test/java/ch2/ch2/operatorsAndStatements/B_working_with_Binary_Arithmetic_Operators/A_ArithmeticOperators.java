@@ -16,7 +16,7 @@ public class A_ArithmeticOperators {
 
     @Test
     public void arithmeticOperators(){
-        /*addition (+), subtraction (-), multiplication (*), division (/), and modulus (%), unary operators, ++ and --*/
+        // addition (+), subtraction (-), multiplication (*), division (/), and modulus (%), unary operators, ++ and --
 
 		/*the multiplicative operators (*, /, %) have a higher order of precedence
 		than the additive operators (+, -).*/
