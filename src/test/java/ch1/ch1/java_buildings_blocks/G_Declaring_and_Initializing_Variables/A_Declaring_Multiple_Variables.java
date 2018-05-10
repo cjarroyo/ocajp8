@@ -22,6 +22,7 @@ For example, here we merge the previous declarations and initializations into mo
     int numberAnimals = 100;
 In the following sections, we’ll look at how to declare multiple variables in one-line and legal identifiers.
  */
+
 public class A_Declaring_Multiple_Variables {
 
 // You can also declare and initialize multiple variables in the same statement. How many variables do you think are declared and initialized in the following two lines?
@@ -50,9 +51,9 @@ To make sure you understand this, see if you can figure out which of the followi
 */
     boolean b1, b2;
     String s11 = "1", s22;
-    //double d11, double d22;
+    //double d11, double d22;   // DOES NOT COMPILE
     int i15; int i25;
-    //int i35; i45;
+    //int i35; i45; // DOES NOT COMPILE
 /*
 The first statement is legal. It declares two variables without initializing them. The second statement is also legal. It declares two variables and initializes only one of them.
 The third statement is not legal. Java does not allow you to declare two different types in the same statement. Wait a minute! Variables d1 and d2 are the same type.
