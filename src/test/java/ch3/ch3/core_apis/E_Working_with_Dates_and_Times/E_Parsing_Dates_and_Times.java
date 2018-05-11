@@ -25,5 +25,4 @@ public class E_Parsing_Dates_and_Times {
         System.out.println(date); // 2015-01-02
         System.out.println(time); // 11:22
     }
-
 }
