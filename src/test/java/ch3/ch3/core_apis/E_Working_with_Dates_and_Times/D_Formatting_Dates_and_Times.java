@@ -55,21 +55,22 @@ public class D_Formatting_Dates_and_Times {
 
     /*
 
+
     TABLE 3.5 ofLocalized methods
-    =============================
-DateTimeFormatter f = DateTime
-Formatter._____(FormatStyle.SHORT);
-                                        Calling f.format(localDate)         Calling f.format(localDateTime)         Calling f.format(localTime)
+    _________________________________________________________________________________________________________________________________________________
+    DateTimeFormatter f = DateTime
+    Formatter._____(FormatStyle.SHORT);     Calling f.format(localDate)             Calling f.format(localDateTime)         Calling f.format(localTime)
+    _________________________________________________________________________________________________________________________________________________
 
-ofLocalizedDate                         Legal – shows                           Legal – shows                           Throws runtime exception
-                                        whole object                            just date part
+    ofLocalizedDate                         Legal – shows                           Legal – shows                           Throws runtime exception
+                                            whole object                            just date part
 
-ofLocalizedDateTime                     Throws runtime exception                Legal – shows                           Throws runtime exception
-                                                                                whole object
+    ofLocalizedDateTime                     Throws runtime exception                Legal – shows                           Throws runtime exception
+                                                                                    whole object
 
-ofLocalizedTime                         Throws runtime exception                Legal – shows                           Legal – shows
-                                                                                just time part                          whole object
-
+    ofLocalizedTime                         Throws runtime exception                Legal – shows                           Legal – shows
+                                                                                    just time part                          whole object
+    _________________________________________________________________________________________________________________________________________________
 
      */
 

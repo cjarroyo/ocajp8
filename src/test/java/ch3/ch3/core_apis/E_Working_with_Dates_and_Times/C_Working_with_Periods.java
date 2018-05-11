@@ -71,8 +71,8 @@ public class C_Working_with_Periods {
 
         Period wrong = Period.ofYears(1).ofWeeks(1); // every week
 
-        /*Period wrong = Period.ofYears(1);
-        wrong = Period.ofWeeks(7);*/
+        Period wrong1 = Period.ofYears(1);
+        wrong1 = Period.ofWeeks(7);
 
         /* This is clearly not what you intended! */
     }
