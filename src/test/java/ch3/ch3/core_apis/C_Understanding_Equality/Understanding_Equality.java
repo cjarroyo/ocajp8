@@ -42,10 +42,9 @@ public class Understanding_Equality {
         String x = new String("Hello World");
         String y = "Hello World";
         System.out.println(x == y); // false
-        //Since you have specifi cally requested a different String object, the pooled value isn’t shared
+        //Since you have specifically requested a different String object, the pooled value isn’t shared
     }
-
-    /*The lesson is to never use == to compare String objects. The only time you should have to deal with == for Strings is on the exam*/
+    //The lesson is to never use == to compare String objects. The only time you should have to deal with == for Strings is on the exam
 
     @Test
     public void understanding_Equality_5() {
@@ -54,7 +53,6 @@ public class Understanding_Equality {
         String z = " Hello World".trim();
         System.out.println(x.equals(z)); // true
         //check the values inside the String rather than the String itself
-
         //If you call equals() on two StringBuilder instances, it will check reference equality.
     }
 

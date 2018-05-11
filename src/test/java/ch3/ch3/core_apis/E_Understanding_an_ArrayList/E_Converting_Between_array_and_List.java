@@ -15,7 +15,7 @@ public class E_Converting_Between_array_and_List {
     //You should know how to convert between an array and an ArrayList
 
     @Test
-    public void converting_Between_array_and_List_1(){
+    public void converting_Between_array_and_List_1() {
         //Let’s start with turning an ArrayList into an array
         List<String> list = new ArrayList<>();
         list.add("hawk");
@@ -30,9 +30,9 @@ public class E_Converting_Between_array_and_List {
     }
 
     @Test(expected = UnsupportedOperationException.class)
-    public void converting_Between_array_and_List_2(){
+    public void converting_Between_array_and_List_2() {
         //Converting from an array to a List is more interesting.
-        String[] array = { "hawk", "robin" }; // [hawk, robin]
+        String[] array = {"hawk", "robin"}; // [hawk, robin]
         List<String> list = Arrays.asList(array); // returns fixed size list --> converts the array to a List
         System.out.println(list.size()); // 2
         list.set(1, "test"); // [hawk, test] -->It updates both array and list because they point to the same data store.
@@ -43,11 +43,9 @@ public class E_Converting_Between_array_and_List {
     }
 
     @Test
-    public void a_Cool_Trick_with_Varargs(){
+    public void a_Cool_Trick_with_Varargs() {
         //merging varargs with ArrayList conversion allows you to create an ArrayList in a cool way:
         List<String> list = Arrays.asList("one", "two");
         //asList() takes varargs, which let you pass in an array or just type out the String values.
-
     }
-
 }

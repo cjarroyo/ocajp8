@@ -56,6 +56,4 @@ public class A_Mutability_and_Chaining {
         System.out.println("b=" + b);
         /* There are two variables referring to that object. */
     }
-
-
 }

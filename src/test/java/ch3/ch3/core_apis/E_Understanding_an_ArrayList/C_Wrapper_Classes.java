@@ -8,10 +8,11 @@ package ch3.ch3.core_apis.E_Understanding_an_ArrayList;
 import org.junit.Test;
 
 public class C_Wrapper_Classes {
-    //Up to now, we’ve only put String objects in the ArrayList
-    //What happens if we want to put primitives in?
-    //Each primitive type has a wrapper class, which is an object type that corresponds to the primitive
     /*
+    Up to now, we’ve only put String objects in the ArrayList
+    What happens if we want to put primitives in?
+    Each primitive type has a wrapper class, which is an object type that corresponds to the primitive
+
     TABLE 3.2              Wrapper classes
     _______________________________________________________________________________________
     Primitive type                  Wrapper class                   Example of constructing
@@ -24,9 +25,7 @@ public class C_Wrapper_Classes {
     float                           Float                           new Float(1.0)
     double                          Double                          new Double(1.0)
     char                            Character                       new Character('c')
-     */
 
-    /*
     The wrapper classes also have a method that converts back to a primitive.
     You don’t need to know much about the constructors or intValue() type methods
     because autoboxing has removed the need for them

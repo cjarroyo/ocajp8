@@ -17,7 +17,6 @@ import org.junit.Test;
 /* import java.time.*; */
 public class A_Creating_Dates_and_Times {
     /* The exam gives you three choices */
-
     /*
     LocalDate: Contains just a date. good example of LocalDate is your birthday this year.
     LocalTime: Contains just a time. A good example of LocalTime is midnight
@@ -34,12 +33,13 @@ public class A_Creating_Dates_and_Times {
 
     @Test
     public void creating_Dates_and_Times_2() {
-        /* let’s look at other specific dates and times */
-        /* To begin, let’s create just a date with no time */
         /*
+        let’s look at other specific dates and times
+        To begin, let’s create just a date with no time
+
         public static LocalDate of(int year, int month, int dayOfMonth)
         public static LocalDate of(int year, Month month, int dayOfMonth)
-         */
+        */
         LocalDate date1 = LocalDate.of(2015, Month.JANUARY, 20); //recomendable
         LocalDate date2 = LocalDate.of(2015, 1, 20);
 
@@ -47,8 +47,9 @@ public class A_Creating_Dates_and_Times {
 
     @Test
     public void creating_Dates_and_Times_3() {
-        /* When creating a time, you can choose how detailed you want to be. You can specify just the hour and minute, seconds, nanosecond */
         /*
+        When creating a time, you can choose how detailed you want to be. You can specify just the hour and minute, seconds, nanosecond
+
         public static LocalTime of(int hour, int minute)
         public static LocalTime of(int hour, int minute, int second)
         public static LocalTime of(int hour, int minute, int second, int nanos)

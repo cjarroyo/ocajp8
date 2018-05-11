@@ -10,10 +10,11 @@ import java.util.Arrays;
 import org.junit.Test;
 
 public class D_Sorting {
-    //Java makes it easy to sort an array by providing a sort method
-    //Just like StringBuilder allowed you to pass almost anything to append(), you can pass almost any array to Arrays.sort().
-    //To use it, you must have either of the following two statements in your class
     /*
+    Java makes it easy to sort an array by providing a sort method
+    Just like StringBuilder allowed you to pass almost anything to append(), you can pass almost any array to Arrays.sort().
+    To use it, you must have either of the following two statements in your class
+
     import java.util.*          // import whole package including Arrays
     import java.util.Arrays;    // import just Arrays
     */

@@ -20,14 +20,15 @@ public class D_Important_String_Methods {
         /* The method length() returns the number of characters in the String */
         String string = "animals";
         System.out.println(string.length());
+        //outpu: 7
     }
 
     @Test
     public void charAt() {
         /* The method charAt() lets you query the string to find out what character is at a specific index. */
         String string = "animals";
-        System.out.println(string.charAt(0));
-        System.out.println(string.charAt(6));
+        System.out.println(string.charAt(0)); //output: a
+        System.out.println(string.charAt(6)); //output: s
         //System.out.println(string.charAt(7)); // throws exception java.lang.StringIndexOutOfBoundsException:
     }
 
@@ -109,7 +110,6 @@ public class D_Important_String_Methods {
         System.out.println("abc".startsWith("A")); // false
         System.out.println("abc".endsWith("c")); // true
         System.out.println("abc".endsWith("a")); // false
-
     }
 
     @Test

@@ -11,12 +11,13 @@ import java.util.List;
 import org.junit.Test;
 
 public class B_Using_an_ArrayList {
-    // a “class” named E
-    // E is used by convention in generics to mean “any class that this array can hold.”
-    // If you didn’t specify a type when creating the ArrayList, E means Object.
-    // You should also know that ArrayList implements toString() so you can easily see the contents just by printing it
-    // Arrays do not do produce such pretty output.
-
+    /*
+     a “class” named E
+     E is used by convention in generics to mean “any class that this array can hold.”
+     If you didn’t specify a type when creating the ArrayList, E means Object.
+     You should also know that ArrayList implements toString() so you can easily see the contents just by printing it
+     Arrays do not do produce such pretty output.
+    */
     @Test
     public void add() {
         // Insert a new value in the ArrayList
@@ -44,7 +45,6 @@ public class B_Using_an_ArrayList {
         birds.add(0, "blue jay"); // [blue jay, hawk, robin]
         birds.add(1, "cardinal"); // [blue jay, cardinal, hawk, robin]
         System.out.println(birds); // [blue jay, cardinal, hawk, robin]
-
     }
 
     @Test
@@ -63,8 +63,6 @@ public class B_Using_an_ArrayList {
         System.out.println(birds.remove("hawk")); // prints true
         System.out.println(birds.remove(0)); // prints hawk
         System.out.println(birds); // []
-
-
     }
 
     @Test

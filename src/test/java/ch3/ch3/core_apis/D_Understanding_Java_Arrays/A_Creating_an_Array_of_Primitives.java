@@ -7,10 +7,11 @@ package ch3.ch3.core_apis.D_Understanding_Java_Arrays;
 
 import org.junit.Test;
 
-//An array is an area of memory on the heap with space for a designated number of elements.
-/* A String is implemented as an array with some methods that you might want to use when dealing with characters specifi cally.*/
-/* A StringBuilder is implemented as an array where the array object is replaced with a new bigger array object when it runs out of space to store all the characters.*/
-/* A big difference is that an array can be of any other Java type.
+/*
+ An array is an area of memory on the heap with space for a designated number of elements.
+ A String is implemented as an array with some methods that you might want to use when dealing with characters specifically.
+ A StringBuilder is implemented as an array where the array object is replaced with a new bigger array object when it runs out of space to store all the characters.
+ A big difference is that an array can be of any other Java type.
 
 If we didn’t want to use a String for some reason, we could use an array of char primitives directly
 char[] letters;
@@ -28,14 +29,14 @@ public class A_Creating_an_Array_of_Primitives {
     public void creating_an_Array_of_Primitives_1() {
         //The most common way to create an array
         int[] numbers1 = new int[3];
-        //It specifi es the type of the array (int) and the size (3)
-        //The brackets tell you this is an array
+        /*
+        It specifies the type of the array (int) and the size (3)
+        The brackets tell you this is an array
+        When using this form to instantiate an array, set all the elements to the default value for that type. As you learned in Chapter 1, the default value of an int is 0
 
-        //When using this form to instantiate an array, set all the elements to the default value for that type. As you learned in Chapter 1, the default value of an int is 0
-
-        // element      0   0   0
-        //              _   _   _
-        //index         0   1   2
+         element      0   0   0
+                      _   _   _
+        index         0   1   2                                         */
     }
 
     @Test
@@ -54,7 +55,7 @@ public class A_Creating_an_Array_of_Primitives {
         are specifying the initial values, it already knows the size*/
 
         int[] numbers3 = {42, 55, 99};
-        //This approach is called an anonymous array. It is anonymous because you don’t specify the type and size
+        //This approach is called an "anonymous array". It is anonymous because you don’t specify the type and size
 
         //Finally, you can type the [] before or after the name, and adding a space
         int[] numAnimals;
@@ -62,7 +63,6 @@ public class A_Creating_an_Array_of_Primitives {
         int numAnimals3[];
         int numAnimals4 [];
         //Most people use the first one
-
     }
 
     @Test
@@ -71,8 +71,10 @@ public class A_Creating_an_Array_of_Primitives {
         //is two variables of type int[].
 
         int ids1[], types1;
-        //The fi rst one is called ids[]. This one is a int[] called ids.
-        //The second one is just called types. No brackets, so it is a regular integer.”
-        //Needless to say, you shouldn’t write code that looks like this
+        /*
+        The first one is called ids[]. This one is a int[] called ids.
+        The second one is just called types. No brackets, so it is a regular integer.”
+        Needless to say, you shouldn’t write code that looks like this
+        */
     }
 }

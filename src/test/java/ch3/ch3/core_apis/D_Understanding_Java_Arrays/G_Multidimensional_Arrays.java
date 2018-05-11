@@ -24,8 +24,7 @@ public class G_Multidimensional_Arrays {
         //You can think of the addressable range as [0][0] through [2][1],
         //Now suppose we set one of these values:
         rectangle[0][1] = "set";
-        /*
-                rectangule -->   0          1           2
+        /*      rectangule -->   0          1           2
                                  _          _           _
 
                                  |          |           |
@@ -33,16 +32,14 @@ public class G_Multidimensional_Arrays {
 
                                  0          0           0
                                  -          -           -
-                                 1(set)     1           1
-
-         */
+                                 1(set)     1           1                       */
     }
 
     @Test
     public void creating_a_Multidimensional_Array_1() {
         int[][] differentSize = {{1, 4}, {3}, {9, 8, 7}};
-        //An asymmetric multidimensional array
-        /*
+        /*An asymmetric multidimensional array
+
            different Sizes -->   0          1           2
                                  _          _           _
 
@@ -52,7 +49,6 @@ public class G_Multidimensional_Arrays {
                                  0 1        0           0 1 2
                                  - -        -           - - -
                                  1 4        3           9 8 7
-
          */
     }
 
