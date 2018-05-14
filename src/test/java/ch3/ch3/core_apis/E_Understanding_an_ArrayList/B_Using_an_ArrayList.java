@@ -58,11 +58,11 @@ public class B_Using_an_ArrayList {
         //The E return type is the element that actually got removed
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
-        birds.add("hawk"); // [hawk, hawk]
-        System.out.println(birds.remove("cardinal")); // prints false
-        System.out.println(birds.remove("hawk")); // prints true
+       // birds.add("hawk"); // [hawk, hawk]
+        //System.out.println(birds.remove("cardinal")); // prints false
+        //System.out.println(birds.remove("hawk")); // prints true
         System.out.println(birds.remove(0)); // prints hawk
-        System.out.println(birds); // []
+        //System.out.println(birds); // []
     }
 
     @Test
