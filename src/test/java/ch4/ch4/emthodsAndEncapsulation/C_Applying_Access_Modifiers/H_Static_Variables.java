@@ -28,9 +28,6 @@ public class H_Static_Variables {
         //NUM_BUCKETS = 5; // DOES NOT COMPILE
         //The compiler will make sure that you do not accidentally try to update a final variable.
     }
-
-
-
 }
 
 class Initializers {

@@ -41,27 +41,28 @@ public class B_Lambda_Syntax {
      */
 
     public static void main(String[] args) {
-        //print(() -> true);                        //0 parameters
-        //print(a -> a.startsWith("test"));           //1 parameter
-        //print((String a) -> a.startsWith("test"));  //1 parameter
-        //print((a, b) -> a.startsWith("test"));      //2 pareameters
-        //print((String a, String b) -> a.startsWith("test"));    //2 parameters
-
-        //print(a, b -> a.startsWith("test"));        // DOES NOT COMPILE
         /*
+        print(() -> true);                        //0 parameters
+        print(a -> a.startsWith("test"));           //1 parameter
+        print((String a) -> a.startsWith("test"));  //1 parameter
+        print((a, b) -> a.startsWith("test"));      //2 pareameters
+        print((String a, String b) -> a.startsWith("test"));    //2 parameters
+
+        print(a, b -> a.startsWith("test"));        // DOES NOT COMPILE
+
         The first line needs parentheses around the parameter list. Remember that the parenthe-
         ses are only optional when there is one parameter and it doesn’t have a type declared.
-         */
-        //print(a -> { a.startsWith("test"); });      // DOES NOT COMPILE
-        /*
-        The second line is missing the return keyword
-         */
-        //print(a -> { return a.startsWith("test") });    // DOES NOT COMPILE
-        /*
-        The last line is missing the semicolon
-         */
 
-        /*
+        print(a -> { a.startsWith("test"); });      // DOES NOT COMPILE
+
+        The second line is missing the return keyword
+
+        print(a -> { return a.startsWith("test") });    // DOES NOT COMPILE
+
+        The last line is missing the semicolon
+
+
+
         (a, b) -> { int a = 0; return 5;     // DOES NOT COMPILE,  Since Java doesn’t allow us to redeclare a local variable
 
 

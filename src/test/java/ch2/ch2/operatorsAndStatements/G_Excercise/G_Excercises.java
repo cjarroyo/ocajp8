@@ -148,4 +148,61 @@ public class G_Excercises {
         System.out.println(out);
 
     }
+
+    @Test
+    public void withz_1_1() {
+        //recorre hasta -4 de ahi el break lo bota del bucle
+        int ar[][] = {{1, 0}, {-4}, {3, 1}};
+
+        f1: for (int[] a : ar) {
+            for (int x = 0; x < a.length; x++) {
+                if (a[x] < 0)
+                    break f1;
+                System.out.print(a[x]);
+            }
+        }
+    }
+
+    @Test
+    public void withz_1_2() {
+        int x = 10;
+        while (x > 0) {
+            //hacer...mientras...
+            do {
+                x -= 2;
+            } while (x > 3);
+            x--;
+            System.out.print(x);
+        }
+        /*while(false){ DONT COMPILE
+
+        }*/
+    }
+
+    @Test
+    public void withz_1_3() {
+        int x = 0;
+        do {
+            System.out.print(x);//aumenta en uno tarde
+        } while (x++ < 2);
+        for (x = 0; x++ < 2; ) {//aumenta en uno
+            System.out.print(x);
+        }
+    }
+    @Test
+    public void withz_1_4() {
+        int x = 0;
+        do {
+            System.out.print(x);//aumenta en uno tarde
+        } while (x++ > 0);
+    }
+
+    @Test
+    public void withz_1_5() {
+        int x = 0;
+        while ((x = 0) <= 1) {
+            System.out.print(x);
+            x++;
+        }
+    }
 }

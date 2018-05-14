@@ -42,12 +42,11 @@ public class C_Predicates {
     }
 
     /*
-    Java 8 even integrated the Predicate interface into some existing classes. There is only
-one you need to know for the exam. ArrayList declares a removeIf() method that takes a
-Predicate. Imagine we have a list of names for pet bunnies. We decide we want to remove
-all of the bunny names that don’t begin with the letter h because our little cousin really
-wants us to choose an H name. We could solve this problem by writing a loop. Or we could
-solve it in one line:
+    Java 8 even integrated the Predicate interface into some existing classes. There is only one you need to know for the exam.
+    ArrayList declares a removeIf() method that takes a Predicate.
+    Imagine we have a list of names for pet bunnies.
+    We decide we want to remove all of the bunny names that don’t begin with the letter h because our little cousin really wants us to choose an H name.
+    We could solve this problem by writing a loop. Or we could solve it in one line:
 
  List<String> bunnies = new ArrayList<>();
 
@@ -62,14 +61,12 @@ solve it in one line:
  bunnies.removeIf(s -> s.charAt(0) != 'h');
 
  System.out.println(bunnies);  // [hoppy]
-Line 8 takes care of everything for us. It defines a predicate that takes a String and
-returns a boolean. The removeIf() method does the rest.
-For the OCA exam, you only need to know how to implement lambda expressions that
-use the Predicate interface. Remember the one method in the interface called test()? It
-takes any one reference type parameter and returns a boolean. Functional programming
-is a large topic and just the basics are covered. On the OCP exam, you’ll learn how to get
-rid of the loop entirely for more than just removeIf(). You’ll also learn the rules for imple-
-menting your own functional interfaces as we did with CheckTrait.
+Line 8 takes care of everything for us. It defines a predicate that takes a String and returns a boolean. The removeIf() method does the rest.
+For the OCA exam, you only need to know how to implement lambda expressions that use the Predicate interface.
+Remember the one method in the interface called test()? It takes any one reference type parameter and returns a boolean.
+Functional programming is a large topic and just the basics are covered.
+On the OCP exam, you’ll learn how to get rid of the loop entirely for more than just removeIf().
+You’ll also learn the rules for implementing your own functional interfaces as we did with CheckTrait.
 
      */
 }

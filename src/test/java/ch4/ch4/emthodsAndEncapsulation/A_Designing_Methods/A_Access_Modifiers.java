@@ -7,22 +7,22 @@ package ch4.ch4.emthodsAndEncapsulation.A_Designing_Methods;
 
 /*
 method declaration
-=================
+===================
 
-access modifier   optional specifier  return type   method name     parentheses (required)  exception (optional)
-                                                                    list of parameters
-
-public            final               void          nap             (int minutes)           throws InterruptedException {
+access modifier   (optional specifier)  return type   (method name)     parentheses (required)      exception (optional)
+    |                |                     |                |            list of parameters           |
+    |                |                     |                |                                         |
+public            final                  void             nap             (int minutes)             throws          InterruptedException {
         // take a nap
+            |
+            |
         method body
 }
-*/
 
-/*
 TABLE 4.1        Parts of a method declaration
-
+____________________________________________________________________________________________
 Element                     Value in nap() example          Required?
-____________________________________________________________________________________
+____________________________________________________________________________________________
 Access modifier             public                          No
 
 Optional specifier          final                           No
@@ -36,10 +36,9 @@ Parameter list              (int minutes)                   Yes, but can be empt
 Optional exception list     throws InterruptedException     No
 
 Method body                 {// take a nap}                 Yes, but can be empty braces
-________________________________________________________________________________________
+____________________________________________________________________________________________
 
 To call this method  --> nap(10);
-
  */
 
 public class A_Access_Modifiers {
@@ -51,12 +50,14 @@ public class A_Access_Modifiers {
         Default (Package Private): Access The method can only be called from classes in the same package.
         This one is tricky because there is no keyword for default access. You simply omit the access modifier.
     */
-    public void walk1() {}
+    public void walk1() {
+    }
 
     //default void walk2() {} // DOES NOT COMPILE ->  default is not a valid access modifier.
 
     //void public walk3() {} // DOES NOT COMPILE -> order
 
-    void walk4() {}
+    void walk4() {
+    }
 
 }

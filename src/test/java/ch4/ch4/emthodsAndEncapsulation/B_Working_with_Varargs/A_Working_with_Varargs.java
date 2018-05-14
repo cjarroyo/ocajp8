@@ -50,6 +50,4 @@ public class A_Working_with_Varargs {
     public void main3() {
         run(11, 22); // 22
     }
-
-
 }

@@ -7,7 +7,7 @@ package ch4.ch4.emthodsAndEncapsulation.A_Designing_Methods;
 
 public class C_Return_Type {
     //The return type might be an actual Java type such as String or int.
-    //If there is no return type, the void keyword is used
+    //If there is no return type, the void keyword is used.
     //You cannot omit the return type.
     //Can you explain why these methods compile or don’t?
 
@@ -23,9 +23,9 @@ public class C_Return_Type {
 
     //String walk6(int a) { if (a == 4) return ""; } // DOES NOT COMPILE
 
-    /*
-    When returning a value, it needs to be assignable to the return type.
-     */
+
+    //When returning a value, it needs to be assignable to the return type.
+
     int integerExpanded() {
         int temp = 9;
         return temp;
@@ -36,6 +36,7 @@ public class C_Return_Type {
         int temp = 9L; // DOES NOT COMPILE
         return temp;
 
-    }*/
-    //This shows more clearly why you can’t return a long primitive in a method that returns an int
+    }
+    This shows more clearly why you can’t return a long primitive in a method that returns an int
+    */
 }

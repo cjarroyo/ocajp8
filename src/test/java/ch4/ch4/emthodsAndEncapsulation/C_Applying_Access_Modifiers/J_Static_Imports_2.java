@@ -28,10 +28,10 @@ public class J_Static_Imports_2 {
          */
     }
 
-    /*
-     In Chapter 1, you learned that importing two classes with the same name gives a compiler error.
-     This is true of static imports as well.
-     The compiler will complain if you try to explicitly do a static import of
+/*
+In Chapter 1, you learned that importing two classes with the same name gives a compiler error.
+This is true of static imports as well.
+The compiler will complain if you try to explicitly do a static import of
 two methods with the same name or two static variables with the same name
 
 import static statics.A.TYPE;
@@ -39,8 +39,6 @@ import static statics.B.TYPE; // DOES NOT COMPILE
 
 Luckily when this happens, we can just refer to the static members via their classname in
 the code instead of trying to use a static import.
+*/
 
-
-
-     */
 }
