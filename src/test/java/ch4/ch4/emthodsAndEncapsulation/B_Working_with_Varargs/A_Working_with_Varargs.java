@@ -8,11 +8,12 @@ package ch4.ch4.emthodsAndEncapsulation.B_Working_with_Varargs;
 import org.junit.Test;
 
 public class A_Working_with_Varargs {
-    //a method may use a vararg parameter (variable argument).
-    //A vararg parameter must be the last element in a method’s parameter list
-    //This implies you are only allowed to have one vararg parameter per method.
-    //Can you identify why each of these does or doesn’t compile?
-
+    /*
+    a method may use a vararg parameter (variable argument).
+    A vararg parameter must be the last element in a method’s parameter list
+    This implies you are only allowed to have one vararg parameter per method.
+    Can you identify why each of these does or doesn’t compile?
+    */
     public void walk1(int... nums) {
     }
 
@@ -26,10 +27,11 @@ public class A_Working_with_Varargs {
     public static void walk(int start, int... nums) {
         System.out.println(nums.length);
     }
-
-    //When calling a method with a vararg parameter, you have a choice:
-    //You can pass in an array, or you can list the elements of the array and let Java create it for you.
-    //You an even omit the vararg values in the method call and Java will create an array of length zero for you.
+    /*
+    When calling a method with a vararg parameter, you have a choice:
+    You can pass in an array, or you can list the elements of the array and let Java create it for you.
+    You an even omit the vararg values in the method call and Java will create an array of length zero for you.
+    */
     @Test(expected = NullPointerException.class)
     public void main2() {
         walk(1); // 0 --> This means Java creates an array of length 0 for nums.

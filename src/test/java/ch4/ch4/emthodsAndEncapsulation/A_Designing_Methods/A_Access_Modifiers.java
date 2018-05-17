@@ -9,10 +9,10 @@ package ch4.ch4.emthodsAndEncapsulation.A_Designing_Methods;
 method declaration
 ===================
 
-access modifier   (optional specifier)  return type   (method name)     parentheses (required)      exception (optional)
-    |                |                     |                |            list of parameters           |
-    |                |                     |                |                                         |
-public            final                  void             nap             (int minutes)             throws          InterruptedException {
+(access modifier) (optional specifier) (return type) (method name) parentheses (required)  exception (optional)
+  |                |                       |               |        (list of parameters)          |
+  |                |                       |               |                                      |
+public            final                  void             nap         (int minutes)             throws          InterruptedException {
         // take a nap
             |
             |
@@ -51,6 +51,7 @@ public class A_Access_Modifiers {
         This one is tricky because there is no keyword for default access. You simply omit the access modifier.
     */
     public void walk1() {
+
     }
 
     //default void walk2() {} // DOES NOT COMPILE ->  default is not a valid access modifier.

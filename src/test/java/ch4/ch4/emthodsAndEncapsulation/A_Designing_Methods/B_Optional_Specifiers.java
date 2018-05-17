@@ -6,9 +6,10 @@ package ch4.ch4.emthodsAndEncapsulation.A_Designing_Methods;
  */
 
 public class B_Optional_Specifiers {
-    // Unlike with access modifiers, you can have multiple specifiers in the same method (although not all combinations are legal)
-    //you can have zero or more specifiers in a method declaration
     /*
+    Unlike with access modifiers, you can have multiple specifiers in the same method (although not all combinations are legal)
+    you can have zero or more specifiers in a method declaration
+
     static: Covered later in this chapter. Used for class methods.
     abstract: Covered in Chapter 5. Used when not providing a method body.
     final: Covered in Chapter 5. Used when a method is not allowed to be overridden by a subclass.

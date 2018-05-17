@@ -37,22 +37,22 @@ To review access modifiers, make sure you know why everything in Table 4.2 is tr
 Remember that a member is a method or field.
 
 TABLE 4.2 Access modifiers
-___________________________________________________________________________________________________________________________________________________________________________
-Can access          If that member is private?      If that member has default (package private) access?         If that member is protected?       If that member is public?
-___________________________________________________________________________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+Can access              If that member      If that member has default     If that member   If that member
+                         is private?        (package private) access?      is protected?     is public?
+______________________________________________________________________________________________________________
 
-Member in the same class    Yes                                 Yes                                                 Yes                                     Yes
+Member in the same class    Yes                     Yes                        Yes              Yes
 
 Member in another
-class in same package       No                                  Yes                                                 Yes                                     Yes
+class in same package       No                      Yes                        Yes              Yes
 
 Member in a
 superclass in a
-different package           No                                  No                                                  Yes                                     Yes
+different package           No                      No                         Yes              Yes
 
-Method/field in a non-
-superclass class in a
-different package           No                                  No                                                  No                                      Yes
-___________________________________________________________________________________________________________________________________________________________________________
-
+Method/field in a
+non-superclass class
+in a different package      No                      No                         No               Yes
+______________________________________________________________________________________________________________
 */

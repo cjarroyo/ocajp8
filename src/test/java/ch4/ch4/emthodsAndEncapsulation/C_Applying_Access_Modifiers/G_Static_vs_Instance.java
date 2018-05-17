@@ -17,22 +17,20 @@ public class G_Static_vs_Instance {
 class Static {
 
     private String name = "Static class";
-    public static void first() { }
-    public static void second() { }
+
+    public static void first() {
+    }
+
+    public static void second() {
+    }
+
     public void third() {
         System.out.println(name);
     }
 
-    public static void main(String args[]) {
-        first();
-        second();
-        //third(); // DOES NOT COMPILE --> Solution: new Static().third();
-
-    }
-}
     /*
     The compiler will give you an error about making a static reference to a nonstatic method.
-    If we fi x this by adding static to third(), we create a new problem.
+    If we fix this by adding static to third(), we create a new problem.
     Can you figure out what it is?
 
     All this does is move the problem. Now, third() is referring to nonstatic name.
@@ -41,13 +39,28 @@ class Static {
 
     The exam creators like this topic.
     A static method or instance method can call a static method because static methods don’t require an object to use.
-    Only an instance method can call another instance method on the same class without using a reference variable,
-    because instance methods do require an object.
-    Similar logic applies for the instance and static variables.
-    Make sure you understand Table 4.3 before continuing.
-    */
+    pero, un metodo estatico no puede llamar a una instancia de metodo
+     */
+    public static void static_method_1(String args[]) {
+        first();
+        second();
+        //third(); // DOES NOT COMPILE --> Solution: new Static().third();
+    }
+
+    public void instance_method_1(String args[]) {
+        third();
+    }
+    /*
+    Only an instance method can call another instance method on the same class without using a reference variable, because instance methods do require an object.
+     */
+    public void instance_method_2(String args[]) {
+        first();
+        second();
+    }
 
     /*
+    Similar logic applies for the instance and static variables. Make sure you understand Table 4.3 before continuing.
+
     TABLE 4.3      Static vs. instance calls
     ____________________________________________________________________________________________________________________
     Type                Calling                                 Legal?      How?
@@ -63,14 +76,20 @@ class Static {
     */
 
     // Do you understand why the following lines fail to compile?
+}
 
-class Gorilla{
+class Gorilla {
 
     public static int count;
 
     //static and instance methods can refer to a static variable.
-    public static void addGorilla() { count++; }
-    public void babyGorilla() { count++; }
+    public static void addGorilla() {
+        count++;
+    }
+
+    public void babyGorilla() {
+        count++;
+    }
 
     //instance method can call a static method
     public void announceBabies() {
@@ -82,9 +101,9 @@ class Gorilla{
         addGorilla();
         //babyGorilla(); // DOES NOT COMPILE,  because a static method cannot call an instance method
     }
+
     public int total;
     //public static average = total / count; // DOES NOT COMPILE,  because a static variable is trying to use an instance variable.
-
 }
 
 //A common use for static variables is counting the number of instances:
@@ -92,7 +111,10 @@ class Gorilla{
 class Counter {
 
     private static int count;
-    public Counter() { count++; }
+
+    public Counter() {
+        count++;
+    }
 
     public static void main(String[] args) {
         Counter c1 = new Counter();
@@ -101,10 +123,9 @@ class Counter {
         System.out.println(count); // 3
     }
     /*
-    Each time the constructor gets called, it increments count by 1. This example relies on
-    the fact that static (and instance) variables are automatically initialized to the default value
-    for that type, which is 0 for int. See Chapter 1 to review the default values.
-    Also notice that we didn’t write Counter.count. We could have. It isn’t necessary
-    because we are already in that class so the compiler can infer it.
+    Each time the constructor gets called, it increments count by 1.
+    This example relies on the fact that static (and instance) variables are automatically initialized to the default value for that type, which is 0 for int.
+    See Chapter 1 to review the default values. Also notice that we didn’t write Counter.count. We could have.
+    It isn’t necessary because we are already in that class so the compiler can infer it.
      */
 }

@@ -8,10 +8,28 @@ import org.junit.Test;
 public class G_Excercises {
 
     @Test
+    public void tres() {
+
+        int x = 0;
+        while(x++ <10){}
+        //String message = x>10 ? "Greater than":false; DONT COMPILE
+        //System.out.println(message+","+x);
+    }
+
+
+    @Test
     public void cuatro() {
 
         long x = 10;
+
         int y = (int) (2 * x);
+        System.out.println(y);
+
+        int z = 2 * (int) x;
+        System.out.println(z);
+
+        long w = 2 * x;
+        System.out.println(w);
 
     }
 
@@ -36,6 +54,20 @@ public class G_Excercises {
         if (y < 10) System.out.println("Too Low");
         else System.out.println("Just Right");
         //else System.out.println("Too High");
+    }
+
+    @Test
+    public void siete() {
+        int x = 5;
+        System.out.println(x > 2 ? x < 4 ? 10 : 8 : 7);
+    }
+
+    @Test
+    public void ocho() {
+        boolean x = true, z = true;
+        int y = 20;
+        x = (y != 10) ^ (z = false);
+        System.out.println(x + "" + y + "" + z);
     }
 
     @Test

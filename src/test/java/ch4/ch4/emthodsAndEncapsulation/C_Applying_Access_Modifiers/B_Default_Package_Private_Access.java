@@ -6,10 +6,12 @@ package ch4.ch4.emthodsAndEncapsulation.C_Applying_Access_Modifiers;
  */
 
 public class B_Default_Package_Private_Access {
-    //MotherDuck allows classes in the same package to access her members.
-    //When there is no access modifier, Java uses the default, which is package private access.
-    //This means that the member is “private” to classes in the same package.
-    //In other words, only classes in the package may access it.
+    /*
+    MotherDuck allows classes in the same package to access her members.
+    When there is no access modifier, Java uses the default, which is package private access.
+    This means that the member is “private” to classes in the same package.
+    In other words, only classes in the package may access it.
+    */
 }
 
 class MotherDuck {
@@ -44,7 +46,7 @@ class GoodDuckling {
 /*
 In this same pond, a swan just gave birth to a baby swan. A baby swan is called a cygnet.
 The cygnet sees the ducklings learning to quack and decides to learn from MotherDuck as well.
-
+//imagine que BadCygnet esta en otro paquete
  */
 class BadCygnet {
 
@@ -54,8 +56,10 @@ class BadCygnet {
         //System.out.println(duck.noise); // DOES NOT COMPILE
     }
 }
-/*Oh no! MotherDuck only allows lessons to other ducks by restricting access to the pond .duck package. Poor little BadCygnet
-is in the pond.swan package and the code doesn’t compile.*/
+/*
+Oh no! MotherDuck only allows lessons to other ducks by restricting access to the pond .duck package. Poor little BadCygnet
+is in the pond.swan package and the code doesn’t compile.
 
-//Remember that when there is no access modifi er, only classes in the same package can access it.
+Remember that when there is no access modifier, only classes in the same package can access it.
+*/
 

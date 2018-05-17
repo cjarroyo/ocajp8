@@ -14,7 +14,6 @@ public class C_Protected_Access {
     //package: pond.inland -> Classes: BirdWatcherFromAfar
     //package: pond.swan   -> Classes: Swan(extends Bird)
     //package: pond.duck   -> Classes: GooseWatcher
-
 }
 
 //we create a Bird class and give protected access to its members:
@@ -130,8 +129,7 @@ class Swan extends Bird { // but subclass of bird
     method is declared in Bird. GooseWatcher is not in the same package as Bird, nor does it
     extend Bird. Goose extends Bird. That only lets Goose refer to floatInWater() and not
     callers of Goose.
-
-*/
+    */
 
 
 }
