@@ -18,20 +18,15 @@ class Static {
 
     private String name = "Static class";
 
-    public static void first() {
-    }
+    public static void first() {}
 
-    public static void second() {
-    }
+    public static void second() {}
 
-    public void third() {
-        System.out.println(name);
-    }
+    public void third() {System.out.println(name);}
 
     /*
-    The compiler will give you an error about making a static reference to a nonstatic method.
-    If we fix this by adding static to third(), we create a new problem.
-    Can you figure out what it is?
+    The compiler will give you an error about making a static reference to a non-static method.
+    If we fix this by adding static to third(), we create a new problem. Can you figure out what it is?
 
     All this does is move the problem. Now, third() is referring to nonstatic name.
     Adding static to name as well would solve the problem.
@@ -48,6 +43,8 @@ class Static {
     }
 
     public void instance_method_1(String args[]) {
+        first();
+        second();
         third();
     }
     /*

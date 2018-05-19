@@ -1,14 +1,10 @@
 package ch4.ch4.emthodsAndEncapsulation.E_Overloading_Methods;
-
 /*
  * Created by: Cristian Arroyo
  * on 27 February 2018 - 7:58 PM
  */
 
-/*
-  Given the rule about Java picking the most specific version of a method that it can,
-  what do you think this code outputs?
- */
+//Given the rule about Java picking the most specific version of a method that it can, what do you think this code outputs?
 public class B_Reference_Types {
 
     public void fly(String s) {

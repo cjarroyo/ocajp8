@@ -4,7 +4,6 @@ package ch4.ch4.emthodsAndEncapsulation.D_Passing_Data_Among_Methods;
  * Created by: Cristian Arroyo
  * on 27 February 2018 - 7:58 PM
  */
-
 public class A_Passing_Data_Among_Methods {
     /*
     Java is a “pass-by-value” language.
@@ -23,8 +22,7 @@ public class A_Passing_Data_Among_Methods {
 
 }
 /*
-Notice how we keep talking about variable assignments.
-This is because we can call methods on the parameters.
+Notice how we keep talking about variable assignments. This is because we can call methods on the parameters.
 As an example, we have code that calls a method on the StringBuilder passed into the method
  */
 
@@ -39,31 +37,24 @@ class A_Passing_Data_Among_Methods_2 {
     public static void speak(StringBuilder s) {
         s.append("Webby");
     }
-
 }
-
 /*
-In this case, the output is Webby because the method merely calls a method on the
-parameter. It doesn’t reassign name to a different object
-
-you can see
-how pass-by-value is still used.
-s is a copy of the variable name.
+In this case, the output is Webby because the method merely calls a method on the parameter.
+It doesn’t reassign name to a different object you can see how pass-by-value is still used.
+"s" is a copy of the variable name.
 Both point to the same StringBuilder, which means that changes made to the StringBuilder are available to both references
 */
-
-
 class ReturningValues {
 
     public static void main(String[] args) {
         int number = 1;         // 1
         String letters = "abc";         // abc
-        number(number);         // 1
+        number(number);         // 1 -> se queda en uno
         letters = letters(letters);         // abcd
         System.out.println(number + letters);         // 1abcd
     }
 
-    public static int number(int number) {
+    public static int number(int number) {//aumneta en uno
         number++;
         return number;
     }

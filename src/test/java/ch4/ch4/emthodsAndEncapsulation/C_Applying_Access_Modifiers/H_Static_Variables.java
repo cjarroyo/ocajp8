@@ -1,11 +1,8 @@
 package ch4.ch4.emthodsAndEncapsulation.C_Applying_Access_Modifiers;
-
 /*
  * Created by: Cristian Arroyo
  * on 27 February 2018 - 7:57 PM
  */
-
-
 import java.util.ArrayList;
 
 public class H_Static_Variables {
@@ -33,7 +30,6 @@ class Initializers {
     public static void main(String[] args) {
         values.add("changed");
     }
-
     /*
     It actually does compile. "values" is a reference variable.
     We are allowed to call methods on reference variables.

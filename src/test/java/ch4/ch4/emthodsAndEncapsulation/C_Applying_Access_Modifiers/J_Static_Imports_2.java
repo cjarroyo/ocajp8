@@ -9,25 +9,20 @@ package ch4.ch4.emthodsAndEncapsulation.C_Applying_Access_Modifiers;
 
 /* tries to use a static import to import a class.
 Remember that static imports are only for importing static members.
-Regular imports are for importing a class*/
+Regular imports are for importing a class   */
 
 import static java.util.Arrays.asList;
 
 //static import java.util.Arrays.*; // DOES NOT COMPILE
 
 /* tries to see if you are paying attention to the order of keywords.
-The syntax is import static and not viceversa.
- */
+The syntax is import static and not viceversa.  */
 
 public class J_Static_Imports_2 {
     public static void main(String[] args) {
-        //Arrays.asList("one"); // DOES NOT COMPILE
-        /*
-         We imported the asList method on line 2. However,
-         we did not import the Arrays class anywher
-         */
+        // Arrays.asList("one"); // DOES NOT COMPILE
+        // We imported the asList method on line 2. However, we did not import the Arrays class anywhere
     }
-
 /*
 In Chapter 1, you learned that importing two classes with the same name gives a compiler error.
 This is true of static imports as well.

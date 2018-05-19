@@ -1,13 +1,10 @@
 package ch4.ch4.emthodsAndEncapsulation.C_Applying_Access_Modifiers;
-
 /*
  * Created by: Cristian Arroyo
  * on 27 February 2018 - 7:58 PM
  */
-
 import java.util.List;
 import static java.util.Arrays.asList; //static import
-
 
 public class J_Static_Imports {
 
@@ -15,9 +12,8 @@ public class J_Static_Imports {
         List<String> list = asList("one", "two"); //no Arrays
     }
 
-
 /*
-In this example, we are specifi cally importing the asList method.
+In this example, we are specifically importing the asList method.
 This means that any time we refer to asList in the class, it will call Arrays.asList().
 
 An interesting case is what would happen if we created an asList method in our StaticImports class.

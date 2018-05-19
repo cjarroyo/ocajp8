@@ -8,16 +8,13 @@ package ch4.ch4.emthodsAndEncapsulation.C_Applying_Access_Modifiers;
 import org.junit.Test;
 
 public class F_Calling_a_Static_Variable_or_Method {
-    /*
-    Usually, accessing a static member is easy. You just put the classname before the method or variable and you are done.
-    Example:
-    */
+
+    //Usually, accessing a static member is easy. You just put the classname before the method or variable and you are done. Example:
     @Test
     public void calling_a_Static_Variable_or_Method_1() {
         System.out.println(Koala.count);
         Koala.main(new String[0]);
     }
-
     /*
     Both of these are nice and easy. There is one rule that is trickier.
     You can use an instance of the object to call a static method.
@@ -57,5 +54,3 @@ public class F_Calling_a_Static_Variable_or_Method {
 
      */
 }
-
-
