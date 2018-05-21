@@ -8,29 +8,29 @@ package ch4.ch4.emthodsAndEncapsulation.F_Creating_Constructors;
 public class E_Order_of_Initialization {
 }
 /*
-Chapter 1 covered the order of initialization. Now that you’ve learned about static initializers, it is time to revisit that. Unfortunately, you do have to memorize this list.
+Chapter 1 covered the order of initialization. Now that you’ve learned about static initializers, it is time to revisit that. Unfortunately,
+    you do have to memorize this list.
 We’ll give you lots of practice, but you do need to know this order by heart.
 1. If there is a superclass, initialize it first (we’ll cover this rule in the next chapter. For now, just say “no superclass” and go on to the next rule.)
 2.  Static variable declarations and static initializers in the order they appear in the file.
 3.  Instance variable declarations and instance initializers in the order they appear in the file.
 4.  The constructor.
-
  */
 
 class InitializationOrderSimple {
-    private String name = "Torchie";
+    private String name = "Torchie"; //instance variable declaration
 
-    {
+    {       //instance initializers
         System.out.println(name);
     }
 
     private static int COUNT = 0;
 
-    static {
+    static { //static initializers
         System.out.println(COUNT);
     }
 
-    static {
+    static {//static initializers
         COUNT += 10;
         System.out.println(COUNT);
     }
@@ -52,10 +52,10 @@ class CallInitializationOrderSimple {
 
 /*************************/
  /*
- Let's look at why. Rule 1 doesn't apply because there is no superclass.
- Rule 2 says to run the static variable declarations and static initializers—in this case,
- lines 5 and 6, which output 0 and 10. Rule 3 says to run the instance variable declarations and instance initializers—here,
- lines 2 and 3, which output Torchie. Finally, rule 4 says to run the constructor—here, lines 7–9, which output constructor.
+Let's look at why. Rule 1 doesn't apply because there is no superclass.
+Rule 2 says to run the static variable declarations and static initializers—in this case,
+lines 5 and 6, which output 0 and 10. Rule 3 says to run the instance variable declarations and instance initializers—here,
+lines 2 and 3, which output Torchie. Finally, rule 4 says to run the constructor—here, lines 7–9, which output constructor.
 
 The next example is a little harder. Keep in mind that the four rules apply only if an object is instantiated.
 If the class is referred to without a new call, only rules 1 and 2 apply.

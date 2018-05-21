@@ -6,8 +6,7 @@ package ch4.ch4.emthodsAndEncapsulation.F_Creating_Constructors;
  */
 
 public class A_Creating_Constructors {
-    /* a constructor is a special method that matches the name of the class and has no return type.
-    Example: */
+    // a constructor is a special method that matches the name of the class and has no return type. Example:
     private String color;
     private int height;
     private int length;

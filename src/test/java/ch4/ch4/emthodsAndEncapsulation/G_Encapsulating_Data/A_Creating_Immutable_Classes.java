@@ -34,12 +34,9 @@ class Swan {
             this.numberEggs = numberEggs;
     }
 }
-/*
-For encapsulation, remember that data (an instance variable) is private and getters/setters
-are public. Java defines a naming convention that is used in JavaBeans. JavaBeans are reusable
-software components. JavaBeans call an instance variable a property. The only thing you need
-to know about JavaBeans for the exam is the naming conventions listed
- */
+/*  For encapsulation, remember that data (an instance variable) is private and getters/setters are public.
+    Java defines a naming convention that is used in JavaBeans. JavaBeans are reusable software components.
+    JavaBeans call an instance variable a property. The only thing you need to know about JavaBeans for the exam is the naming conventions listed   */
 
 class Saw2 {
 
@@ -137,10 +134,12 @@ class NotImmutable {
         System.out.println(problem.getBuilder()); // initial added more
 
     }
-    //The problem  is that we are just passing the same StringBuilder all over.
-    //The caller has a reference since it was passed to the constructor.
-    // Anyone who calls the getter gets a reference too.
-    //A solution is to make a copy of the mutable object. This is called a "defensive copy
+    /*
+    The problem  is that we are just passing the same StringBuilder all over.
+    The caller has a reference since it was passed to the constructor.
+    Anyone who calls the getter gets a reference too.
+    A solution is to make a copy of the mutable object. This is called a "defensive copy
+    */
 
 }
 

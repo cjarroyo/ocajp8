@@ -48,7 +48,6 @@ public class D_Putting_It_All_Together {
         System.out.print(glide("a", "b", "c"));
     }
     //print 142
-
 }
 
 class TooManyConversions {
@@ -61,7 +60,6 @@ class TooManyConversions {
         //play(4); // DOES NOT COMPILE
         play(4L); // calls the Long version
     }
-
     /*
     Here we have a problem. Java is happy to convert the int 4 to a long 4 or an Integer 4.
     It cannot handle converting in two steps to a long and then to a Long.

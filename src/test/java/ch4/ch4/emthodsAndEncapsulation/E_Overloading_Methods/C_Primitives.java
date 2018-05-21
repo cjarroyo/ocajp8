@@ -24,5 +24,4 @@ public class C_Primitives {
         p.fly(123);
         p.fly(123L);
     }
-
 }

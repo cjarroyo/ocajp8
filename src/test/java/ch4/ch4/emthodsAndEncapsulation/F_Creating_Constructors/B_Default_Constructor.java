@@ -6,16 +6,13 @@ package ch4.ch4.emthodsAndEncapsulation.F_Creating_Constructors;
  */
 
 public class B_Default_Constructor {
-
     public static void main(String[] args) {
         B_Default_Constructor rabbit = new B_Default_Constructor();
         // Calls default constructor
     }
-
 }
 
-class Rabbit1 {
-}
+class Rabbit1 {}
 
 class Rabbit2 {
     public Rabbit2() {
@@ -28,8 +25,7 @@ class Rabbit3 {
 }
 
 class Rabbit4 {
-    private Rabbit4() {
-    }
+    private Rabbit4() {}
 }
 
 class RabbitsMultiply {
