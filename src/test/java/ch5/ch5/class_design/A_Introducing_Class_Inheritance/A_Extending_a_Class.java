@@ -8,8 +8,8 @@ package ch5.ch5.class_design.A_Introducing_Class_Inheritance;
 /*
 Introducing Class Inheritance
 =============================
-When creating a new class in Java, you can defi ne the class to inherit from an existing class.
-Inheritance is the process by which the new child subclass automatically includes any public or protected primitives, objects, or methods defi ned in the parent class.
+When creating a new class in Java, you can define the class to inherit from an existing class.
+Inheritance is the process by which the new child subclass automatically includes any public or protected primitives, objects, or methods defined in the parent class.
 For illustrative purposes, we refer to any class that inherits from another class as a child class, or a descendent of that class.
 Alternatively, we refer to the class that the child inherits from as the parent class, or an ancestor of the class.
 If child X inherits from class Y, which in turn inherits from class Z, then X would be considered an indirect child, or descendent, of class Z.
@@ -28,18 +28,17 @@ For example, a dog object has multiple parent designations. Part of what makes m
 For example, if you have an object or method defined in all of the parents, which one does the child inherit?
 There is no natural ordering for parents in this example, which is why Java avoids these issues by disallowing multiple inheritance altogether.
 
-figure 5.1 Types of inheritance
+FIGURE 5.1 Types of inheritance
 
         Animal                          Animal  Pet Friendly
-
-Mammal          Bird                            Dog
-
+        |    |                               |   |   |
+   Mammal    Bird                               Dog
+                                             |   |   |
 Bat Tiger   Parrot  Eagle                   Husky   Poodle
 
-It is possible in Java to prevent a class from being extended by marking the class with the final modifier.
-If you try to defi ne a class that inherits from a final class, the compiler will throw an error and not compile.
+If you try to define a class that inherits from a final class, the compiler will throw an error and not compile.
 Unless otherwise specified, throughout this chapter you can assume the classes we work with are not marked as final.
- */
+*/
 
 public class A_Extending_a_Class {
 /*
@@ -55,17 +54,17 @@ public class A_Extending_a_Class {
                        |      |        |    class name
                        |      |        |        |        extends parent class(optional)
                        |      |        |        |             |
-                       |      |        |        |        ----------
+                       |      |        |        |      ------------
                     public abstract class ElephantSeal extends Seal {
 
                         //Method and Variables defined here
 
                     }
 
-    We’ll discuss what it means for a class to be abstract and final, as well as the class access modifiers, later in this chapter.
+    We’ll discuss what it means for a class to be "abstract" and "final", as well as the class access modifiers, later in this chapter.
 
-Because Java allows only one public class per file, we can create two files, Animal.java and Lion.java, in which the Lion class extends the Animal class.
-Assuming they are in the same package, an import statement is not required in Lion.java to access the Animal class. Here are the contents of Animal.java:
+    Because Java allows only one public class per file, we can create two files, Animal.java and Lion.java, in which the Lion class extends the Animal class.
+    Assuming they are in the same package, an import statement is not required in Lion.java to access the Animal class. Here are the contents of Animal.java:
 */
 public class Animal {
     private int age;
@@ -81,23 +80,22 @@ public class Animal {
 /*
 And here are the contents of Lion.java:
 */
-    public class Lion extends Animal {
-        private void roar() {
-            System.out.println("The " + getAge() + " year old lion says: Roar!");
-        }
+public class Lion extends Animal {
+    private void roar() {
+        System.out.println("The " + getAge() + " year old lion says: Roar!");
     }
+}
 /*
 Notice the use of the extends keyword in Lion.java to indicate that the Lion class extends from the Animal class.
 In this example, we see that getAge() and setAge() are accessible by subclass Lion, because they are marked as public in the parent class.
 The primitive age is marked as private and therefore not accessible from the subclass Lion, as the following would not compile:
-
-    public class Lion extends Animal {
-        private void roar() {
-        System.out.println("The "+age+" year old lion says: Roar!");
-            // DOES NOT COMPILE
-        }
+*/
+public class Lion2 extends Animal {
+    private void roar() {
+        //System.out.println("The " + age + " year old lion says: Roar!"); // DOES NOT COMPILE
     }
-
+}
+/*
 Despite the fact that age is inaccessible by the child class, if we have an instance of a Lion object, there is still an age value that exists within the instance.
 The age value just cannot be directly referenced by the child class nor any instance of the class.
 In this manner, the Lion object is actually “bigger” than the Animal object in the sense that it includes all the properties of the Animal object (although not all
