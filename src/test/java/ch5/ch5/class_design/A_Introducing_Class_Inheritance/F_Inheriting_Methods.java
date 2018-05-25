@@ -7,11 +7,12 @@ package ch5.ch5.class_design.A_Introducing_Class_Inheritance;
 
 public class F_Inheriting_Methods {
 /*
-Inheriting a class grants us access to the public and protected members of the parent class,
-but also sets the stage for collisions between methods defined in both the parent class and the subclass.
+Inheriting a class grants us access to the public and protected members of the parent class, but also sets the stage for collisions between methods defined in both the parent class and the subclass.
 In this section, we’ll review the rules for method inheritance and how Java handles such scenarios.
 */
-    public void overriding_a_Method() {}
+    public void overriding_a_Method() {
+    }
+}
 /*
 overriding_a_Method
 ===================
@@ -24,18 +25,18 @@ When you override a method, you may reference the parent version of the method u
 In this manner, the keywords this and super allow you to select between the current and parent version of a method, respectively.
 We illustrate this with the following example:
 */
-public class Canine {
+class Canine {
     public double getAverageWeight() {
         return 50;
     }
 }
 
-public class Wolf extends Canine {
+class Wolf extends Canine {
     public double getAverageWeight() {
         return super.getAverageWeight() + 20;
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println(new Canine().getAverageWeight());
         System.out.println(new Wolf().getAverageWeight());
     }
@@ -48,12 +49,12 @@ In this example, in which the child class Wolf overrides the parent class Canine
 You might be wondering, was the use of super in the child’s method required? For example,
 what would the following code output if we removed the super keyword in the getAverageWeight() method of the Wolf class?
 */
-public class Wolf2 extends Canine {
+class Wolf2 extends Canine {
     public double getAverageWeight() {
         return getAverageWeight() + 20; //INFINITE LOOP, recursive call.
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println(new Canine().getAverageWeight());
         System.out.println(new Wolf().getAverageWeight());
     }
@@ -83,27 +84,28 @@ They differ in that an overloaded method will use a different signature than an 
 This distinction allows overloaded methods a great deal more freedom in syntax than an overridden method would have.
 For example, take a look at the following code sample:
 */
-    public class Bird {
-        public void fly() {
-            System.out.println("Bird is flying");
-        }
-        public void eat(int food) {
-            System.out.println("Bird is eating "+food+" units of food");
-        }
+class Bird {
+    public void fly() {
+        System.out.println("Bird is flying");
     }
 
-    public class Eagle extends Bird {
-        public int fly(int height) {
-            System.out.println("Bird is flying at "+height+" meters");
-            return height;
-        }
+    public void eat(int food) {
+        System.out.println("Bird is eating " + food + " units of food");
+    }
+}
+
+class Eagle extends Bird {
+    public int fly(int height) {
+        System.out.println("Bird is flying at " + height + " meters");
+        return height;
+    }
         /*
         public int eat(int food) { // DOES NOT COMPILE
             System.out.println("Bird is eating "+food+" units of food");
             return food;
         }
         */
-    }
+}
 /*
 The first method, fly(), is overloaded in the subclass Eagle, since the signature changes from a no-argument constructor to a constructor with one int argument.
 Because the method is being overloaded and not overridden, the return type can be changed from void to int without issue.
@@ -116,18 +118,19 @@ doing so will help you with questions about whether the code will compile.
 
 Let’s review some examples of the last three rules of overriding methods so you can learn to spot the issues when they arise:
 */
-    public class Camel {
-        protected String getNumberOfHumps() {
-            return "Undefined";
-        }
+class Camel {
+    protected String getNumberOfHumps() {
+        return "Undefined";
     }
-    /*
-    public class BactrianCamel extends Camel {
-        private int getNumberOfHumps() { // DOES NOT COMPILE
-            return 2;
-        }
+}
+
+/*
+public class BactrianCamel extends Camel {
+    private int getNumberOfHumps() { // DOES NOT COMPILE
+        return 2;
     }
-    */
+}
+*/
 /*
 In this example, the method in the child class doesn’t compile for two reasons. First, it violates the second rule of overriding methods:
 the child method must be at least as accessible as the parent.
@@ -139,10 +142,10 @@ Once you have confirmed it is being overridden, check that the access modifiers,
 Let’s take a look at some example methods that use exceptions:
 
 */
-    public class InsufficientDataException extends Exception {
+    class InsufficientDataException extends Exception {
     }
 
-    public class Reptile {
+    class Reptile {
         protected boolean hasLegs() throws InsufficientDataException {
             throw new InsufficientDataException();
         }
@@ -152,7 +155,7 @@ Let’s take a look at some example methods that use exceptions:
         }
     }
 
-    public class Snake extends Reptile {
+    class Snake extends Reptile {
         protected boolean hasLegs() {
             return false;
         }
@@ -171,26 +174,28 @@ This is also permitted, as InsufficientDataException is a subclass of Exception 
 Neither of the methods in the previous example violates the third rule of overriding methods, so the code compiles and runs without issue.
 Let’s review some examples that do violate the third rule of overriding methods:
 */
-    public class InsufficientDataException2 extends Exception {}
+class InsufficientDataException2 extends Exception {
+}
 
-    public class Reptile2 {
-        protected double getHeight() throws InsufficientDataException2 {
-            return 2;
-        }
-        protected int getLength() {
-            return 10;
-        }
+class Reptile2 {
+    protected double getHeight() throws InsufficientDataException2 {
+        return 2;
     }
 
+    protected int getLength() {
+        return 10;
+    }
+}
 
-    public class Snake2 extends Reptile2 {
+
+class Snake2 extends Reptile2 {
 //        protected double getHeight() throws Exception { // DOES NOT COMPILE Exception no es subclase de InsufficientDataException2
 //            return 2;
 //        }
 //        protected int getLength() throws InsufficientDataException2 { // DOES NOT COMPILE. xq define una nueva exception que el padre no la tiene
 //            return 10;
 //        }
-    }
+}
 /*
 Unlike the earlier example, neither of the methods in the child class of this code will compile.
 The getHeight() method in the parent class throws an InsufficientDataException, whereas the method in the child class throws an Exception.
@@ -200,11 +205,7 @@ Next, the getLength() method doesn’t throw an exception in the parent class, b
 In this manner, the child class defines a new exception that the parent class did not, which is a violation of the third rule of overriding methods.
 The last three rules of overriding a method may seem arbitrary or confusing at first, but as you’ll see later in this chapter when we discuss polymorphism,
 they are needed for consistency of the language. Without these rules in place, it is possible to create contradictions within the Java language.
-*/
 
-
-    public void Redeclaring_private_Methods() {}
-/*
 Redeclaring_private_Methods
 ===========================
 The previous section defined the behavior if you override a public or protected method in the class. Now let’s expand our discussion to private methods.
@@ -215,17 +216,17 @@ Java permits you to redeclare a new method in the child class with the same or m
 This method in the child class is a separate and independent method, unrelated to the parent version’s method, so none of the rules for overriding methods are invoked.
 For example, let’s return to the Camel example we used in the previous section and show two related classes that define the same method:
 */
-    public class Camel2 {
-        private String getNumberOfHumps() {
-            return "Undefined";
-        }
+class Camel2 {
+    private String getNumberOfHumps() {
+        return "Undefined";
     }
+}
 
-    public class BactrianCamel extends Camel2 {
-        private int getNumberOfHumps() {
-            return 2;
-        }
+class BactrianCamel extends Camel2 {
+    private int getNumberOfHumps() {
+        return 2;
     }
+}
     //son metodos separados e independientes
 /*
 This code compiles without issue. Notice that the return type differs in the child method from String to int.
@@ -233,10 +234,8 @@ In this example, the method getNumberOfHumps() in the parent class is hidden, so
 As you saw in the previous section, if the method in the parent class were public or protected, the method in the child class would not compile because it would violate two rules
 of overriding methods.
 The parent method in this example is private, so there are no such issues.
-*/
 
-    public void Hiding_Static_Methods() {}
-/*
+
 Hiding_Static_Methods
 =====================
 A hidden method occurs when a child class defines a static method with the same name and signature as a static method defined in a parent class.
@@ -253,51 +252,55 @@ The following list summarizes the five rules for hiding a method:
 
 Note that the first four are the same as the rules for overriding a method.
 Let’s review some examples of the new rule:
+*/
+class Bear {
+    public static void eat() {
+        System.out.println("Bear is eating");
+    }
+}
 
-    public class Bear {
-        public static void eat() {
-            System.out.println("Bear is eating");
-        }
+
+class Panda extends Bear {
+
+    public static void eat() {
+        System.out.println("Panda bear is chewing");
     }
 
-
-    public class Panda extends Bear {
-
-        public static void eat() {
-            System.out.println("Panda bear is chewing");
-        }
-
-        public static void main(String[] args) {
-            Panda.eat();
-        }
-
+    public static void main(String[] args) {
+        Panda.eat();
     }
 
+}
+/*
 In this example, the code compiles and runs without issue. The eat() method in the child class hides the eat() method in the parent class.
 Because they are both marked as static, this is not considered an overridden method. Let’s contrast this with examples that violate the fifth rule:
-
-    public class Bear {
-        public static void sneeze() {
-            System.out.println("Bear is sneezing");
-        }
-        public void hibernate() {
-            System.out.println("Bear is hibernating");
-        }
-    }
-    public class Panda extends Bear {
-        public void sneeze() { // DOES NOT COMPILE
-            System.out.println("Panda bear sneezes quietly");
-        }
-        public static void hibernate() { // DOES NOT COMPILE
-            System.out.println("Panda bear is going to sleep");
-        }
+*/
+class Bear2 {
+    public static void sneeze() {
+        System.out.println("Bear is sneezing");
     }
 
+    public void hibernate() {
+        System.out.println("Bear is hibernating");
+    }
+}
+
+class Panda2 extends Bear2 {
+    /*
+    public void sneeze() { // DOES NOT COMPILE
+        System.out.println("Panda bear sneezes quietly");
+    }
+
+    public static void hibernate() { // DOES NOT COMPILE
+        System.out.println("Panda bear is going to sleep");
+    }
+    */
+}
+/*
 In this example, sneeze() is marked as static in the parent class but not in the child class.
 The compiler detects that you’re trying to override a method that should be hidden and generates a compiler error.
 In the second method, hibernate() is an instance member in the parent class but a static method in the child class.
 In this scenario, the compiler thinks that you’re trying to hide a method that should be overridden and also generates a compiler error.
-
 
 =========================================================
 As you saw in the previous example, hiding static methods is fraught with pitfalls and potential problems and as a practice should be avoided.
@@ -305,11 +308,7 @@ Though you might see questions on the exam that contain hidden static methods th
 own work, since it tends to lead to confusing and difficult-to-read code.
 You should not reuse the name of a static method in your class if it is already used in the parent class.
 =========================================================
-*/
 
-
-    public void Overriding_vs_Hiding_Methods() {
-/*
 Overriding_vs_Hiding_Methods
 =============================
 In our description of hiding of static methods, we indicated there was a distinction between overriding and hiding methods.
@@ -317,32 +316,35 @@ Unlike overriding a method, in which a child method replaces the parent method i
 At runtime the child version of an overridden method is always executed for an instance regardless of whether the method call is defi ned in a parent or child class method.
 In this manner, the parent method is never used unless an explicit call to the parent method is referenced, using the syntax ParentClassName.method() .
 Alternatively, at runtime the parent version of a hidden method is always executed if the call to the method is defined in the parent class. Let’s take a look at an example:
-
-    public class Marsupial {
-        public static boolean isBiped() {
-            return false;
-        }
-        public void getMarsupialDescription() {
-            System.out.println("Marsupial walks on two legs: "+isBiped());
-        }
-    }
-    public class Kangaroo extends Marsupial {
-
-        public static boolean isBiped() {
-            return true;
-        }
-        public void getKangarooDescription() {
-            System.out.println("Kangaroo hops on two legs: "+isBiped());
-        }
-
-        public static void main(String[] args) {
-            Kangaroo joey = new Kangaroo();
-            joey.getMarsupialDescription();
-            joey.getKangarooDescription();
-        }
+*/
+class Marsupial2 {
+    public static boolean isBiped() {
+        return false;
     }
 
+    public void getMarsupialDescription() {
+        System.out.println("Marsupial walks on two legs: " + isBiped());
+    }
+}
 
+class Kangaroo2 extends Marsupial2 {
+
+    public static boolean isBiped() {
+        return true;
+    }
+
+    public void getKangarooDescription() {
+        System.out.println("Kangaroo hops on two legs: " + isBiped());
+    }
+
+    public static void main(String[] args) {
+        Kangaroo2 joey = new Kangaroo2();
+        joey.getMarsupialDescription();
+        joey.getKangarooDescription();
+    }
+}
+
+/*
 In this example, the code compiles and runs without issue, outputting the following:
     Marsupial walks on two legs: false
     Kangaroo hops on two legs: true
@@ -352,32 +354,33 @@ The Marsupial class only knows about isBiped() from its own class definition, so
 In the second method call, the child executes a method of isBiped(), which hides the parent method’s version and returns true.
 
 Contrast this first example with the following example, which uses an overridden version of isBiped() instead of a hidden version:
-/*
-    class Marsupial {
-        public boolean isBiped() {
-            return false;
-        }
-
-        public void getMarsupialDescription() {
-            System.out.println("Marsupial walks on two legs: "+isBiped());
-        }
+*/
+class Marsupial3 {
+    public boolean isBiped() {
+        return false;
     }
 
-    public class Kangaroo extends Marsupial {
-        public boolean isBiped() {
-            return true;
-        }
-
-        public void getKangarooDescription() {
-            System.out.println("Kangaroo hops on two legs: "+isBiped());
-        }
-
-        public static void main(String[] args) {
-            Kangaroo joey = new Kangaroo();
-            joey.getMarsupialDescription();
-            joey.getKangarooDescription();
-        }
+    public void getMarsupialDescription() {
+        System.out.println("Marsupial walks on two legs: " + isBiped());
     }
+}
+
+class Kangaroo3 extends Marsupial3 {
+    public boolean isBiped() {
+        return true;
+    }
+
+    public void getKangarooDescription() {
+        System.out.println("Kangaroo hops on two legs: " + isBiped());
+    }
+
+    public static void main(String[] args) {
+        Kangaroo3 joey = new Kangaroo3();
+        joey.getMarsupialDescription();
+        joey.getKangarooDescription();
+    }
+}
+    /*
 This code also compiles and runs without issue, but it outputs slightly different text:
     Marsupial walks on two legs: true
     Kangaroo hops on two legs: true
@@ -386,13 +389,7 @@ In this example, the isBiped() method is overridden, not hidden, in the child cl
 Therefore, it is replaced at runtime in the parent class with the call to the child class’s method.
 Make sure you understand these examples as they show how hidden and overridden methods are fundamentally different.
 This example makes uses of polymorphism, which we’ll discuss later in this chapter.
-*/
-    }
 
-
-    public void creating_final_methods() {}
-
-/*
 creating_final_methods
 =====================
 We conclude our discussion of method inheritance with a somewhat self-explanatory rule: final methods cannot be overridden.
@@ -402,27 +399,22 @@ In other words, you cannot hide a static method in a parent class if it is marke
 
 Let’s take a look at an example:
 */
-    public class Bird4 {
-        public final boolean hasFeathers() {
-            return true;
-        }
+class Bird4 {
+    public final boolean hasFeathers() {
+        return true;
     }
+}
 
-    public class Penguin extends Bird4 {
+class Penguin extends Bird4 {
         /*public final boolean hasFeathers() { // DOES NOT COMPILE
             return false;
         }*/
-    }
+}
 /*
 In this example, the method hasFeathers() is marked as final in the parent class Bird, so the child class Penguin cannot override the parent method, resulting in a compiler error.
 Note that whether or not the child method used the final keyword is irrelevant—the code will not compile either way.
 
-*/
-
-
-    public void Why_Mark_a_Method_as_final() {}
-
-/*
+=====================================================================
 Why_Mark_a_Method_as_final
 =====================================================================
 Although marking methods as final prevents them from being overridden, it does have advantages in practice.
@@ -436,4 +428,3 @@ For example, although all adult birds have feathers, a baby chick doesn’t; the
 In short, the final modifier is only used on methods when the author of the parent method wants to guarantee very precise behavior.
 =====================================================================
 */
-}
