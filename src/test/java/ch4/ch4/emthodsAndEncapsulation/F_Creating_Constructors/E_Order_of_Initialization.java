@@ -8,8 +8,7 @@ package ch4.ch4.emthodsAndEncapsulation.F_Creating_Constructors;
 public class E_Order_of_Initialization {
 }
 /*
-Chapter 1 covered the order of initialization. Now that you’ve learned about static initializers, it is time to revisit that. Unfortunately,
-    you do have to memorize this list.
+Chapter 1 covered the order of initialization. Now that you’ve learned about static initializers, it is time to revisit that. Unfortunately, you do have to memorize this list.
 We’ll give you lots of practice, but you do need to know this order by heart.
 1. If there is a superclass, initialize it first (we’ll cover this rule in the next chapter. For now, just say “no superclass” and go on to the next rule.)
 2.  Static variable declarations and static initializers in the order they appear in the file.
@@ -46,7 +45,7 @@ class InitializationOrderSimple {
 class CallInitializationOrderSimple {
     public static void main(String[] args) {
         InitializationOrderSimple init = new InitializationOrderSimple();
-
+        //0 10 Torchie constructor
     }
 }
 
@@ -113,7 +112,7 @@ class YetMoreInitializationOrder {
         System.out.print(num + " ");
     }
 
-    YetMoreInitializationOrder() {
+    YetMoreInitializationOrder() { //contructor
         add(5);
     }
 
@@ -126,7 +125,7 @@ class YetMoreInitializationOrder {
     }
 
     static {
-        new YetMoreInitializationOrder();
+        new YetMoreInitializationOrder();//la primera vez no imprime porque es constructor, la ultima vez cuando se llama directamente si imoprime 5
     }
 
     {
