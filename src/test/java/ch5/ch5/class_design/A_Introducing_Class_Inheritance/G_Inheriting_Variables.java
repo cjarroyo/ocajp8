@@ -13,8 +13,8 @@ Luckily, the rules for variables with the same name in the parent and child clas
 */
 }
 /*
-hiding_Variables
-===============
+hidding_Variables
+================
 When you hide a variable, you define a variable with the same name as a variable in a parent class. This creates two copies of the variable within an instance of the child class:
 one instance defined for the parent reference and another defined for the child reference.
 
@@ -43,8 +43,8 @@ class Mouse extends Rodent {
 
     public static void main(String[] args) {
         Mouse mouse = new Mouse();
-        mouse.getRodentDetails();//mientras lo referencias bien, no hablia problema
-        mouse.getMouseDetails();//mientras lo referencias bien, no hablia problema
+        mouse.getRodentDetails();//mientras lo referencias bien, no habria problema
+        mouse.getMouseDetails();//mientras lo referencias bien, no habria problema
     }
 }
 /*
