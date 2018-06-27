@@ -19,11 +19,11 @@ class Primate {
     }
 }
 
-interface HasTail {
+interface TieneCola {
     public boolean isTailStriped();
 }
 
-class Lemur extends Primate implements HasTail {
+class Lemur extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
     }
@@ -34,8 +34,8 @@ class Lemur extends Primate implements HasTail {
         Lemur lemur = new Lemur();
         System.out.println(lemur.age);
 
-        HasTail hasTail = lemur; //reference that defines an interface the object implements
-        System.out.println(hasTail.isTailStriped());
+        TieneCola tieneCola = lemur; //reference that defines an interface the object implements
+        System.out.println(tieneCola.isTailStriped());
 
 
         Primate primate = lemur; //reference that is a superclass of the object
@@ -55,7 +55,7 @@ Once the object has been assigned a new reference type, only the methods and var
 For example, the following snippets of code will not compile:
 */
 
-class Lemur2 extends Primate implements HasTail {
+class Lemur2 extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
     }
@@ -63,10 +63,10 @@ class Lemur2 extends Primate implements HasTail {
     public int age = 10;
 
     public static void main(String[] args) {
-        Lemur lemur = new Lemur();
+        Lemur2 lemur = new Lemur2();
         System.out.println(lemur.age);
 
-        HasTail hasTail = lemur; //reference that defines an interface the object implements
+        TieneCola hasTail = lemur; //reference that defines an interface the object implements
         //System.out.println(hasTail.age); // DOES NOT COMPILE
 
 
