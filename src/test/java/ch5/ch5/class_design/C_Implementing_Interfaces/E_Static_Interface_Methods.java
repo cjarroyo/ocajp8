@@ -8,9 +8,9 @@ package ch5.ch5.class_design.C_Implementing_Interfaces;
 public class E_Static_Interface_Methods {}
     /*
 Java 8 also now includes support for static methods within interfaces.
-These methods are defi ned explicitly with the static keyword and function nearly identically to static methods defined in classes, as discussed in Chapter 4.
+These methods are defined explicitly with the static keyword and function nearly identically to static methods defined in classes, as discussed in Chapter 4.
 In fact, there is really only one distinction between a static method in a class and an interface.
-A static method defi ned in an interface is not inherited in any classes that implement the interface.
+A static method defined in an interface is not inherited in any classes that implement the interface.
 Here are the static interface method rules you need to be familiar with:
     1. Like all methods in an interface, a static method is assumed to be public and will not compile if marked as private or protected.
     2. To reference the static method, a reference to the name of the interface must be used.
@@ -23,7 +23,7 @@ The following is an example of a static method defined in an interface:
         }
     }
 /*
-The method getJumpHeight() works just like a static method as defi ned in a class.
+The method getJumpHeight() works just like a static method as defined in a class.
 In other words, it can be accessed without an instance of the class using the Hop.getJumpHeight() syntax.
 Also, note that the compiler will automatically insert the access modifier public since all methods in interfaces are assumed to be public.
 The following is an example of a class Bunny that implements Hop:
@@ -36,7 +36,7 @@ The following is an example of a class Bunny that implements Hop:
 /*
 As you can see, without an explicit reference to the name of the interface the code will not compile, even though Bunny implements Hop.
 In this manner, the static interface methods are not inherited by a class implementing the interface.
-The following modifi ed version of the code resolves the issue with a reference to the interface name Hop:
+The following modified version of the code resolves the issue with a reference to the interface name Hop:
 */
     /*public*/ class Bunny2 implements Hop {
         public void printDetails() {

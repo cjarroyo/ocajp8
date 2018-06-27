@@ -8,7 +8,7 @@ package ch5.ch5.class_design.D_Understanding_Polymorphism;
 public class B_Casting_Objects {
 /*
 In the previous example, we created a single instance of a Lemur object and accessed it via superclass and interface references. Once we changed the reference type, though,
-we lost access to more specifi c methods defined in the subclass that still exist within the object. We can reclaim those references by casting the object back to the specifi c sub-
+we lost access to more specific methods defined in the subclass that still exist within the object. We can reclaim those references by casting the object back to the specifi c sub-
 class it came from:
 
     Primate primate = lemur;

@@ -7,7 +7,7 @@ package ch5.ch5.class_design.D_Understanding_Polymorphism;
 
 /*
 Java supports polymorphism, the property of an object to take on many different forms. To put this more precisely, a Java object may be accessed using a reference with the same type
-as the object, a reference that is a superclass of the object, or a reference that defi nes an interface the object implements, either directly or through a superclass. Furthermore, a cast
+as the object, a reference that is a superclass of the object, or a reference that defines an interface the object implements, either directly or through a superclass. Furthermore, a cast
 is not required if the object is being reassigned to a super type or interface of the object.
 
 Let’s illustrate this polymorphism property with the following example:
