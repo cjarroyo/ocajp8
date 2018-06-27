@@ -8,10 +8,10 @@ package ch5.ch5.class_design.C_Implementing_Interfaces;
 public class D_Default_Interface_Methods {}
 /*
 With the release of Java 8, the authors of Java have introduced a new type of method to an interface, referred to as a default method.
-A default method is a method defi ned within an interface with the default keyword in which a method body is provided.
+A default method is a method defined within an interface with the default keyword in which a method body is provided.
 Contrast default methods with “regular” methods in an interface, which are assumed to be abstract and may not have a method body.
 
-A default method within an interface defi nes an abstract method with a default implementation.
+A default method within an interface defines an abstract method with a default implementation.
 In this manner, classes have the option to override the default method if they need to, but they are not required to do so.
 If the class doesn’t override the method, the default implementation will be used. In this manner, the method definition is concrete, not abstract.
 
@@ -22,7 +22,7 @@ In practice, this might even discourage you from making the change altogether.
 By providing a default implementation of the method, though, the interface becomes backward compatible with the existing codebase, while still providing those
 individuals who do want to use the new method with the option to override it.
 
-The following is an example of a default method defi ned in an interface:
+The following is an example of a default method defined in an interface:
 */
 /*public*/ interface IsWarmBlooded {
     boolean hasScales();
@@ -99,7 +99,7 @@ Finally, the SharkFamily interface overrides the doFinsHaveScales() method but d
 Since interfaces may only contain methods with a body that are marked as default, the code will not compile.
 Because default methods are new to Java 8, there will probably be a few questions on the exam about them, although they likely will not be any more difficult than the previous example.
 
-default_Methods_and_Multiple_Inheritance
+//TODO: Default_Methods_and_Multiple_Inheritance
 =========================================
 You may have realized that by allowing default methods in interfaces, coupled with the fact a class may implement multiple interfaces, Java has essentially opened the door to multiple
 inheritance problems. For example, what value would the following code output?

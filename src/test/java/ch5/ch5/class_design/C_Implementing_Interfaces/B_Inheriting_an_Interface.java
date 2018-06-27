@@ -36,9 +36,10 @@ We illustrate this in the following example:
 /*public*/ interface HasWhiskers2 {
     public int getNumberOfWhiskers();
 }
-/*public*/ abstract class HarborSeal2 implements HasTail, HasWhiskers {}
+/*public*/ abstract class HarborSeal2 implements HasTail, HasWhiskers {}// La primera clase concreta que implemente esa interfaz es la que debe implementar todas los metodos abstractos
+                                                                        // La primera clase concreta que extienda HarborSeal2 debe implementar todas los metodos abstractos
 
-//public class LeopardSeal implements HasTail, HasWhiskers {} // DOES NOT COMPILE
+//class LeopardSeal implements HasTail, HasWhiskers {} // DOES NOT COMPILE, como primera clase concreta, debe implementar los metodos
 
 /*
 In this example, we see that HarborSeal is an abstract class and compiles without issue.
@@ -47,8 +48,8 @@ Alternatively, LeopardSeal is not an abstract class, so it must implement all th
 In this example, LeopardSeal doesn’t provide an implementation for the interface methods, so the code doesn’t compile.
 
 
-classes_Interfaces_and_Keywords
-===============================
+//TODO: Classes_Interfaces_and_Keywords
+=======================================
 The exam creators are fond of questions that mix class and interface terminology.
 Although a class can implement an interface, a class cannot extend an interface.
 Likewise, whereas an interface can extend another interface, an interface cannot implement another interface.
@@ -58,13 +59,14 @@ The following examples illustrate these principles:
 //public class Cheetah extends CanRun {} // DOES NOT COMPILE
 /*public*/ class Hyena {}
 //public interface HasFur extends Hyena {} // DOES NOT COMPILE
+//public interface HasFur implements CanRun {} // DOES NOT COMPILE
 /*
 The first example shows a class trying to extend an interface that doesn’t compile. The second example shows an interface trying to extend a class, which also doesn’t compile.
 Be wary of examples on the exam that mix class and interface definitions.
 Make sure the only connection between a class and an interface is with the class implements interface syntax.
 
-Abstract_Methods_and_Multiple_Inheritance
-==========================================
+//Todo: Abstract_Methods_and_Multiple_Inheritance
+=================================================
 Since Java allows for multiple inheritance via interfaces, you might be wondering what will happen if you define a class that inherits from two interfaces that contain the same abstract method:
 */
 /*public*/ interface Herbivore {
@@ -75,7 +77,7 @@ Since Java allows for multiple inheritance via interfaces, you might be wonderin
     public void eatMeat();
 }
 /*
-In this scenario, the signatures for the two interface methods eatPlants() are compatible, so you can defi ne a class that fulfills both interfaces simultaneously:
+In this scenario, the signatures for the two interface methods eatPlants() are compatible, so you can define a class that fulfills both interfaces simultaneously:
 */
 /*public*/ class Bear implements Herbivore, Omnivore {
     public void eatMeat() {
@@ -123,7 +125,8 @@ the following code will not compile:
 /*public*/ interface Omnivore3 {
     public void eatPlants();
 }
-/*public class Bear3 implements Herbivore3, Omnivore3 {
+/*
+class Bear3 implements Herbivore3, Omnivore3 {
 
     public int eatPlants() { // DOES NOT COMPILE
         System.out.println("Eating plants: 10");
@@ -133,14 +136,13 @@ the following code will not compile:
     public void eatPlants() { // DOES NOT COMPILE
         System.out.println("Eating plants");
     }
-
 }
 */
 /*
-The code doesn’t compile, as the class defi nes two methods with the same name and input parameters but different return types.
-If we were to remove either definition of eatPlants(), the compiler would stop because the defi nition of Bear would be missing one of the required methods.
+The code doesn’t compile, as the class defines two methods with the same name and input parameters but different return types.
+If we were to remove either definition of eatPlants(), the compiler would stop because the definition of Bear would be missing one of the required methods.
 In other words, there is no implementation of the Bear class that inherits from Herbivore and Omnivore that the compiler would accept.
-The compiler would also throw an exception if you defi ne an interface or abstract class that inherits from two conflicting interfaces, as shown here:
+The compiler would also throw an exception if you define an interface or abstract class that inherits from two conflicting interfaces, as shown here:
 */
 /*public*/ interface Herbivore4 {
     public int eatPlants();
@@ -148,9 +150,9 @@ The compiler would also throw an exception if you defi ne an interface or abstra
 /*public*/ interface Omnivore4 {
 public void eatPlants();
 }
-//public interface Supervore4 extends Herbivore4, Omnivore4 {} // DOES NOT COMPILE
+//interface Supervore4 extends Herbivore4, Omnivore4 {} // DOES NOT COMPILE
 
-//public abstract class AbstractBear4 implements Herbivore4, Omnivore4 {} // DOES NOT COMPILE
+//abstract class AbstractBear4 implements Herbivore4, Omnivore4 {} // DOES NOT COMPILE
 
 /*
 Even without implementation details, the compiler detects the problem with the abstract definition and prevents compilation.

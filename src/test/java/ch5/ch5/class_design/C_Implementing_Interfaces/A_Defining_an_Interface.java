@@ -21,12 +21,9 @@ FIGURE 5.4 Defining an interface
                        |     |          |       |
                        |     |          |       |
                     public abstract interface CanBurrow {
-                        public static final int MINIMUM_DEPTH = 2;
-                        public abstract int getMaximumDepth();
-                    }   |       |
-                        |       |
-                        public abstract keywords (assumed)
-                                public static final keywords (assumed)
+                        public static final int MINIMUM_DEPTH = 2; --> public static final keywords (assumed)
+                        public abstract int getMaximumDepth();   ----> public abstract keywords (assumed)
+                    }
 
 FIGURE 5.5 Implementing an interface
 
@@ -36,12 +33,10 @@ FIGURE 5.5 Implementing an interface
                                       |       |         |
                                       |       |         |
                     public class FieldMouse implements CanBurrow {
-                        public int getMaximumDepth() {
-                          |  return 10;
-                        } |
-                    }     |
-                          |
-                        signature matches interface method
+                        public int getMaximumDepth() {   -----> signature matches interface method
+                            return 10;
+                        }
+                    }
 
 
 As you see in this example, an interface is not declared an abstract class, although it has many of the same properties of abstract class.
@@ -62,7 +57,7 @@ It may be helpful to think of an interface as a specialized kind of abstract cla
 The following is a list of rules for creating an interface, many of which you should recognize as adaptions of the rules for defining abstract classes.
 
     1. Interfaces cannot be instantiated directly.
-    2. An interface is not required to have any methods.
+    2. An interface is not required to have any methods.(La interfaz puede no tener metodos)
     3. An interface may not be marked as final.
     4. All top-level interfaces are assumed to have public or default access, and they must include the abstract modifier in their definition.
        Therefore, marking an interface as private, protected, or final will trigger a compiler error, since this is incompatible with these assumptions.
@@ -82,7 +77,7 @@ It compiles without issue, since interfaces are not required to define any metho
         }
     }
 
-    //public final interface WalksOnEightLegs {} // DOES NOT COMPILE, una intrerfaz no puede ser final
+    //public final interface WalksOnEightLegs {} // DOES NOT COMPILE, una interfaz no puede ser final
 /*
 The first example doesn’t compile, as WalksOnTwoLegs is an interface and cannot be instantiated directly.
 The second example, WalksOnEightLegs, doesn’t compile since interfaces may not be marked as final for the same reason that abstract classes cannot be marked as final.
@@ -116,12 +111,11 @@ Next, it is marked as private, which conflicts with the public or default requir
 The second and third line do not compile because all interface methods are assumed to be public and marking them as private or protected throws a compiler error.
 Finally, the last line doesn’t compile because the method is marked as final and since interface methods are assumed to be abstract, the compiler throws an exception for using
 both abstract and final keywords on a method.
-========================================================================
+================================================================================================================================================
 Adding the assumed keywords to an interface is a matter of personal preference, although it is considered good coding practice to do so.
 Code with the assumed keywords written out tends to be easier and clearer to read, and leads to fewer potential conflicts, as you saw in the previous examples.
-========================================================================
+================================================================================================================================================
 
 Be sure to review the previous example and understand why each of the lines doesn’t compile.
-There will likely be at least one question on the exam in which an interface or interface method uses an invalid modifi er.
+There will likely be at least one question on the exam in which an interface or interface method uses an invalid modifier.
 */
-

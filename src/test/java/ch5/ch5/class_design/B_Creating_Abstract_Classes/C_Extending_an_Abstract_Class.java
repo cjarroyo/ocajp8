@@ -60,7 +60,6 @@ intermediate abstract class provides the implementation. For example, take a loo
     public String getName() {
         return "BigCat";
     }
-
     public abstract void roar();
 }
 

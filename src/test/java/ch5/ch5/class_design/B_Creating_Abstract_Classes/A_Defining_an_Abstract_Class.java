@@ -6,6 +6,7 @@ package ch5.ch5.class_design.B_Creating_Abstract_Classes;
  */
 
 /*
+(deseas tener muhcas hijas y no instancien tu clase padre pero si a las hijas)
 Let’s say you want to define a parent class that other developers are going to subclass.
 Your goal is to provide some reusable variables and methods to developers in the parent class, whereas the developers provide specific implementations or overrides of other methods in the child classes.
 Furthermore, let’s say you also don’t want an instance of the parent class to be instantiated unless it is an instance of the child class.
@@ -29,6 +30,7 @@ The following code is based on our Animal and Swan description:
 }
 
 /*public*/ class Swan extends Animal {
+    @Override
     public String getName() {
         return "Swan";
     }
@@ -59,27 +61,27 @@ Although an abstract class doesn’t have to implement any abstract methods, an 
 For example, the following code won’t compile because an abstract method is not defined within an abstract class:
 
     public class Chicken {
-        public abstract void peck(); // DOES NOT COMPILE, si tienes un metodo abstract, la clase tambien debe er abstract
+        public abstract void peck(); // DOES NOT COMPILE, si tienes un metodo abstract, la clase tambien debe ser abstract
     }
 
 The exam creators are fond of questions like this one, which mixes non-abstract classes with abstract methods. They are also fond of questions with methods marked as abstract
 for which an implementation is also defined. For example, neither method in the following code will compile because the methods are marked as abstract:
 */
     /*public*/ abstract class Turtle {
-        //public abstract void swim() {}  DOES NOT COMPILE, no deben d etener cuerpo
-        //public abstract int getAge() { return 10; }  DOES NOT COMPILE, no deben de tener cuerpo
+        //public abstract void swim() {}  //DOES NOT COMPILE, no deben de tener cuerpo o no deben ser abstractos
+        //public abstract int getAge() { return 10; }  //DOES NOT COMPILE, no deben de tener cuerpo o no deben ser abstractos
     }
 /*
 The first method, swim(), doesn’t compile because two brackets are provided instead of a semicolon, and Java interprets this as providing a body to an abstract method.
 The second method, getAge(), doesn’t compile because it also provides a body to an abstract method.
 Pay close attention to swim(), because you’ll likely see a question like this on the exam.
 
-==================================================
+=============================================================================================================================================================================
 Default Method Implementations in Abstract Classes
-==================================================
+=============================================================================================================================================================================
 Although you can’t provide a default implementation to an abstract method in an abstract class, you can still define a method with a body—you just can’t mark it as abstract.
 As long as you do not mark it as final, the subclass still has the option to override it, as explained in the previous section.
-==================================================
+=============================================================================================================================================================================
 
 Next, we note that an abstract class cannot be marked as final for a somewhat obvious reason.
 By definition, an abstract class is one that must be extended by another class to be instantiated, whereas a final class can’t be extended by another class.
@@ -100,7 +102,7 @@ Finally, a method may not be marked as both abstract and private. This rule make
 How would you define a subclass that implements a required method if the method is not accessible by the subclass itself? The answer is you can’t, which is why the compiler will complain if you try to do the following:
 */
     /*public*/ abstract class Whale {
-        //private abstract void sing(); // DOES NOT COMPILE, no se debe combinar private y String en el metodo
+        //private abstract void sing(); // DOES NOT COMPILE, no se debe combinar private y Abstract en el metodo
     }
 
     /*public*/ class HumpbackWhale extends Whale {
@@ -118,8 +120,8 @@ If we changed the access modified from private to protected in the parent class 
     /*public*/ abstract class Whale2 {
         protected abstract void sing();//overriding
     }
-    /*
-    public class HumpbackWhale2 extends Whale2 {
+
+    /*public class HumpbackWhale2 extends Whale2 {
         private void sing() { // DOES NOT COMPILE, overriding, el metodo debe ser tan o mas accesible que el padre
             System.out.println("Humpback whale is singing");
         }
@@ -130,5 +132,3 @@ If you remember the rules earlier in this chapter for overriding a method, the s
 Because the method is declared protected in the parent class, it must be marked as protected or public in the child class.
 Even with abstract methods, the rules for overriding methods must be followed.
 */
-
-

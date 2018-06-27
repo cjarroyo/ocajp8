@@ -8,6 +8,7 @@ package ch5.ch5.class_design.B_Creating_Abstract_Classes;
 public class B_Creating_a_Concrete_Class {}
 
 /*
+(Su unica funcion es definir metodos y variables estaticas)(no se puede intanciar)
 When working with abstract classes, it is important to remember that by themselves, they cannot be instantiated and therefore do not do much other than define static variables and methods.
 For example, the following code will not compile as it is an attempt to instantiate an abstract class.
 */
@@ -39,8 +40,9 @@ The key point is that the first class to extend the non-abstract class must impl
         public abstract String getName();
     }
 
-    //public class Bird6 extends Animal6 {} // DOES NOT COMPILE, xq debe implementra las clases abstractas del padre
     /*
+    public class Bird6 extends Animal6 {} // DOES NOT COMPILE, xq debe implementra las clases abstractas del padre
+
     public class Flamingo6 extends Bird6 {
         public String getName() {
             return "Flamingo";
