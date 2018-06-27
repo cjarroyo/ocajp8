@@ -33,7 +33,7 @@ The following is an example of a default method defined in an interface:
 /*
 This example defines two interface methods, one is a normal abstract method and the other a default method.
 Note that both methods are assumed to be public, as all methods of an interface are all public.
-The fi rst method is terminated with a semicolon and doesn’t provide a body, whereas the second default method provides a body.
+The first method is terminated with a semicolon and doesn’t provide a body, whereas the second default method provides a body.
 Any class that implements IsWarmBlooded may rely on the default implementation of getTemperature() or override the method and create its own version.
 Note that the default access modifier as defined in Chapter 4 is completely different from the default method defined in this chapter.
 We defined a default access modifier in Chapter 4 as lack of an access modifier, which indicated a class may access a class, method, or value within another class if
@@ -63,18 +63,16 @@ The second method, getRequiredFood Amount(), also doesn’t compile because it p
 Unlike interface variables, which are assumed static class members, default methods cannot be marked as static and require an instance of the class implementing the interface to be invoked.
 They can also not be marked as final or abstract, because they are allowed to be overridden in subclasses but are not required to be overridden.
 When an interface extends another interface that contains a default method, it may choose to ignore the default method, in which case the default implementation for the method will be used.
-Alternatively, the interface may override the defi nition of the default method using the standard rules for method overriding, such as not limiting the accessibility of the method and using covariant returns.
+Alternatively, the interface may override the definition of the default method using the standard rules for method overriding, such as not limiting the accessibility of the method and using covariant returns.
 Finally, the interface may redeclare the method as abstract, requiring classes that implement the new interface to explicitly provide a method body.
 Analogous options apply for an abstract class that implements an interface.
 For example, the following class overrides one default interface method and redeclares a second interface method as abstract:
 */
 /*public*/ interface HasFins {
-    public default
-    int getNumberOfFins() {
+    public default int getNumberOfFins() {
         return 4;
     }
-    public default
-    double getLongestFinLength() {
+    public default double getLongestFinLength() {
         return 20.0;
     }
     public default boolean doFinsHaveScales() {
@@ -83,16 +81,16 @@ For example, the following class overrides one default interface method and rede
 }
 
 /*public*/ interface SharkFamily extends HasFins {
-    public default int getNumberOfFins() {
+    public default int getNumberOfFins() {//override
         return 8;
     }
-    public double getLongestFinLength();
-    //public boolean doFinsHaveScales() { // DOES NOT COMPILE
-    //    return false;
-    //}
+    public double getLongestFinLength();//replace with a new abstract method
+    /*public boolean doFinsHaveScales() { // DOES NOT COMPILE; override, but not mark the method as default
+        return false;
+    }*/
 }
 /*
-In this example, the fi rst interface, HasFins , defi nes three default methods: getNumberOfFins() , getLongestFinLength(), and doFinsHaveScales().
+In this example, the first interface, HasFins , defines three default methods: getNumberOfFins() , getLongestFinLength(), and doFinsHaveScales().
 The second interface, SharkFamily, extends HasFins and overrides the default method getNumberOfFins() with a new method that returns a different value.
 Next, the SharkFamily interface replaces the default method getLongestFinLength() with a new abstract method, forcing any class that implements the SharkFamily interface to provide an implementation of the method.
 Finally, the SharkFamily interface overrides the doFinsHaveScales() method but doesn’t mark the method as default.
@@ -110,13 +108,13 @@ inheritance problems. For example, what value would the following code output?
     }
 }
 /*public*/ interface Run {
-    public default int getSpeed() {
+    public default int getSpeed() {//override
         return 10;
     }
 }
-/*public class Cat implements Walk, Run { // DOES NOT COMPILE
+/*class Cat1 implements Walk, Run { // DOES NOT COMPILE, debe implemetar
     public static void main(String[] args) {
-        System.out.println(new Cat().getSpeed());
+        System.out.println(new Cat1().getSpeed());
     }
 }*/
 /*
@@ -126,12 +124,12 @@ If a class implements two interfaces that have default methods with the same nam
 There is an exception to this rule, though: if the subclass overrides the duplicate default methods, the code will compile without issue—the ambiguity about which version of the method to call has been removed.
 For example, the following modified implementation of Cat will compile and output 1:
 */
-/*public*/ class Cat implements Walk, Run {
+/*public*/ class Cat2 implements Walk, Run {
     public int getSpeed() {
         return 1;
     }
     public static void main(String[] args) {
-        System.out.println(new Cat().getSpeed());
+        System.out.println(new Cat2().getSpeed());
     }
 }
 /*
