@@ -10,13 +10,13 @@ public class B_UnderstandingExceptionTypes {
 As we’ve explained, an exception is an event that alters program flow. Java has a Throwable superclass for all objects that represent these events.
 Not all of them have the word exception in their classname, which can be confusing. Figure 6.1 shows the key subclasses of Throwable.
 
-                java.lang.Object
-                        ||
-                java.lang.Throwable
-                //                 \\
-java.lang.Exception                 ava.lang.Error
-            ||
-java.lang.RuntimeException
+                                java.lang.Object
+                                        ||
+                                java.lang.Throwable
+                                //                 \\
+                java.lang.Exception                 ava.lang.Error
+                            ||
+                java.lang.RuntimeException
 
 
 Error: means something went so horribly wrong that your program should not attempt to recover from it.
