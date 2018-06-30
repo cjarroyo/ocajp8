@@ -410,13 +410,13 @@ In other words, you cannot hide a static method in a parent class if it is marke
 Let’s take a look at an example:
 */
 class Bird4 {
-    public final boolean hasFeathers() {
+    public final boolean tienePlumas() {
         return true;
     }
 }
 
 class Penguin extends Bird4 {
-        /*public final boolean hasFeathers() { // DOES NOT COMPILE
+        /*public final boolean tienePlumas() { // DOES NOT COMPILE
             return false;
         }*/
 }

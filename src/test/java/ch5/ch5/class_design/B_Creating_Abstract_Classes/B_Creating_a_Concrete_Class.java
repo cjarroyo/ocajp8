@@ -26,7 +26,7 @@ When you see a concrete class extending an abstract class on the exam, check tha
         public abstract String getName();
     }
 
-    //public class Walrus extends Animal5 {} // DOES NOT COMPILE, xq debe implementar la clase abstracta getName
+    //public class Walrus extends Animal5 {} // DOES NOT COMPILE, xq debe implementar la metodo abstracto getName
 
 /*
 First, note that Animal is marked as abstract and Walrus is not. In this example, Walrus is considered the first concrete subclass of Animal.
@@ -40,15 +40,15 @@ The key point is that the first class to extend the non-abstract class must impl
         public abstract String getName();
     }
 
-    /*
-    public class Bird6 extends Animal6 {} // DOES NOT COMPILE, xq debe implementra las clases abstractas del padre
 
-    public class Flamingo6 extends Bird6 {
+    //public class Bird6 extends Animal6 {} // DOES NOT COMPILE, xq debe implementra las clases abstractas del padre
+
+    /*public class Flamingo6 extends Bird6 {
         public String getName() {
             return "Flamingo";
         }
-    }
-    */
+    }*/
+
 /*
 Even though a second subclass Flamingo implements the abstract method getName(), the first concrete subclass Bird doesn’t; therefore, the Bird class will not compile.
 */

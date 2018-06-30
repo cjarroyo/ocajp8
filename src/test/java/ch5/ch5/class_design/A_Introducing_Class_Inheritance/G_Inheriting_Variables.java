@@ -25,24 +25,24 @@ Alternatively, if you’re referencing the variable from within a child class, t
 Likewise, you can reference the parent value of the variable with an explicit use of the super keyword. Consider the following example:
 */
 
-class Rodent {
-    protected int tailLength = 4;//hidden
+class Roedor {
+    protected int colaLength = 4;//hidden
 
     public void getRodentDetails() {//independient
-        System.out.println("[parentTail=" + tailLength + "]");
+        System.out.println("[parentCola=" + colaLength + "]");
     }
 }
 
-class Mouse extends Rodent {
+class Raton extends Roedor {
 
-    protected int tailLength = 8;//hidden
+    protected int colaLength = 8;//hidden
 
     public void getMouseDetails() {//independient
-        System.out.println("[tail=" + tailLength + ",parentTail=" + super.tailLength + "]");
+        System.out.println("[tail=" + colaLength + ",parentCola=" + super.colaLength + "]");
     }
 
     public static void main(String[] args) {
-        Mouse mouse = new Mouse();
+        Raton mouse = new Raton();
         mouse.getRodentDetails();//mientras lo referencias bien, no habria problema
         mouse.getMouseDetails();//mientras lo referencias bien, no habria problema
     }
@@ -74,13 +74,13 @@ class Animal {
     public int length = 2;//hidden
 }
 
-class Jellyfish extends Animal {
+class Medusa extends Animal {
     public int length = 5;//hidden
 
     public static void main(String[] args) {
-        Jellyfish jellyfish = new Jellyfish();
-        Animal animal = new Jellyfish();
-        System.out.println(jellyfish.length);
+        Medusa medusa = new Medusa();
+        Animal animal = new Medusa();
+        System.out.println(medusa.length);
         System.out.println(animal.length);
     }
 }
@@ -94,5 +94,5 @@ If the object Jellyfish was passed to a method by an Animal reference, as you’
 Hiding variables makes the code very confusing and difficult to read, especially if you start modifying the value of the variable in both the parent and child methods, since it may not be clear which variable you’re updating.
 
 When defining a new variable in a child class, it is considered good coding practice to select a name for the variable that is not already a public, protected, or default variable in use in a parent class.
-Hiding private variables is considered less problematic because the child class did not have access to the variable in the parent class to begin with.
+Hiding private variables is considered less problematic because <the child class did not have access to the variable in the parent class to begin with.
 */
