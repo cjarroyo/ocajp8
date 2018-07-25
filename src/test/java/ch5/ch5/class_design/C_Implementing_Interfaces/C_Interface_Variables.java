@@ -10,10 +10,8 @@ public class C_Interface_Variables {}
 Let’s expand our discussion of interfaces to include interface variables, which can be defined within an interface.
 Like interface methods, interface variables are assumed to be public. Unlike interface methods, though, interface variables are also assumed to be static and final.
 Here are two interface variables rules:
-
     1. Interface variables are assumed to be public, static, and final. Therefore, marking a variable as private or protected will trigger a compiler error, as will marking any variable as abstract.
     2. The value of an interface variable must be set when it is declared since it is marked as final.
-
 In this manner, interface variables are essentially constant variables defined on the interface level.
 Because they are assumed to be static, they are accessible even without an instance of the interface.
 Like our earlier CanFly example, the following two interface definitions are equivalent, because the compiler will automatically convert them both to the second example:
@@ -47,4 +45,3 @@ It is marked as protected, which conflicts with the assumed modifier public, and
 Finally, the last example, TYPE, doesn’t compile because it is missing a value.
 Unlike the other examples, the modifiers are correct, but as you may remember from Chapter 4, you must provide a value to a static final member of the class when it is defined.
 */
-

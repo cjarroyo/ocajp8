@@ -114,10 +114,10 @@ We demonstrate this principle in the following example:
 /*
 In this example, we see that the class that implements both interfaces must provide implements of both versions of eatPlants(), since they are considered separate methods.
 Notice that it doesn’t matter if the return type of the two methods is the same or different, because the compiler treats these methods as independent.
-Unfortunately, if the method name and input parameters are the same but the return types are different between the two methods, the class or interface attempting to inherit
-both interfaces will not compile. The reason the code doesn’t compile has less to do with interfaces and more to do with class design, as discussed in Chapter 4. It is not possible in
-Java to define two methods in a class with the same name and input parameters but different return types. Given the following two interface definitions for Herbivore and Omnivore,
-the following code will not compile:
+Unfortunately, if the method name and input parameters are the same but the return types are different between the two methods, the class or interface attempting to inherit both interfaces will not compile.
+The reason the code doesn’t compile has less to do with interfaces and more to do with class design, as discussed in Chapter 4.
+It is not possible in Java to define two methods in a class with the same name and input parameters but different return types.
+Given the following two interface definitions for Herbivore and Omnivore, the following code will not compile:
 */
 /*public*/ interface Herbivore3 {
     public int eatPlants();
@@ -127,12 +127,10 @@ the following code will not compile:
 }
 /*
 class Bear3 implements Herbivore3, Omnivore3 {
-
     public int eatPlants() { // DOES NOT COMPILE
         System.out.println("Eating plants: 10");
         return 10;
     }
-
     public void eatPlants() { // DOES NOT COMPILE
         System.out.println("Eating plants");
     }
@@ -148,9 +146,9 @@ The compiler would also throw an exception if you define an interface or abstrac
     public int eatPlants();
 }
 /*public*/ interface Omnivore4 {
-public void eatPlants();
+    public void eatPlants();
 }
-//interface Supervore4 extends Herbivore4, Omnivore4 {} // DOES NOT COMPILE
+//public interface Supervore4 extends Herbivore4, Omnivore4 {} // DOES NOT COMPILE
 
 //abstract class AbstractBear4 implements Herbivore4, Omnivore4 {} // DOES NOT COMPILE
 
