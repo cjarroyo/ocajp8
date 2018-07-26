@@ -47,8 +47,7 @@ The following are the default interface method rules you need to be familiar wit
     3. A default method is not assumed to be static, final, or abstract, as it may be used or overridden by a class that implements the interface.
     4. Like all methods in an interface, a default method is assumed to be public and will not compile if marked as private or protected.
 
-The first rule should give you some comfort in that you’ll only see default methods in interfaces.
-If you see them in a class on the exam, assume the code will not compile.
+The first rule should give you some comfort in that you’ll only see default methods in interfaces. If you see them in a class on the exam, assume the code will not compile.
 The second rule just denotes syntax, as default methods must use the default keyword. For example, the following code snippets will not compile:
 */
 /*public*/ interface Carnivore {
@@ -99,8 +98,8 @@ Because default methods are new to Java 8, there will probably be a few question
 
 //TODO: Default_Methods_and_Multiple_Inheritance
 =========================================
-You may have realized that by allowing default methods in interfaces, coupled with the fact a class may implement multiple interfaces, Java has essentially opened the door to multiple
-inheritance problems. For example, what value would the following code output?
+You may have realized that by allowing default methods in interfaces, coupled with the fact a class may implement multiple interfaces,
+Java has essentially opened the door to multiple inheritance problems. For example, what value would the following code output?
 */
 /*public*/ interface Walk {
     public default int getSpeed() {
@@ -112,7 +111,7 @@ inheritance problems. For example, what value would the following code output?
         return 10;
     }
 }
-/*class Cat1 implements Walk, Run { // DOES NOT COMPILE, debe implemetar
+/*class Cat1 implements Walk, Run { // DOES NOT COMPILE, debe implementar
     public static void main(String[] args) {
         System.out.println(new Cat1().getSpeed());
     }
