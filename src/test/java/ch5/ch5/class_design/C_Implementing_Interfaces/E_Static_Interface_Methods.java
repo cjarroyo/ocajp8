@@ -6,7 +6,7 @@ package ch5.ch5.class_design.C_Implementing_Interfaces;
  */
 
 public class E_Static_Interface_Methods {}
-    /*
+/*
 Java 8 also now includes support for static methods within interfaces.
 These methods are defined explicitly with the static keyword and function nearly identically to static methods defined in classes, as discussed in Chapter 4.
 In fact, there is really only one distinction between a static method in a class and an interface.

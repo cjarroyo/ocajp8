@@ -13,17 +13,17 @@ Furthermore, a cast is not required if the object is being reassigned to a super
 
 Let’s illustrate this polymorphism property with the following example:
 */
-class Primate {
+/*public*/ class Primate {
     public boolean hasHair() {
         return true;
     }
 }
 
-interface TieneCola {
+/*public*/ interface TieneCola {
     public boolean isTailStriped();
 }
 
-class Lemur extends Primate implements TieneCola {
+/*public*/ class Lemur extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
     }
@@ -37,24 +37,19 @@ class Lemur extends Primate implements TieneCola {
         TieneCola tieneCola = lemur; //reference that defines an interface the object implements
         System.out.println(tieneCola.isTailStriped());
 
-
         Primate primate = lemur; //reference that is a superclass of the object
         System.out.println(primate.hasHair());
     }
 }
-/*
-This code compiles and executes without issue and yields the following output:
-
+/*This code compiles and executes without issue and yields the following output:
 10
 false
 true
-
 The most important thing to note about this example is that only one object, Lemur, is created and referenced.
 The ability of an instance of Lemur to be passed as an instance of an interface it implements, HasTail, as well as an instance of one of its superclasses, Primate, is the nature of polymorphism.
 Once the object has been assigned a new reference type, only the methods and variables available to that reference type are callable on the object without an explicit cast.
 For example, the following snippets of code will not compile:
 */
-
 class Lemur2 extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
@@ -68,7 +63,6 @@ class Lemur2 extends Primate implements TieneCola {
 
         TieneCola hasTail = lemur; //reference that defines an interface the object implements
         //System.out.println(hasTail.age); // DOES NOT COMPILE
-
 
         Primate primate = lemur; //reference that is a superclass of the object
         //System.out.println(primate.isTailStriped()); // DOES NOT COMPILE
