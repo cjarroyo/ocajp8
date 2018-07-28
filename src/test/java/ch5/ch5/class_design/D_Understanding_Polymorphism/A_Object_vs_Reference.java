@@ -50,7 +50,7 @@ The ability of an instance of Lemur to be passed as an instance of an interface 
 Once the object has been assigned a new reference type, only the methods and variables available to that reference type are callable on the object without an explicit cast.
 For example, the following snippets of code will not compile:
 */
-class Lemur2 extends Primate implements TieneCola {
+/*public*/ class Lemur2 extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
     }
