@@ -12,8 +12,7 @@ Once we changed the reference type, though, we lost access to more specific meth
 We can reclaim those references by casting the object back to the specific sub-class it came from:
 */
 }
-
-class Lemur3 extends Primate implements TieneCola {
+/*public*/ class Lemur3 extends Primate implements TieneCola {
     public boolean isTailStriped() {
         return false;
     }
@@ -30,7 +29,6 @@ class Lemur3 extends Primate implements TieneCola {
         System.out.println(lemur3.age);
     }
 }
-
 /*
 In this example, we first try to convert the primate reference back to a lemur reference, lemur2, without an explicit cast.
 The result is that the code will not compile.
@@ -61,8 +59,7 @@ Casting is not without its limitations.
 Even though two classes share a related hierarchy, that doesn’t mean an instance of one can automatically be cast to another.
 Here’s an example:
 */
-/*public*/ class Roedor {
-}
+/*public*/ class Roedor {}
 
 /*public*/ class Pikachu extends Roedor {
     public static void main(String[] args) {
@@ -75,8 +72,7 @@ This code creates an instance of Roedor and then tries to cast it to a subclass 
 Although this code will compile without issue, it will throw a ClassCastException at runtime since the object being referenced is not an instance of the Pikachu class.
 The thing to keep in mind in this example is the object that was created is not related to the Pikachu class in any way.
 ============================================================================================================================================
-Although this topic is out of scope for the OCA exam, keep in mind that the instanceof operator can be used to check whether an object belongs to a
-particular class and to prevent ClassCastExceptions at runtime.
+Although this topic is out of scope for the OCA exam, keep in mind that the instanceof operator can be used to check whether an object belongs to a particular class and to prevent ClassCastExceptions at runtime.
 Unlike the previous example, the following code snippet doesn’t throw an exception at runtime and performs the cast only if the instanceof operator returns true.
 */
 /*public*/ class Pikachu2 extends Roedor {
@@ -87,9 +83,7 @@ Unlike the previous example, the following code snippet doesn’t throw an excep
         }
     }
 }
-/*
-============================================================================================================================================
-
+/*============================================================================================================================================
 When reviewing a question on the exam that involves casting and polymorphism, be sure to remember what the instance of the object actually is.
 Then, focus on whether the compiler will allow the object to be referenced with or without explicit casts.
 */
