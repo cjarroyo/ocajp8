@@ -14,19 +14,16 @@ The first rule is that an overridden method must be at least as accessible as th
 Let’s assume this rule is not necessary and consider the following example:
 */
 }
-
 /*public*/ class Animal {
     public String getName() {//override
         return "Animal";
     }
 }
-
 /*public*/ class Gorilla extends Animal {
     /*protected String getName() { // override, DOES NOT COMPILE, (hija debe ser tan o mas accesible que el padre)
           return "Gorilla";
     }*/
 }
-
 /*public*/ class ZooKeeper {
     public static void main(String[] args) {
         Animal animal = new Gorilla();

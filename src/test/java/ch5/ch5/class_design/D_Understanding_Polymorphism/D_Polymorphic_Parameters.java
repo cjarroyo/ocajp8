@@ -14,28 +14,24 @@ Since you’re casting from a subtype to a supertype, an explicit cast is not re
 This property is referred to as polymorphic parameters of a method, and we demonstrate it in the following example:
 */
 }
-
 /*public*/ class Reptile {
     public String getName() {//override
         return "Reptile";
     }
 }
-
 /*public*/ class Caiman extends Reptile {
     public String getName() {//override
         return "Caiman";
     }
 }
-
 /*public*/ class Crocodilo extends Reptile {
     public String getName() {//override
         return "Crocodile";
     }
 }
-
 /*public*/ class ZooWorker {
     public static void alimentar(Reptile reptile) {
-        System.out.println("Feeding reptile " + reptile.getName());
+        System.out.println("Feeding: " + reptile.getName());
     }
 
     public static void main(String[] args) {
@@ -43,21 +39,17 @@ This property is referred to as polymorphic parameters of a method, and we demon
         alimentar(new Crocodilo());
         alimentar(new Reptile());
     }
-
 /*
 This code compiles and executes without issue, yielding the following output:
 Feeding: Caiman
 Feeding: Crocodilo
 Feeding: Reptile
-
 Let’s focus on the feed(Reptile reptile) method in this example.
 As you can see, that method was able to handle instances of Caiman and Crocodilo without issue, because both are subclasses of the Reptile class.
 It was also able to accept a matching type Reptile class.
 If we had tried to pass an unrelated class, such as the previously defined Roedor or Pikachu classes, or a superclass such as java.lang.Object, to the alimentar() method, the code would not have compiled.
 */
-
     public void polymorphic_Parameters_and_Code_Reusability() {
-
 /*
 If you’re defining a method that will be accessible outside the current class, either to subclasses of the current class or publicly to objects outside the current class,
 it is considered good coding practice to use the superclass or interface type of input parameters whenever possible.
