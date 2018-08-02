@@ -37,7 +37,8 @@ public class C_NamingConflicts {
         import java.util.Date;
         import java.sql.Date;
 
-    Java is smart enough to detect that this code is no good. As a programmer, you’ve claimed to explicitly want the default to be both the java.util.Date and java.sql.Date implementations. Because there can’t be two defaults, the compiler tells you:
+    Java is smart enough to detect that this code is no good. As a programmer, you’ve claimed to explicitly want the default to be both the java.util.Date and java.sql.Date implementations.
+    Because there can’t be two defaults, the compiler tells you:
 
         The import java.sql.Date collides with another import statement
 

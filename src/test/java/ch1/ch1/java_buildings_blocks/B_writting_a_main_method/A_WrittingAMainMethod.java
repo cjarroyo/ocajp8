@@ -13,18 +13,14 @@ public class A_WrittingAMainMethod {
     The main() method lets us hook our code into this process, keeping it alive long enough to do the work we’ve coded.
      */
 }
-
-class Zoo {
+/*public*/ class Zoo1 {
     public static void main(String[] args) {
         System.out.println("Welcome!");
     }
-
     /* To compile and execute this code
            javac Zoo.java
            java Zoo
-    */
 
-    /*
     To compile Java code, the file must have the extension ".java". The name of the file must match the name of the class.
     The result is a file of bytecode by the same name, but with a .class filename extension.
     Bytecode consists of instructions that the JVM knows how to execute.
@@ -32,9 +28,7 @@ class Zoo {
 
     -Each file can contain only one class
     -The filename must match the class name, including case, and have a .java extension
-     */
 
-    /*
     Let’s first review the words in the main() method’s signature:
         The keyword public is what’s called an access modifier. It declares this method’s level of exposure to potential callers in the program.
         The keyword static binds a method to its class so it can be called by just the class name, as in, for example, Zoo.main()
@@ -65,7 +59,6 @@ class Zoo {
                         San Diego
                         Zoo
 
-
             javac Zoo.java
             java Zoo Zoo 2
                 Output:
@@ -87,4 +80,3 @@ class Zoo {
 
      */
 }
-

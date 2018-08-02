@@ -6,7 +6,6 @@ package ch1.ch1.java_buildings_blocks.D_creating_objects;
  */
 
 public class D_OrderOfInitialization {
-
 /*
 When writing code that initializes fields in multiple places, you have to keep track of the order of initialization.
  In the meantime, you need to remember:
@@ -45,9 +44,7 @@ Order matters for the fields and blocks of code. You can’t refer to a variable
 
 You should expect to see a question about initialization on the exam. Let’s try one more.
 What do you think this code prints out?
-
  */
-
 }
 
 class Egg {
@@ -66,7 +63,6 @@ class Egg {
         number = 4;
     }
 }
-
 /*
 If you answered 5, you got it right. Fields and blocks are run fi rst in order, setting number to 3 and then 4. Then the constructor runs, setting number to 5.
  */
