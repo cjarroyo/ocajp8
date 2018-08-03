@@ -6,6 +6,8 @@ package ch1.ch1.java_buildings_blocks.C_understanding_package_declarations_and_i
  */
 
 public class C_NamingConflicts {
+    java.util.Date date;
+    java.sql.Date sqlDate;
     /*
     One of the reasons for using packages is so that class names don’t have to be unique across all of Java.
     This means you’ll sometimes want to import a class that can be found in multiple places.
@@ -35,7 +37,7 @@ public class C_NamingConflicts {
     One more example. What does Java do with “ties” for precedence?
 
         import java.util.Date;
-        import java.sql.Date;
+        import java.sql.Date; //DOES NOT COMPILE
 
     Java is smart enough to detect that this code is no good. As a programmer, you’ve claimed to explicitly want the default to be both the java.util.Date and java.sql.Date implementations.
     Because there can’t be two defaults, the compiler tells you:
