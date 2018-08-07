@@ -9,8 +9,8 @@ public class D_OrderOfInitialization {
 /*
 When writing code that initializes fields in multiple places, you have to keep track of the order of initialization.
  In the meantime, you need to remember:
--  Fields and instance initializer blocks are run in the order in which they appear in the file.
--  The constructor runs after all fields and instance initializer blocks have run.
+    -  Fields and instance initializer blocks are run in the order in which they appear in the file.
+    -  The constructor runs after all fields and instance initializer blocks have run.
 Let’s look at an example:
 
 1: public class Chick {
@@ -33,8 +33,7 @@ Let’s look at what’s happening here. We start with the main() method because
 
 where Java starts execution. On line 9, we call the constructor of Chick. Java creates a new object.
 First it initializes name to "Fluffy" on line 2. Next it executes the print statement in the instance initializer on line 3.
-Once all the fields and instance initializers have run, Java returns to the constructor.
-Line 5 changes the value of name to "Tiny" and line 6 prints another statement.
+Once all the fields and instance initializers have run, Java returns to the constructor. Line 5 changes the value of name to "Tiny" and line 6 prints another statement.
 At this point, the constructor is done executing and goes back to the print statement on line 10.
 
 Order matters for the fields and blocks of code. You can’t refer to a variable before it has been initialized:
@@ -63,6 +62,4 @@ class Egg {
         number = 4;
     }
 }
-/*
-If you answered 5, you got it right. Fields and blocks are run fi rst in order, setting number to 3 and then 4. Then the constructor runs, setting number to 5.
- */
+// If you answered 5, you got it right. Fields and blocks are run first in order, setting number to 3 and then 4. Then the constructor runs, setting number to 5.

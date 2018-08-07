@@ -35,7 +35,7 @@ public class E_CodeFormattingOnTheExam {
     You’ll be expected to know that ArrayList is in java.util—at least you will once you get to Chapter 3 of this book!
 
     You’ll also see code that doesn’t have a main() method.
-    When this happens, assume the main() method, class defi nition, and all necessary imports are present.
+    When this happens, assume the main() method, class definition, and all necessary imports are present.
     You’re just being asked if the part of the code you’re shown compiles when dropped into valid surrounding code.
      */
 }

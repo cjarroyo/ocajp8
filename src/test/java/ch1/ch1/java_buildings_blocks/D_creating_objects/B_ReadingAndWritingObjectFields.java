@@ -6,9 +6,7 @@ package ch1.ch1.java_buildings_blocks.D_creating_objects;
  */
 
 public class B_ReadingAndWritingObjectFields {
-    /*
-    It’s possible to read and write instance variables directly from the caller. In this example, a mother swan lays eggs:
-    */
+    //It’s possible to read and write instance variables directly from the caller. In this example, a mother swan lays eggs:
 }
 
 class Swan {
@@ -20,14 +18,12 @@ class Swan {
         System.out.println(mother.numberEggs); // read variable
     }
 }
+/*  Reading a variable is known as getting it. The class gets numberEggs directly to print it out.
+    Writing to a variable is known as setting it. This class sets numberEggs to 1.
 
-/*
-Reading a variable is known as getting it. The class gets numberEggs directly to print it out.
-Writing to a variable is known as setting it. This class sets numberEggs to 1.
+    You can even read and write fields directly on the line declaring them:         */
 
-You can even read and write fields directly on the line declaring them:
- */
-class Name {
+/*public*/ class Name {
     String first = "Theodore";
     String last = "Moose";
     String full = first + last;
