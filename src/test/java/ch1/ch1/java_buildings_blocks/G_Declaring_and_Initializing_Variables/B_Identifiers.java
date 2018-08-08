@@ -10,12 +10,10 @@ public class B_Identifiers {
 It probably comes as no surprise that Java has precise rules about identifier names.
 Luckily, the same rules for identifiers apply to anything you are free to name, including variables, methods, classes, and fields.
 There are only three rules to remember for legal identifiers:
-
     - The name must begin with a letter or the symbol "$" or "_".
     - Subsequent characters may also be numbers.
     - You cannot use the same name as a Java reserved word. As you might imagine, a reserved word is a keyword that Java has reserved so that you are not allowed to use it.
-    Remember that Java is case sensitive, so you can use versions of the keywords that only differ in case. Please don’t, though.
-
+      Remember that Java is case sensitive, so you can use versions of the keywords that only differ in case. Please don’t, though.
 Don’t worry—you won’t need to memorize the full list of reserved words. The exam will only ask you about ones you’ve already learned, such as class.
 The following is a list of all the reserved words in Java. const and goto aren’t actually used in Java.
 They are reserved so that people coming from other languages don’t use them by accident—and in theory, in case Java wants to use them one day.
@@ -48,6 +46,5 @@ Although you can do crazy things with identifier names, you shouldn’t. Java ha
 This consistency includes CamelCase. In CamelCase, each word begins with an uppercase letter. This makes multiple-word variable names easier to read.
 Which would you rather read: Thisismyclass name or ThisIsMyClass name? The exam will mostly use common conventions for identifiers, but not always.
 When you see a nonstandard identifier, be sure to check if it is legal. If not, you get to mark the answer “does not compile” and skip analyzing everything else in the question.
-
 */
 }

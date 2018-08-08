@@ -4,7 +4,6 @@ package ch1.ch1.java_buildings_blocks.G_Declaring_and_Initializing_Variables;
  * Created by: Cristian Arroyo
  * on 08 May 2018 - 3:23 PM
  */
-
 /*
 We’ve seen some variables already. A variable is a name for a piece of memory that stores data.
 When you declare a variable, you need to state the variable type along with giving it a name.
@@ -22,11 +21,8 @@ For example, here we merge the previous declarations and initializations into mo
     int numberAnimals = 100;
 In the following sections, we’ll look at how to declare multiple variables in one-line and legal identifiers.
  */
-
 public class A_Declaring_Multiple_Variables {
-
 // You can also declare and initialize multiple variables in the same statement. How many variables do you think are declared and initialized in the following two lines?
-
     String s1, s2;
     String s3 = "yes", s4 = "no";
 /*
@@ -73,5 +69,4 @@ Looking at the last line on its own, you can easily see that the declaration is 
 And yes, the exam really does cram multiple statements onto the same line—partly to try to trick you and partly to fit more code on the screen.
 In the real world, please limit yourself to one declaration per statement and line. Your teammates will thank you for the readable code.
 */
-
 }

@@ -4,16 +4,15 @@ package ch1.ch1.java_buildings_blocks.F_distinguishing_Between_Object_References
  * Created by: Cristian Arroyo
  * on 07 May 2018 - 6:14 PM
  */
-
-/*
-Java applications contain two types of data.
+/* Java applications contain two types of data.
     -  primitive types
     -  reference types
-we’ll discuss the differences between a primitive type and a reference type.
-*/
+we’ll discuss the differences between a primitive type and a reference type.    */
+
+import org.junit.Test;
+
 public class A_PrimitiveTypes {
-    /*
-    Java has eight built-in data types, referred to as the Java primitive types.
+/*  Java has eight built-in data types, referred to as the Java primitive types.
     These eight data types represent the building blocks for Java objects, because all Java objects are just a complex collection of these primitive data types.
 
     TABLE 1.1   Java primitive types
@@ -30,7 +29,6 @@ public class A_PrimitiveTypes {
     double              64-bit floating-point value     123.456
     char                16-bit Unicode value            'a'
     ___________________________________________________________
-
  - float and double are used for floating-point (decimal) values.
  - A float requires the letter "f" following the number so Java knows it is a float.
  - byte, short, int, and long are used for numbers without decimal points.
@@ -53,38 +51,35 @@ public class A_PrimitiveTypes {
     easier to just ask Java to print the value, isn’t it?
     ====================================================================================================
 
-
     There are a few more things you should know about numeric primitives.
     When a number is present in the code, it is called a literal. By default, Java assumes you are defining an int value with a literal.
     In this example, the number listed is bigger than what fits in an int.
-    Remember, you aren’t expected to memorize the maximum value for an int. The exam will include it in the question if it comes up.
-
+    Remember, you aren't expected to memorize the maximum value for an int. The exam will include it in the question if it comes up.
         long max = 3123456789; // DOES NOT COMPILE
-
     Java complains the number is out of range. And it is—for an int. However, we don’t have an int. The solution is to add the character L to the number:
-
         long max = 3123456789L; // now Java knows it is a long
-
     Alternatively, you could add a lowercase l to the number. But please use the uppercase L. The lowercase l looks like the number 1.
 
     Another way to specify numbers is to change the “base.” When you learned how to count, you studied the digits 0–9.
     This numbering system is called base 10 since there are 10 numbers. It is also known as the decimal number system. Java allows you to specify digits in several other formats:
-
         - octal (digits 0–7), which uses the number 0 as a prefix—for example, 017
         - hexadecimal (digits 0–9 and letters A–F), which uses the number 0 followed by x or X as a prefix—for example, 0xFF
         - binary (digits 0–1), which uses the number 0 followed by b or B as a prefix—for example, 0b10
-
     You won’t need to convert between number systems on the exam. You’ll have to recognize valid literal values that can be assigned to numbers.
 
     ====================================================================================================
     Converting Back to Binary
     ====================================================================================================
     Although you don’t need to convert between number systems on the exam, we’ll look at one example in case you’re curious:
-        System.out.println(56); // 56
+    */
+    @Test
+    public void primitiveTypes(){
+        System.out.println(56);    // 56
         System.out.println(0b11);  // 3
-        System.out.println(017);  // 15
+        System.out.println(017);   // 15
         System.out.println(0x1F);  // 31
-
+    }
+    /*
     First we have our normal base 10 value. We know you already know how to read that, but bear with us. The rightmost digit is 6, so it’s “worth” 6.
     The second-to-rightmost digit is 5, so it’s “worth” 50 (5 times 10.) Adding these together, we get 56.
 
@@ -100,18 +95,12 @@ public class A_PrimitiveTypes {
     ====================================================================================================
 
     The last thing you need to know about numeric literals is a feature added in Java 7. You can have underscores in numbers to make them easier to read:
-
         int million1 = 1000000;
         int million2 = 1_000_000;
-
     We’d rather be reading the latter one because the zeroes don’t run together.
     You can add underscores anywhere except at the beginning of a literal, the end of a literal, right before a decimal point, or right after a decimal point. Let’s look at a few examples:
-
         double notAtStart = _1000.00; // DOES NOT COMPILE
         double notAtEnd = 1000.00_; // DOES NOT COMPILE
         double notByDecimal = 1000_.00; // DOES NOT COMPILE
-        double annoyingButLegal = 1_00_0.0_0; // this one compiles
-
-     */
-
+        double annoyingButLegal = 1_00_0.0_0; // this one compiles  */
 }

@@ -9,7 +9,7 @@ public class B_ReadingAndWritingObjectFields {
     //It’s possible to read and write instance variables directly from the caller. In this example, a mother swan lays eggs:
 }
 
-class Swan {
+/*public*/ class Swan {
     int numberEggs;// instance variable
 
     public static void main(String[] args) {
