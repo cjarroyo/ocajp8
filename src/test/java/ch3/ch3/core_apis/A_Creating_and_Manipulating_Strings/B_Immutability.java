@@ -28,7 +28,7 @@ public class B_Immutability {
         }
     }
 
-    final class Immutable {
+    class Immutable {
         private String s = "name";
 
         public String getS() {

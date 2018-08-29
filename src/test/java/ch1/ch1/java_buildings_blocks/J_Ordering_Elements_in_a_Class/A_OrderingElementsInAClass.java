@@ -23,20 +23,17 @@ public class A_OrderingElementsInAClass {
 
     Let’s look at a few examples to help you remember this. The first example contains one of each element:
 
-    package structure; // package must be first non-comment
-
-    import java.util.*; // import must come after package
-
-    public class Meerkat { // then comes the class
-        double weight; // fields and methods can go in either order
+    package structure;      // package must be first non-comment
+    import java.util.*;     // import must come after package
+    public class Meerkat {  // then comes the class
+        double weight;      // fields and methods can go in either order
         public double getWeight() {
             return weight;
         }
-        double height; // another field – they don't need to be together
+        double height;      // another field – they don't need to be together
     }
 
     So far so good. This is a common pattern that you should be familiar with. How about this one?
-
     /* header * /
     package structure;
     // class Meerkat
@@ -55,10 +52,8 @@ public class A_OrderingElementsInAClass {
     Got all that? Think of the acronym PIC (picture): package, import, and class. Fields and methods are easier to remember because they merely have to be inside of a class.
     You need to know one more thing about class structure for the OCA exam: multiple classes can be defined in the same file, but only one of them is allowed to be public.
     The public class matches the name of the file. For example, these two classes must be in a file named Meerkat.java:
-
         1: public class Meerkat { }
         2: class Paw { }
-
     A file is also allowed to have neither class be public. As long as there isn’t more than one public class in a file, it is okay.
     On the OCP exam, you’ll also need to understand inner classes, which are classes within a class.
      */
