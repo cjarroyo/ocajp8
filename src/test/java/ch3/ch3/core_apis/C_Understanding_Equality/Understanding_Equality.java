@@ -58,7 +58,6 @@ public class Understanding_Equality {
 
     @Test
     public void understanding_Equality_6() {
-
         Tiger t1 = new Tiger();
         Tiger t2 = new Tiger();
         Tiger t3 = t1;
