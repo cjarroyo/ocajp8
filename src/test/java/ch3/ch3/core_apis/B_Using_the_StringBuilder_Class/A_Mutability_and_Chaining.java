@@ -43,8 +43,7 @@ public class A_Mutability_and_Chaining {
         StringBuilder same = sb.append("+end");// "start+middle+end"
         System.out.println(same);
         System.out.println(sb);
-        /* sb This time the reference is stored in same which means sb and same point to the exact same object and would print
-        out the same value */
+        /* sb This time the reference is stored in same which means sb and same point to the exact same object and would print out the same value */
     }
 
     @Test

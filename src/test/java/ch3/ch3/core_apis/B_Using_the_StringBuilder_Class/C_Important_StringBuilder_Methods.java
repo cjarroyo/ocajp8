@@ -33,14 +33,12 @@ public class C_Important_StringBuilder_Methods {
     public void insert() {
         //adds characters to the StringBuilder at the requested index and returns a reference to the current StringBuilder.
         //StringBuilder insert(int offset, String str)
-
         StringBuilder sb = new StringBuilder("animals");
         sb.insert(7, "-"); // sb = animals-
         sb.insert(0, "-"); // sb = -animals-
         sb.insert(4, "-"); // sb = -ani-mals-
         System.out.println(sb);
-        //As we add and remove characters, their indexes change
-        //draw what is going on so you won’t be confused
+        //As we add and remove characters, their indexes change, draw what is going on so you won’t be confused
     }
 
     @Test
@@ -48,10 +46,8 @@ public class C_Important_StringBuilder_Methods {
         //is the opposite of the insert() method.
         //removes characters from the sequence and returns a reference to the current StringBuilder
         //The deleteCharAt() method is convenient when you want to delete only one character.
-        /*
-        StringBuilder delete(int start, int end)
-        StringBuilder deleteCharAt(int index)
-        */
+        /*  StringBuilder delete(int start, int end)
+            StringBuilder deleteCharAt(int index)       */
         StringBuilder sb = new StringBuilder("abcdef");
         sb.delete(1, 3); // sb = adef
         System.out.println(sb);
@@ -62,10 +58,10 @@ public class C_Important_StringBuilder_Methods {
     @Test
     public void reverse() {
         //it reverses the characters in the sequences and returns a reference to the current StringBuilder
-        //StringBuilder reverse()
+        // StringBuilder reverse()
         StringBuilder sb = new StringBuilder("ABC");
         sb.reverse();
-        System.out.println(sb);
+        System.out.println(sb);//CBA
     }
 
     @Test

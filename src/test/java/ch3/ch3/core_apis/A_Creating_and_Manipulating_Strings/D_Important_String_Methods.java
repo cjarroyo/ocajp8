@@ -139,8 +139,7 @@ public class D_Important_String_Methods {
     public void trim() {
         /* The trim() method removes whitespace from the beginning and end of a String. */
         /* public String trim() */
-        System.out.println("abc".trim());
-        // abc
+        System.out.println("abc".trim());  // abc
         System.out.println("\t       a b c\n".trim()); // a b c
 
     }

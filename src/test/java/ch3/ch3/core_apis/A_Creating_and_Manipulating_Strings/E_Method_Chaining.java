@@ -15,7 +15,7 @@ public class E_Method_Chaining {
         String start = "AniMaL      ";
         String trimmed = start.trim(); // "AniMaL"
         String lowercase = trimmed.toLowerCase(); //"animal"
-        String result = lowercase.replace('a', 'A'); //"Animal"
+        String result = lowercase.replace('a', 'A'); //"AnimAl"
         System.out.println(result);
     }
 
