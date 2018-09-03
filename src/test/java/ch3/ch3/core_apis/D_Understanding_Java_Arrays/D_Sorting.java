@@ -25,8 +25,9 @@ public class D_Sorting {
         int[] numbers = {6, 9, 1};
         Arrays.sort(numbers);
         // we had to loop through the output to print the values in the array
-        for (int i = 0; i < numbers.length; i++)
-            System.out.print(numbers[i] + " ");
+        System.out.print(Arrays.toString(numbers));
+//        for (int i = 0; i < numbers.length; i++)
+//            System.out.print(numbers[i] + " ");
     }
 
     @Test
@@ -34,8 +35,9 @@ public class D_Sorting {
         //Try this again with String types:
         String[] strings = {"10", "9", "100"};
         Arrays.sort(strings);
-        for (String string : strings)
-            System.out.print(string + " ");
+//        for (String string : strings)
+//            System.out.print(string + " ");
+        System.out.print(Arrays.toString(strings));
         //String sorts in alphabetic order, and 1 sorts before 9.
     }
 

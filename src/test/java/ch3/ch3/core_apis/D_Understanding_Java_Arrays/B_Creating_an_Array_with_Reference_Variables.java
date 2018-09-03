@@ -28,9 +28,8 @@ public class B_Creating_an_Array_with_Reference_Variables {
 
     @Test
     public void creating_an_Array_with_Reference_Variables_2(){
-        //The array does not allocate space for the String objects. Instead, it allocates space for a reference to where the objects are really stored
+        /* The array does not allocate space for the String objects. Instead, it allocates space for a reference to where the objects are really stored
 
-        /*
                             0           1           2
                             -           -           -
                             |           |           |
@@ -41,7 +40,7 @@ public class B_Creating_an_Array_with_Reference_Variables {
         class Names {
             String names[];
         }
-        //The answer is null. The code never instantiated the array so it is just a reference variable to null
+        The answer is null. The code never instantiated the array so it is just a reference variable to null
 
         what do you think this array points to?
         class Names {
@@ -60,10 +59,8 @@ public class B_Creating_an_Array_with_Reference_Variables {
         objects[0] = new StringBuilder(); // careful!
             /*
             From the point of view of the compiler, this is just fine. A StringBuilder object can clearly go in an Object[].
-            The problem is that we don’t actually have an Object[].
-            We have a String[] referred to from an Object[] variable.
-            At runtime, the code throws an ArrayStoreException.
-            You don’t need to memorize the name of this exception, but you do need to know that the code will throw an exception
+            The problem is that we don’t actually have an Object[]. We have a String[] referred to from an Object[] variable.
+            At runtime, the code throws an ArrayStoreException. You don’t need to memorize the name of this exception, but you do need to know that the code will throw an exception
             */
     }
 }

@@ -36,9 +36,10 @@ public class E_Searching {
         System.out.println(Arrays.binarySearch(numbers, 3)); //-2
         System.out.println(Arrays.binarySearch(numbers, 9)); //-5
         /*
-        Line 5 searches for the index of 1. Although 1 isn’t in the list, the search can determine that it should be inserted at element 0 to preserve the sorted order. Since 0 already means
-        something for array indexes, Java needs to subtract 1 to give us the answer of –1.
-        Line 7 is similar. Although 3 isn’t in the list, it would need to be inserted at element 1 to preserve the sorted order. We negate and subtract 1 for consistency, getting –1 –1, also known as –2.
+        Line 5 searches for the index of 1. Although 1 isn’t in the list, the search can determine that it should be inserted at element 0 to preserve the sorted order.
+        Since 0 already means something for array indexes, Java needs to subtract 1 to give us the answer of –1.
+        Line 7 is similar. Although 3 isn’t in the list, it would need to be inserted at element 1 to preserve the sorted order.
+        We negate and subtract 1 for consistency, getting –1 –1, also known as –2.
         Finally, line 8 wants to tell us that 9 should be inserted at index 4. We again negate and subtract 1, getting –4 –1, also known as –5.
          */
     }

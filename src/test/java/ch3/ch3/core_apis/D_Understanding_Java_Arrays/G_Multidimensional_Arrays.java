@@ -48,8 +48,7 @@ public class G_Multidimensional_Arrays {
 
                                  0 1        0           0 1 2
                                  - -        -           - - -
-                                 1 4        3           9 8 7
-         */
+                                 1 4        3           9 8 7               */
     }
 
     @Test
