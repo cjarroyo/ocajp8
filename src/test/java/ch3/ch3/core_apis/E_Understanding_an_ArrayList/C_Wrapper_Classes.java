@@ -41,7 +41,6 @@ public class C_Wrapper_Classes {
         int bad1 = Integer.parseInt("a"); // throws NumberFormatException
         Integer bad2 = Integer.valueOf("123.45"); // throws NumberFormatException
     }
-
     /*
     TABLE 3.3                Converting from a String
     _______________________________________________________________________________________________________________
@@ -55,9 +54,5 @@ public class C_Wrapper_Classes {
     Float                           Float.parseFloat("1");                      Float.valueOf("2.2");
     Double                          Double.parseDouble("1");                    Double.valueOf("2.2");
     Character                       None                                        None
-    ________________________________________________________________________________________________________________
-
-     */
-
-
+    ________________________________________________________________________________________________________________*/
 }

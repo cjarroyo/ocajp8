@@ -11,8 +11,7 @@ import java.util.List;
 import org.junit.Test;
 
 public class D_Autoboxing {
-    /*Since Java 5, you can just type the primitive value and Java will convert it to the
-    relevant wrapper class for you. This is called autoboxing. */
+    /*Since Java 5, you can just type the primitive value and Java will convert it to the relevant wrapper class for you. This is called autoboxing. */
 
     @Test
     public void autoboxing_1(){
@@ -38,9 +37,10 @@ public class D_Autoboxing {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
-        numbers.remove(1);
-        // numbers.remove(new Integer(2)); //is correct
         System.out.println(numbers);
-
+        numbers.remove(1);
+        System.out.println(numbers);
+        System.out.println(numbers.remove(new Integer(2))); //is correct
+        System.out.println(numbers);
     }
 }

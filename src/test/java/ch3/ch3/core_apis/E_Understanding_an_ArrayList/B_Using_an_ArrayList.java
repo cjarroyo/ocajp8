@@ -18,13 +18,12 @@ public class B_Using_an_ArrayList {
      You should also know that ArrayList implements toString() so you can easily see the contents just by printing it
      Arrays do not do produce such pretty output.
     */
+
     @Test
     public void add() {
         // Insert a new value in the ArrayList
-        /*
-        boolean add(E element) -->It always returns true
-        void add(int index, E element)
-        */
+        /*      boolean add(E element) -->It always returns true
+                void add(int index, E element)                  */
         ArrayList list = new ArrayList();
         list.add("hawk"); // [hawk]
         list.add(Boolean.TRUE); // [hawk, true]
@@ -50,27 +49,23 @@ public class B_Using_an_ArrayList {
     @Test
     public void remove() {
         // remove the first matching value in the ArrayList or remove the element at a specified index.
-        /*
-        boolean remove(Object object)
-        E remove(int index)
-        */
+        /*      boolean remove(Object object)
+                E remove(int index)             */
         //This time the boolean return value tells us whether a match was removed.
         //The E return type is the element that actually got removed
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
-       // birds.add("hawk"); // [hawk, hawk]
-        //System.out.println(birds.remove("cardinal")); // prints false
-        //System.out.println(birds.remove("hawk")); // prints true
+        birds.add("hawk"); // [hawk, hawk]
+        System.out.println(birds.remove("cardinal")); // prints false
+        System.out.println(birds.remove("hawk")); // prints true
         System.out.println(birds.remove(0)); // prints hawk
-        //System.out.println(birds); // []
+        System.out.println(birds); // []
     }
 
     @Test
     public void set() {
         // Changes one of the elements of the ArrayList without changing the size.
-        /*
-        E set(int index, E newElement)
-         */
+        /*      E set(int index, E newElement)      */
         //The E return type is the element that got replaced.
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
@@ -78,16 +73,13 @@ public class B_Using_an_ArrayList {
         birds.set(0, "robin"); // [robin]
         System.out.println(birds.size()); // 1
         birds.set(1, "robin"); // IndexOutOfBoundsException
-
     }
 
     @Test
     public void isEmpty_and_Size() {
         // look at how many of the slots are in use.
-        /*
-        boolean isEmpty()
-        int size()
-        */
+        /*      boolean isEmpty()
+                int size()                  */
         List<String> birds = new ArrayList<>();
         System.out.println(birds.isEmpty()); // true
         System.out.println(birds.size()); // 0
@@ -100,9 +92,7 @@ public class B_Using_an_ArrayList {
     @Test
     public void clear() {
         // Provides an easy way to discard all elements of the ArrayList
-        /*
-        void clear()
-        */
+        /*      void clear()                */
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
         birds.add("hawk"); // [hawk, hawk]
@@ -117,9 +107,7 @@ public class B_Using_an_ArrayList {
     @Test
     public void contains() {
         //checks whether a certain value is in the ArrayList.
-        /*
-        boolean contains(Object object)
-         */
+        /*      boolean contains(Object object)             */
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
         System.out.println(birds.contains("hawk")); // true
@@ -129,11 +117,8 @@ public class B_Using_an_ArrayList {
 
     @Test
     public void equals() {
-        /* ArrayList has a custom implementation of equals() so you can compare two lists
-           to see if they contain the same elements in the same order */
-        /*
-        boolean equals(Object object)
-         */
+        /* ArrayList has a custom implementation of equals() so you can compare two lists  to see if they contain the same elements in the same order
+                     boolean equals(Object object)                      */
         List<String> one = new ArrayList<>();
         List<String> two = new ArrayList<>();
         System.out.println(one.equals(two)); // true
@@ -144,6 +129,5 @@ public class B_Using_an_ArrayList {
         one.add("b"); // [a,b]
         two.add(0, "b"); // [b,a]
         System.out.println(one.equals(two)); // false
-
     }
 }
