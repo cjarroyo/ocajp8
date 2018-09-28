@@ -23,10 +23,12 @@ public class E_Converting_Between_array_and_List {
         Object[] objectArray = list.toArray(); //--> shows that an ArrayList knows how to convert itself to an array.
                                                // The only problem is that it defaults to an array of class Object.
         System.out.println(objectArray.length); // 2
-        String[] stringArray = list.toArray(new String[0]);//-->specifies the type of the array and does what we actually want.
+        String[] stringArray = list.toArray(new String[5]);//-->specifies the type of the array and does what we actually want.
         //The advantage of specifying a size of 0 for the parameter is that Java will create a new array of the proper size for the return value.
         // If you like, you can suggest a larger array to be used instead. If the ArrayList fits in that array, it will be returned. Otherwise, a new one will be created.
         System.out.println(stringArray.length + " - " + stringArray.toString()); // 2
+        System.out.println(stringArray[0]);
+        System.out.println(stringArray[1]);
 
     }
 
