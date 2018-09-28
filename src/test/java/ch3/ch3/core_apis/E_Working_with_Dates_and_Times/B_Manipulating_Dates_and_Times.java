@@ -17,7 +17,6 @@ public class B_Manipulating_Dates_and_Times {
     @Test
     public void manipulating_Dates_and_Times_1() {
         /*Adding to a date is easy. The date and time classes are immutable, just like String was.*/
-
         LocalDate date = LocalDate.of(2014, Month.JANUARY, 20);
         System.out.println(date); // 2014-01-20
         date = date.plusDays(2);
@@ -43,7 +42,6 @@ public class B_Manipulating_Dates_and_Times {
         System.out.println(dateTime); // 2020-01-18T19:15
         dateTime = dateTime.minusSeconds(30);
         System.out.println(dateTime); // 2020-01-18T19:14:30
-
     }
 
     @Test
@@ -51,8 +49,7 @@ public class B_Manipulating_Dates_and_Times {
         /* It is common for date and time methods to be chained*/
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(5, 15);
-        //LocalDateTime dateTime = LocalDateTime.of(date2, time).minusDays(1).minusHours(10).minusSeconds(30);
-
+        LocalDateTime dateTime = LocalDateTime.of(date, time).minusDays(1).minusHours(10).minusSeconds(30);
     }
 
     @Test

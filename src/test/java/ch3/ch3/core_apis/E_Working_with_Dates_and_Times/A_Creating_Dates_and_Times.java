@@ -24,7 +24,7 @@ public class A_Creating_Dates_and_Times {
     */
     @Test
     public void creating_Dates_and_Times_1() {
-        /* create your fi rst date and time objects */
+        /* create your first date and time objects */
         System.out.println(LocalDate.now());
         System.out.println(LocalTime.now());
         System.out.println(LocalDateTime.now());
@@ -33,27 +33,23 @@ public class A_Creating_Dates_and_Times {
 
     @Test
     public void creating_Dates_and_Times_2() {
-        /*
-        let’s look at other specific dates and times
-        To begin, let’s create just a date with no time
+        /* Let’s look at other specific dates and times. To begin, let’s create just a date with no time
 
         public static LocalDate of(int year, int month, int dayOfMonth)
-        public static LocalDate of(int year, Month month, int dayOfMonth)
-        */
+        public static LocalDate of(int year, Month month, int dayOfMonth)       */
+
         LocalDate date1 = LocalDate.of(2015, Month.JANUARY, 20); //recomendable
         LocalDate date2 = LocalDate.of(2015, 1, 20);
-
     }
 
     @Test
     public void creating_Dates_and_Times_3() {
-        /*
-        When creating a time, you can choose how detailed you want to be. You can specify just the hour and minute, seconds, nanosecond
+        /* When creating a time, you can choose how detailed you want to be. You can specify just the hour and minute, seconds, nanosecond
 
         public static LocalTime of(int hour, int minute)
         public static LocalTime of(int hour, int minute, int second)
-        public static LocalTime of(int hour, int minute, int second, int nanos)
-         */
+        public static LocalTime of(int hour, int minute, int second, int nanos)     */
+
         LocalTime time1 = LocalTime.of(6, 15); // hour and minute
         LocalTime time2 = LocalTime.of(6, 15, 30); // + seconds
         LocalTime time3 = LocalTime.of(6, 15, 30, 200); // + nanoseconds
@@ -61,15 +57,17 @@ public class A_Creating_Dates_and_Times {
 
     @Test
     public void creating_Dates_and_Times_4() {
-        /*Finally*/
-
-        /*The first line of code shows how you can specify all the information about the LocalDateTime right in the same line*/
+        /*Finally
+        The first line of code shows how you can specify all the information about the LocalDateTime right in the same line*/
         LocalDateTime dateTime1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6, 15, 30);
-        /*The second line of code shows how you can create LocalDate and LocalTime objects separately fi rst and then combine them to create a LocalDateTime object*/
-        /* LocalDateTime dateTime2 = LocalDateTime.of(date1, time1); */
 
-        /* This time there are a lot of method signatures since there are more combinations */
-        /*
+        /*The second line of code shows how you can create LocalDate and LocalTime objects separately first and then combine them to create a LocalDateTime object*/
+        LocalDate date1 = LocalDate.of(2015, Month.JANUARY, 20);
+        LocalTime time1 = LocalTime.of(6, 15);
+        LocalDateTime dateTime2 = LocalDateTime.of(date1, time1);
+
+        /* This time there are a lot of method signatures since there are more combinations
+
         public static LocalDateTime of(int year, int month, int dayOfMonth, int hour, int minute)
         public static LocalDateTime of(int year, int month, int dayOfMonth, int hour, int minute, int second)
         public static LocalDateTime of(int year, int month, int dayOfMonth, int hour, int minute, int second, int nanos)
@@ -79,10 +77,10 @@ public class A_Creating_Dates_and_Times {
         public static LocalDateTime of(LocalDate date, LocalTime)
         */
     }
-    /* we did not use a constructor in any of the examples? */
-    /*The date and time classes have private constructors to force you to use the static methods*/
-    /* LocalDate d = new LocalDate(); // DOES NOT COMPILE */
+    /* we did not use a constructor in any of the examples?
+        The date and time classes have private constructors to force you to use the static methods
+        LocalDate d = new LocalDate(); // DOES NOT COMPILE
 
-    /* what happens when you pass invalid numbers to of(). */
-    /* LocalDate.of(2015, Month.JANUARY, 32) // throws DateTimeException */
+        what happens when you pass invalid numbers to of().
+        LocalDate.of(2015, Month.JANUARY, 32) // throws DateTimeException           */
 }

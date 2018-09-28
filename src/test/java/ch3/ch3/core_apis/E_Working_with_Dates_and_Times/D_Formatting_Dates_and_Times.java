@@ -54,8 +54,6 @@ public class D_Formatting_Dates_and_Times {
     }
 
     /*
-
-
     TABLE 3.5 ofLocalized methods
     _________________________________________________________________________________________________________________________________________________
     DateTimeFormatter f = DateTime
@@ -71,7 +69,6 @@ public class D_Formatting_Dates_and_Times {
     ofLocalizedTime                         Throws runtime exception                Legal – shows                           Legal – shows
                                                                                     just time part                          whole object
     _________________________________________________________________________________________________________________________________________________
-
      */
 
     @Test
@@ -114,6 +111,4 @@ public class D_Formatting_Dates_and_Times {
         We can only use this formatter with objects containing times. Therefore, line 6 will throw
         an exception.*/
     }
-
-
 }
