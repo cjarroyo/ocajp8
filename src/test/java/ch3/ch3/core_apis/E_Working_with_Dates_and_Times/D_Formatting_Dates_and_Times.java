@@ -40,8 +40,8 @@ public class D_Formatting_Dates_and_Times {
 
     @Test
     public void formatting_Dates_and_Times_3() {
-         /* This is a reasonable way for computers to communicate, but probably not how you want to output the date and time in your program. Luckily there are some predefi ned formats
-        that are more useful: */
+         /* This is a reasonable way for computers to communicate, but probably not how you want to output the date and time in your program.
+         Luckily there are some predefined formats that are more useful: */
         DateTimeFormatter shortDateTime = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
         // System.out.println(shortDateTime.format(dateTime)); // 1/20/20
         // System.out.println(shortDateTime.format(date)); // 1/20/20
@@ -53,8 +53,7 @@ public class D_Formatting_Dates_and_Times {
         //System.out.println(time.format(shortDateTime2));
     }
 
-    /*
-    TABLE 3.5 ofLocalized methods
+    /*TABLE 3.5 ofLocalized methods
     _________________________________________________________________________________________________________________________________________________
     DateTimeFormatter f = DateTime
     Formatter._____(FormatStyle.SHORT);     Calling f.format(localDate)             Calling f.format(localDateTime)         Calling f.format(localTime)
@@ -68,12 +67,11 @@ public class D_Formatting_Dates_and_Times {
 
     ofLocalizedTime                         Throws runtime exception                Legal – shows                           Legal – shows
                                                                                     just time part                          whole object
-    _________________________________________________________________________________________________________________________________________________
-     */
+    _________________________________________________________________________________________________________________________________________________*/
 
     @Test
     public void formatting_Dates_and_Times_4() {
-        /*There are two predefi ned formats that can show up on the exam: SHORT and MEDIUM. The other predefi ned formats involve time zones */
+        /*There are two predefined formats that can show up on the exam: SHORT and MEDIUM. The other predefi ned formats involve time zones */
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(11, 12, 34);
         LocalDateTime dateTime = LocalDateTime.of(date, time);
