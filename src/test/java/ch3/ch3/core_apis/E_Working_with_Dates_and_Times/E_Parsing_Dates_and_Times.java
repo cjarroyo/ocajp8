@@ -14,7 +14,8 @@ import org.junit.Test;
 public class E_Parsing_Dates_and_Times {
     /*
     you’ll find it easy to convert a String to a date or time
-    Just like the format() method, the parse() method takes a formatter as well. If you don’t specify one, it uses the default for that type.
+    Just like the format() method, the parse() method takes a formatter as well.
+    If you don’t specify one, it uses the default for that type.
     */
 
     @Test

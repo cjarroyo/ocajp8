@@ -11,6 +11,7 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.time.temporal.UnsupportedTemporalTypeException;
 
 import org.junit.Test;
 
@@ -20,6 +21,7 @@ public class D_Formatting_Dates_and_Times {
     public void formatting_Dates_and_Times_1() {
         /* The date and time classes support many methods to get data out of them: */
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
+        System.out.println(date); // 2020-01-20
         System.out.println(date.getDayOfWeek()); // MONDAY
         System.out.println(date.getMonth()); // JANUARY
         System.out.println(date.getYear()); // 2020
@@ -28,7 +30,8 @@ public class D_Formatting_Dates_and_Times {
 
     @Test
     public void formatting_Dates_and_Times_2() {
-        /* Java provides a class called DateTimeFormatter to help us out. DateTimeFormatter can be used to format any type of date and/or time object*/
+        /* Java provides a class called DateTimeFormatter to help us out.
+        DateTimeFormatter can be used to format any type of date and/or time object */
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(11, 12, 34);
         LocalDateTime dateTime = LocalDateTime.of(date, time);
@@ -38,19 +41,22 @@ public class D_Formatting_Dates_and_Times {
         System.out.println(dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)); //2020-01-20T11:12:34
     }
 
-    @Test
+    @Test(expected = UnsupportedTemporalTypeException.class)
     public void formatting_Dates_and_Times_3() {
-         /* This is a reasonable way for computers to communicate, but probably not how you want to output the date and time in your program.
+        LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
+        LocalTime time = LocalTime.of(11, 12, 34);
+        LocalDateTime dateTime = LocalDateTime.of(date, time);
+        /* This is a reasonable way for computers to communicate, but probably not how you want to output the date and time in your program.
          Luckily there are some predefined formats that are more useful: */
         DateTimeFormatter shortDateTime = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        // System.out.println(shortDateTime.format(dateTime)); // 1/20/20
-        // System.out.println(shortDateTime.format(date)); // 1/20/20
+        System.out.println(shortDateTime.format(dateTime)); // 20/01/20
+        System.out.println(shortDateTime.format(date)); // 20/01/20
         // System.out.println(shortDateTime.format(time)); // UnsupportedTemporalTypeException
         //similar
-        //DateTimeFormatter shortDateTime2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        //System.out.println(dateTime.format(shortDateTime2));
-        //System.out.println(date.format(shortDateTime2));
-        //System.out.println(time.format(shortDateTime2));
+        DateTimeFormatter shortDateTime2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        System.out.println(dateTime.format(shortDateTime2)); // 20/01/20
+        System.out.println(date.format(shortDateTime2)); // 20/01/20
+        System.out.println(time.format(shortDateTime2)); // UnsupportedTemporalTypeException
     }
 
     /*TABLE 3.5 ofLocalized methods
@@ -71,7 +77,7 @@ public class D_Formatting_Dates_and_Times {
 
     @Test
     public void formatting_Dates_and_Times_4() {
-        /*There are two predefined formats that can show up on the exam: SHORT and MEDIUM. The other predefi ned formats involve time zones */
+        /*There are two predefined formats that can show up on the exam: SHORT and MEDIUM. The other predefined formats involve time zones */
         LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
         LocalTime time = LocalTime.of(11, 12, 34);
         LocalDateTime dateTime = LocalDateTime.of(date, time);
@@ -85,9 +91,13 @@ public class D_Formatting_Dates_and_Times {
 
     @Test
     public void formatting_Dates_and_Times_5() {
-        /*If you don’t want to use one of the predefi ned formats, you can create your own. For example, this code spells out the month*/
+        LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
+        LocalTime time = LocalTime.of(11, 12, 34);
+        LocalDateTime dateTime = LocalDateTime.of(date, time);
+
+        /*If you don’t want to use one of the predefined formats, you can create your own. For example, this code spells out the month*/
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
-        //System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
+        System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
 
         /*
         MMMM: M represents the month(M outputs 1, MM outputs 01, MMM outputs Jan, and MMMM outputs January)
@@ -99,14 +109,17 @@ public class D_Formatting_Dates_and_Times {
          */
     }
 
-    @Test
+    @Test(expected = UnsupportedTemporalTypeException.class)
     public void formatting_Dates_and_Times_6() {
+        LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
+        LocalTime time = LocalTime.of(11, 12, 34);
+        LocalDateTime dateTime = LocalDateTime.of(date, time);
+
         DateTimeFormatter f = DateTimeFormatter.ofPattern("hh:mm");
-        // f.format(dateTime);
-        // f.format(date); // throws exception
-        // f.format(time);
+        f.format(dateTime);
+        f.format(date); // throws exception
+        f.format(time);
         /*Remember M (uppercase) is month and m (lowercase) is minute.
-        We can only use this formatter with objects containing times. Therefore, line 6 will throw
-        an exception.*/
+        We can only use this formatter with objects containing times. Therefore, line 6 will throw an exception.*/
     }
 }
