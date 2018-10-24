@@ -18,7 +18,6 @@ public class A_Private_Access {
 }
 
 class FatherDuck {
-
     private String noise = "quack";
 
     private void quack() {
@@ -28,15 +27,13 @@ class FatherDuck {
     private void makeNoise() {
         quack(); // private access is ok
     }
-
 }
 
 class BadDuckling {
-
     public void makeNoise() {
-        FatherDuck duck = new FatherDuck();
-        //duck.quack(); // DOES NOT COMPILE
-        //System.out.println(duck.noise); // DOES NOT COMPILE
+        FatherDuck fatherDuck = new FatherDuck();
+        //fatherDuck.quack(); // DOES NOT COMPILE
+        //System.out.println(fatherDuck.noise); // DOES NOT COMPILE
     }
-
 }
+

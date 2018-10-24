@@ -27,7 +27,6 @@ class Bird {
 }
 
 //Next we create a subclass: in a different package
-
 class Gosling extends Bird { // extends means create subclass
     public void swim() {
         floatInWater(); // calling protected member
@@ -60,11 +59,10 @@ class BirdWatcherFromAfar {
     }
 }
 
-//BirdWatcherFromAfar is not in the same package as Bird and it doesn’t inherit from Bird.
+//BirdWatcherFromAfar is not in the same package as Bird and it doesn't inherit from Bird.
 //This means that it is not allowed to access protected members of Bird.
 
 //Subclasses and classes in the same package are the only ones allowed to access protected members.
-
 class Swan extends Bird { // but subclass of bird
 
     public void swim() {
@@ -73,18 +71,18 @@ class Swan extends Bird { // but subclass of bird
     }
 
     public void helpOtherSwanSwim() {
-        Swan other = new Swan();
-        other.floatInWater(); // package access to superclass
-        System.out.println(other.text);// package access to superclass
+        Swan swan = new Swan();
+        swan.floatInWater(); // package access to superclass
+        System.out.println(swan.text);// package access to superclass
     }
 
     public void helpOtherBirdSwim() {
-        Bird other = new Bird();
-        //other.floatInWater(); // DOES NOT COMPILE
-        //System.out.println(other.text); // DOES NOT COMPILE
+        Bird bird = new Bird();
+        //bird.floatInWater(); // DOES NOT COMPILE
+        //System.out.println(bird.text); // DOES NOT COMPILE
     }
     //This time a Bird reference is used. It is created on line 14.
-    //Bird is in a different package, and this code isn’t inheriting from Bird, so it doesn’t get to use protected members.
+    //Bird is in a different package, and this code isn’t inheriting from Bird, so it doesn't get to use protected members.
 
     /*
     A member is used without referring to a variable. This is the case on lines 5 and 6.
@@ -98,21 +96,20 @@ class Swan extends Bird { // but subclass of bird
 
     class Goose extends Bird {
         public void helpGooseSwim() {
-            Goose other = new Goose();
-            other.floatInWater();
-            System.out.println(other.text);
+            Goose goose = new Goose();
+            goose.floatInWater();
+            System.out.println(goose.text);
         }
 
         public void helpOtherGooseSwim() {
-            Bird other = new Goose();
-            //other.floatInWater(); // DOES NOT COMPILE
-            //System.out.println(other.text); // DOES NOT COMPILE
+            Bird bird = new Goose();
+            //bird.floatInWater(); // DOES NOT COMPILE
+            //System.out.println(bird.text); // DOES NOT COMPILE
         }
     }
     /*
-    The second method is a problem. Although the object happens to be
-    a Goose, it is stored in a Bird reference. We are not allowed to refer to members of the Bird
-    class since we are not in the same package and Bird is not a subclass of Bird.
+    The second method is a problem. Although the object happens to be a Goose, it is stored in a Bird reference.
+    We are not allowed to refer to members of the Bird class since we are not in the same package and Bird is not a subclass of Bird.
     */
 
     //What about this one?
@@ -120,16 +117,12 @@ class Swan extends Bird { // but subclass of bird
     class GooseWatcher {
         public void watch() {
             Goose goose = new Goose();
-            goose.floatInWater(); // DOES NOT COMPILE
+            //goose.floatInWater(); // DOES NOT COMPILE
         }
     }
-
     /*
-    This code doesn’t compile because we are not in the Goose class. The floatInWater()
-    method is declared in Bird. GooseWatcher is not in the same package as Bird, nor does it
-    extend Bird. Goose extends Bird. That only lets Goose refer to floatInWater() and not
-    callers of Goose.
+    This code doesn't compile because we are not in the Goose class. The floatInWater() method is declared in Bird.
+    GooseWatcher is not in the same package as Bird, nor does it extend Bird.
+    Goose extends Bird. That only lets Goose refer to floatInWater() and not callers of Goose.
     */
-
-
 }

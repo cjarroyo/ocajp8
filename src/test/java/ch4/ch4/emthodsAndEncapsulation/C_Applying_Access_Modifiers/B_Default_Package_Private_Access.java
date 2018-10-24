@@ -33,14 +33,12 @@ protected                                           private
 */
 
 class GoodDuckling {
-
     public void makeNoise() {
         MotherDuck duck = new MotherDuck();
         duck.quack(); // default access
         System.out.println(duck.noise); // default access
     }
 }
-
 
 /*another package*/
 /*
@@ -62,4 +60,3 @@ is in the pond.swan package and the code doesn’t compile.
 
 Remember that when there is no access modifier, only classes in the same package can access it.
 */
-

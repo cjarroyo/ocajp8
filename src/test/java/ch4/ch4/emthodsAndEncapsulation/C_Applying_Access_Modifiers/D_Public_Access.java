@@ -18,7 +18,6 @@ class DuckTeacher {
 }
 
 //DuckTeacher allows access to any class that wants it.
-
 class LostDuckling {
     public void swim() {
         DuckTeacher teacher = new DuckTeacher();
