@@ -10,7 +10,7 @@ public class G_Static_vs_Instance {
     There’s another way the exam creators will try to trick you regarding static and instance members.
     (Remember that “member” means field or method.)
     A static member cannot call an instance member.
-    This shouldn’t be a surprise since static doesn’t require any instances of the class to be around.
+    This shouldn't be a surprise since static doesn't require any instances of the class to be around.
     */
 }
 
@@ -22,34 +22,34 @@ class Static {
 
     public static void second() {}
 
-    public void third() {System.out.println(name);}
+    public void third() {
+        System.out.println(name);
+    }
 
-    /*
-    The compiler will give you an error about making a static reference to a non-static method.
+    /*The compiler will give you an error about making a static reference to a non-static method.
     If we fix this by adding static to third(), we create a new problem. Can you figure out what it is?
 
-    All this does is move the problem. Now, third() is referring to nonstatic name.
-    Adding static to name as well would solve the problem.
-    Another solution would have been to call third as an instance method—for example, new Static().third();.
-
-    The exam creators like this topic.
-    A static method or instance method can call a static method because static methods don’t require an object to use.
-    pero, un metodo estatico no puede llamar a una instancia de metodo
-     */
+    All this does is move the problem. Now, third() is referring to nonstatic name. Adding static to name as well would solve the problem.
+    Another solution would have been to call third as an instance method—for example, new Static().third();.*/
     public static void static_method_1(String args[]) {
         first();
         second();
         //third(); // DOES NOT COMPILE --> Solution: new Static().third();
+        new Static().third();
     }
 
+    /*Un instance member si puede llamar a un static member*/
     public void instance_method_1(String args[]) {
         first();
         second();
         third();
     }
-    /*
-    Only an instance method can call another instance method on the same class without using a reference variable, because instance methods do require an object.
-     */
+
+    /*The exam creators like this topic.
+    A static method or instance method can call a static method because static methods don’t require an object to use.
+    pero, un metodo estatico no puede llamar a una instancia de metodo
+
+    Only an instance method can call another instance method on the same class without using a reference variable, because instance methods do require an object.*/
     public void instance_method_2(String args[]) {
         first();
         second();
@@ -70,9 +70,8 @@ class Static {
 
     Instance method     Another instance method or variable     Yes         Using a reference variable
     ____________________________________________________________________________________________________________________
+    Do you understand why the following lines fail to compile?
     */
-
-    // Do you understand why the following lines fail to compile?
 }
 
 class Gorilla {
@@ -104,7 +103,6 @@ class Gorilla {
 }
 
 //A common use for static variables is counting the number of instances:
-
 class Counter {
 
     private static int count;

@@ -45,8 +45,6 @@ public class F_Calling_a_Static_Variable_or_Method {
         System.out.println(Koala.count); //5
     }
     /*
-    There is only one count variable since it is static.
-    It is set to 4, then 6, and finally winds up as 5.
-    All the Koala variables are just distractions.
+    There is only one count variable since it is static. It is set to 4, then 6, and finally winds up as 5. All the Koala variables are just distractions.
      */
 }

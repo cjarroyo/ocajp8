@@ -35,5 +35,4 @@ import static statics.B.TYPE; // DOES NOT COMPILE
 Luckily when this happens, we can just refer to the static members via their classname in
 the code instead of trying to use a static import.
 */
-
 }
