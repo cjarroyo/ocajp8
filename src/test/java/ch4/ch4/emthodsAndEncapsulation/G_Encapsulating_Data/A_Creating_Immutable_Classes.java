@@ -13,7 +13,6 @@ package ch4.ch4.emthodsAndEncapsulation.G_Encapsulating_Data;
     //We no longer have control of what gets set in our own class. A caller could even write this:.
 
     // mother.numberEggs = -1;
-
     //This is clearly no good. We do not want the mother Swan to have a negative number of eggs!
 }*/
 
@@ -102,19 +101,16 @@ public class A_Creating_Immutable_Classes {
     Immutable classes are allowed to have values. They just can't change after instantiation.
 
      */
-
 }
 
 /*
 Return Types in Immutable Classes
 ================================
-
 When you are writing an immutable class, be careful about the return types.
 On the surface, this class appears to be immutable since there is no setter:
  */
 
 class NotImmutable {
-
     private StringBuilder builder;
 
     public NotImmutable(StringBuilder b) {
@@ -132,7 +128,6 @@ class NotImmutable {
         StringBuilder gotBuilder = problem.getBuilder();
         gotBuilder.append(" more");
         System.out.println(problem.getBuilder()); // initial added more
-
     }
     /*
     The problem  is that we are just passing the same StringBuilder all over.
@@ -140,11 +135,9 @@ class NotImmutable {
     Anyone who calls the getter gets a reference too.
     A solution is to make a copy of the mutable object. This is called a "defensive copy
     */
-
 }
 
 class Mutable {
-
     private StringBuilder builder;
 
     public Mutable(StringBuilder b) {
@@ -162,31 +155,22 @@ class Mutable {
         StringBuilder gotBuilder = problem.getBuilder();
         gotBuilder.append(" more");
         System.out.println(problem.getBuilder()); // initial
-
         /*
         Now the caller can make changes to the initial sb object and it is fine. Mutable no longer
         cares about that object after the constructor gets run. The same goes for the getter: call-
         ers can change their StringBuilder without affecting Mutable.
-
         Another approach for the getter is to return an immutable object:
-
 
         public String getValue() {
             return builder.toString();
         }
 
-
         There’s no rule that says we have to return the same type as we are storing. String is safe to return because
-        it is immutable in the fi rst place.
-
+        it is immutable in the first place.
         */
-
     }
 }
-
 /*
 To review, encapsulation refers to preventing callers from changing the instance variables directly.
 Immutability refers to preventing callers from changing the instance variables at all.
- */
-
-
+*/

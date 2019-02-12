@@ -24,9 +24,12 @@ public class A_Creating_Constructors {
 
     /*
     Line 6 is incorrect and you should watch for it on the exam. The instance variable length starts out with a 0 value.
-    That 0 is assigned to the method parameter length.
-    The instance variable stays at 0. Line 7 is more straightforward. The parameter theHeight and instance variable height have different names.
-    Since there is no naming collision, this is not required. Finally, line 8 shows that it is allowed to use this even when there is no duplication of variable names.
+    That 0 is assigned to the method parameter length. The instance variable stays at 0.
+
+    Line 7 is more straightforward. The parameter theHeight and instance variable height have different names.
+    Since there is no naming collision, this is not required.
+
+    Finally, line 8 shows that it is allowed to use this even when there is no duplication of variable names.
     In this section, we’ll look at default constructors, overloading constructors, final fields, and the order of initialization in a class.
      */
 

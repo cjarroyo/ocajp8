@@ -24,7 +24,7 @@ public class C_Overloading_Constructors {
 
 //  What we really want is for the first constructor to call the second constructor with two parameters. You might be tempted to write this:
 //        public C_Overloading_Constructors(int weight) {
-//        C_Overloading_Constructors(weight, "brown"); // DOES NOT COMPILE
+//            C_Overloading_Constructors(weight, "brown"); // DOES NOT COMPILE
 //        }
 
     public C_Overloading_Constructors(int weight) {
