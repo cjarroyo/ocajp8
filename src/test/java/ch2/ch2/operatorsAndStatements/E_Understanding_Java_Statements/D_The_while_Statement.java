@@ -13,7 +13,8 @@ public class D_The_while_Statement {
     int roomInBelly = 5;
 
     @Test
-    public void eatCheese(int bitesOfCheese) {
+    public void eatCheese() {
+        int bitesOfCheese = 4;
         while (bitesOfCheese > 0 && roomInBelly > 0) {
             bitesOfCheese--;
             roomInBelly--;

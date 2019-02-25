@@ -5,6 +5,8 @@ package ch4.ch4.emthodsAndEncapsulation.H_Writing_Simple_Lambdas.C_predicates;
  * on 27 February 2018 - 8:01 PM
  */
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -22,15 +24,13 @@ public class C_Predicates {
     public interface Predicate<T> {
         boolean test(T t);
     }
-
     That’s the syntax for generics
-
      */
 
     public static void main(String[] args) {
         List<Animal> animals = new ArrayList<Animal>();
         animals.add(new Animal("fish", false, true));
-        print(animals, a -> a.canHop());
+        print(animals, a -> a.canSwim());
     }
 
     private static void print(List<Animal> animals, Predicate<Animal> checker) {
@@ -47,20 +47,18 @@ public class C_Predicates {
     Imagine we have a list of names for pet bunnies.
     We decide we want to remove all of the bunny names that don’t begin with the letter h because our little cousin really wants us to choose an H name.
     We could solve this problem by writing a loop. Or we could solve it in one line:
-
- List<String> bunnies = new ArrayList<>();
-
- bunnies.add("long ear");
-
- bunnies.add("floppy");
-
- bunnies.add("hoppy");
-
- System.out.println(bunnies);  // [long ear, floppy, hoppy]
-
- bunnies.removeIf(s -> s.charAt(0) != 'h');
-
- System.out.println(bunnies);  // [hoppy]
+*/
+    @Test
+    public void conejitos() {
+        List<String> bunnies = new ArrayList<>();
+        bunnies.add("long ear");
+        bunnies.add("floppy");
+        bunnies.add("hoppy");
+        System.out.println(bunnies);  // [long ear, floppy, hoppy]
+        bunnies.removeIf(x -> x.charAt(0) != 'h');
+        System.out.println(bunnies);  // [hoppy]
+    }
+    /*
 Line 8 takes care of everything for us. It defines a predicate that takes a String and returns a boolean. The removeIf() method does the rest.
 For the OCA exam, you only need to know how to implement lambda expressions that use the Predicate interface.
 Remember the one method in the interface called test()? It takes any one reference type parameter and returns a boolean.

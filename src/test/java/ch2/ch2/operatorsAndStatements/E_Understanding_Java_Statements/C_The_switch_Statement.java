@@ -106,12 +106,12 @@ public class C_The_switch_Statement {
         final String suffix = "JR";
         int id = 0;
         switch (firstName) {
-            case "Test":
+            case "Test": //case statement es un literal
                 return 52;
-            /*case middleName: // DOES NOT COMPILE, tiene que ser un final variable
+            /*case middleName: // DOES NOT COMPILE, tiene que ser un final variable, para que no cambie
                 id = 5;
                 break;*/
-            case suffix:
+            case suffix://case statement es un final
                 id = 0;
                 break;
             /*case lastName: // DOES NOT COMPILE, no es constante, ya que se pasa a la funció, puede variar;

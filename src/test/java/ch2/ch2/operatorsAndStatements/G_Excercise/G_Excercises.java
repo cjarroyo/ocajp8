@@ -237,4 +237,103 @@ public class G_Excercises {
             x++;
         }
     }
+
+    @Test
+    public void book(){
+        int x = 3;
+        int y = ++x * 5 / x-- + --x;
+        //primero x = 4
+        //luego baja a 3
+        //luego vuelve a bajar a 2
+        System.out.println("y = " + y);
+        System.out.println("x = " + x);
+    }
+
+
+    @Test
+    public void overflow(){
+        //roll over effect to lower limit in overflow
+        int overflowExample = 2147483647;
+        System.out.println("Overflow: "+ (overflowExample + 1));
+
+        //roll over effect to upper limit in underflow
+        int underflowExample = -2147483648;
+        System.out.println("Underflow: "+ (underflowExample - 1));
+
+        //underflow
+        float f = 3.4028235E38f * 20f;
+        System.out.println(f);
+    }
+
+    @Test
+    public void switchstatement0() {
+        //sabe que ninguno va coincidir, entonces se mete al default
+        int days = 5;
+        switch (days) {
+            default:
+                System.out.println("Weekday0");
+                break;
+            case 0:
+                System.out.println("Sunday0");
+                break;
+            case 6:
+                System.out.println("Saturday0");//aqui entra
+                break;
+        }
+    }
+    @Test
+    public void switchstatement1() {
+        //sabe que ninguno va coincidir, entonces se mete al deault
+        //una vez que entra, ya entra a todos lados, hasta en los que no coinciden (sin BREAK)
+        int days = 5;
+        switch (days) {
+            case 0:
+                System.out.println("Sunday1");
+            default:
+                System.out.println("Weekday1");//aqui entra
+            case 6:
+                System.out.println("Saturday1");//aqui entra
+                break;
+        }
+    }
+
+    @Test
+    public void switchstatement2() {
+        //sabe que uno va coincidir, entonces NO se mete al default
+        //una vez que entra, ya entra a todos lados, hasta en los que no coinciden (sin BREAK)
+        int days = 6;
+        switch (days) {
+            default:
+                System.out.println("Weekday2");
+            case 0:
+                System.out.println("Sunday2");
+            case 6:
+                System.out.println("Saturday2");
+                break;
+        }
+    }
+
+    @Test
+    public void switchstatement3() {
+        //sabe que uno va coincidir, entonces NO se mete al default
+        //una vez que entra, ya entra a todos lados, hasta en los que no coinciden (sin BREAK)
+        int days = 0;
+        switch (days) {
+            case 0:
+                System.out.println("Sunday3");//entra aqui
+            default:
+                System.out.println("Weekday3");//entra aqui
+            case 6:
+                System.out.println("Saturday3");//entra aqui
+                break;
+        }
+    }
+
+    @Test
+    public void boo(){
+        float f = -1;
+        float f1 = 0x0123;
+        float f2 = 4;
+    }
+
 }
