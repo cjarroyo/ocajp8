@@ -105,7 +105,7 @@ class Eagle extends Bird {
         return height;
     }
     /*
-    public int eat(int food) { // DOES NOT COMPILE, overriding
+    public int eat(int food) { // DOES NOT COMPILE, overriding, the return type void is not a subclass of int
         System.out.println("Bird is eating "+food+" units of food");
         return food;
     }

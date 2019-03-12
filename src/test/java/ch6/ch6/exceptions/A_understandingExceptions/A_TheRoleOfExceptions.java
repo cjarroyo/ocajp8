@@ -15,7 +15,8 @@ A program can fail for just about any reason:
 
 public class A_TheRoleOfExceptions {
 /*
-“I give up. I don’t know what to do right now. You deal with it.”
+"I give up. I don't know what to do right now. You deal with it."
+"Me doy por vencido. No sé qué hacer en este momento. Usted se ocupa de ello."
 ================================================================
 When you write a method:
 -You can either deal with the exception
@@ -34,7 +35,7 @@ These are the two approaches Java uses when dealing with exceptions.
 -A method can handle the exception case itself
 -Make it the caller’s responsibility.
 You saw both in the trip to the zoo.
-You saw an exception in Chapter 1, “Java Building Blocks,” with a very simple Zoo example.
+You saw an exception in Chapter 1, "Java Building Blocks," with a very simple Zoo example.
 You wrote a class that printed out the name of the zoo:
 
 */

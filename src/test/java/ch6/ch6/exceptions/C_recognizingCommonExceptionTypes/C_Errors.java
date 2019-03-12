@@ -13,8 +13,8 @@ public class C_Errors {
     * They are thrown by the JVM and should not be handled or declared.
     * Errors are rare, but you might see these
     *
-    * - ExceptionInInitializerError, Thrown by the JVM when a static initializer throws an exception and doesn’t handle it
-    * - StackOverflowError, Thrown by the JVM when a method calls itself too many times (this is called infi nite recursion because the method typically calls itself without end)
+    * - ExceptionInInitializerError, Thrown by the JVM when a static initializer throws an exception and doesn't handle it
+    * - StackOverflowError, Thrown by the JVM when a method calls itself too many times (this is called infinite recursion because the method typically calls itself without end)
     * - NoClassDefFoundError, Thrown by the JVM when a class that the code uses is available at compile time but not runtime
     * */
 
@@ -26,7 +26,7 @@ public class C_Errors {
     @Test
     public void exceptionInInitializerError(){
         /*
-        Java runs static initializers the fi rst time a class is used.
+        Java runs static initializers the first time a class is used.
         If one of the static initializers throws an exception, Java can’t start using the class.
         It declares defeat by throwing an ExceptionInInitializerError.
         This code shows an ArrayIndexOutOfBounds in a static initializer:
@@ -45,7 +45,7 @@ public class C_Errors {
     public void stackOverflowError(int num){
         /*
         * When Java calls methods, it puts parameters and local variables on the stack.
-        * After doing this a very large number of times, the stack runs out of room and overfl ows.
+        * After doing this a very large number of times, the stack runs out of room and overflows.
         * This is called a StackOverflowError. Most of the time, this error occurs when a method calls itself.
         * */
         stackOverflowError(1);
