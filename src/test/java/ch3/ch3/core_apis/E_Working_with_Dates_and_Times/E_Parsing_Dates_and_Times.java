@@ -25,5 +25,8 @@ public class E_Parsing_Dates_and_Times {
         LocalTime time = LocalTime.parse("11:22");
         System.out.println(date); // 2015-01-02
         System.out.println(time); // 11:22
+
+        System.out.println(LocalDate.parse("2015-01-01").minusMonths(1));
+        //.minusDays(1).plusYears(1);
     }
 }

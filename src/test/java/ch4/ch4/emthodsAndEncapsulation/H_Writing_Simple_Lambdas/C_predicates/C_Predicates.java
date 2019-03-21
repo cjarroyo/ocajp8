@@ -27,7 +27,8 @@ public class C_Predicates {
     That’s the syntax for generics
      */
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         List<Animal> animals = new ArrayList<Animal>();
         animals.add(new Animal("fish", false, true));
         print(animals, a -> a.canSwim());
@@ -55,7 +56,7 @@ public class C_Predicates {
         bunnies.add("floppy");
         bunnies.add("hoppy");
         System.out.println(bunnies);  // [long ear, floppy, hoppy]
-        bunnies.removeIf(x -> x.charAt(0) != 'h');
+        bunnies.removeIf(x -> x.charAt(0) != 'h'); //line 8
         System.out.println(bunnies);  // [hoppy]
     }
     /*
