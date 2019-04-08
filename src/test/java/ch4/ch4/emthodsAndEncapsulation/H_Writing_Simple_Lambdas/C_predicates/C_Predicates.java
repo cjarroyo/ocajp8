@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+
 public class C_Predicates {
     /*
     Lambdas work with interfaces that have only one method.
